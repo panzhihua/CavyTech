@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- From: file:/C:/Users/LiBin/Desktop/新建文件夹%20(3)/CavyTech/SlidingMenuLib/build/intermediates/exploded-aar/CavyTech/BaseCore/unspecified/res/values-w600dp/values-w600dp.xml -->
+    <eat-comment/>
+    <dimen name="dialog_padding">90dp</dimen>
+</resources>

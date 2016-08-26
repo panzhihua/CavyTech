@@ -1,0 +1,59 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:background="#000000"
+    android:layout_height="fill_parent">
+
+    <com.edmodo.cropper.CropImageView xmlns:custom="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/crop_image_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:orientation="horizontal"
+        android:paddingLeft="10dip"
+        android:paddingRight="10dip"
+        android:paddingBottom="20dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true">
+
+
+        <Button
+            android:layout_alignParentLeft="true"
+            android:id="@+id/discard"
+            android:layout_width="80dp"
+            android:layout_height="fill_parent"
+            android:background="@drawable/crop_button_bg"
+            android:textColor="#ffffff"
+            android:textSize="18sp"
+            android:text="@string/picture_cancel" />
+
+        <Button
+            android:id="@+id/rotate"
+            android:layout_toRightOf="@+id/discard"
+            android:layout_width="80dp"
+            android:layout_marginLeft="10dp"
+            android:layout_height="fill_parent"
+            android:background="@drawable/crop_button_bg"
+            android:textColor="#ffffff"
+            android:textSize="18sp"
+            android:visibility="visible"
+            android:text="@string/rotate" />
+
+
+        <Button
+            android:id="@+id/save"
+            android:layout_width="80dp"
+            android:layout_marginLeft="10dp"
+            android:layout_height="fill_parent"
+            android:layout_toRightOf="@+id/rotate"
+            android:background="@drawable/crop_button_bg"
+            android:textColor="#ffffff"
+            android:textSize="18sp"
+            android:text="@string/picture_send" />
+
+    </RelativeLayout>
+</RelativeLayout>
+<!-- From: file:/C:/Users/LiBin/Desktop/新建文件夹%20(3)/CavyTech/BaseCore/res/layout/crop_image.xml -->

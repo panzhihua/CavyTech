@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="main"><source path="C:\Users\LiBin\Desktop\新建文件夹 (3)\CavyTech\circularfillableloaders_library\src\main\res"><file path="C:\Users\LiBin\Desktop\新建文件夹 (3)\CavyTech\circularfillableloaders_library\src\main\res\values\attrs.xml" qualifiers=""><declare-styleable name="CircularFillableLoaders">
+        <attr format="integer" name="cfl_progress"/>
+        <attr format="boolean" name="cfl_border"/>
+        <attr format="dimension" name="cfl_border_width"/>
+        <attr format="color" name="cfl_wave_color"/>
+        <attr format="float" name="cfl_wave_amplitude"/>
+    </declare-styleable></file></source><source path="C:\Users\LiBin\Desktop\新建文件夹 (3)\CavyTech\circularfillableloaders_library\build\generated\res\rs\release"/><source path="C:\Users\LiBin\Desktop\新建文件夹 (3)\CavyTech\circularfillableloaders_library\build\generated\res\generated\release"/></dataSet><dataSet config="release"><source path="C:\Users\LiBin\Desktop\新建文件夹 (3)\CavyTech\circularfillableloaders_library\src\release\res"/></dataSet><mergedItems><configuration qualifiers=""><declare-styleable name="CircularFillableLoaders"><attr format="integer" name="cfl_progress"/><attr format="boolean" name="cfl_border"/><attr format="dimension" name="cfl_border_width"/><attr format="color" name="cfl_wave_color"/><attr format="float" name="cfl_wave_amplitude"/></declare-styleable></configuration></mergedItems></merger>

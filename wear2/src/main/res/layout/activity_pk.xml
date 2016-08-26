@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/com_titlebar2"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true">
+
+    <include
+        layout="@layout/toobar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/let_us_comparer"
+        android:textColor="@color/text_80_color"
+        android:textSize="14sp" />
+
+    <RelativeLayout
+        android:background="@color/com_titlebar2"
+        android:layout_marginBottom="10dp"
+        android:layout_width="300dp"
+        android:layout_height="286dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:background="@color/white">
+
+            <ImageView
+                android:layout_marginTop="18dp"
+                android:background="#123456"
+                android:id="@+id/iv_pk_image"
+                android:layout_gravity="center_horizontal"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_width="264dp"
+                android:layout_height="160dp" />
+
+            <TextView
+                android:id="@+id/tv_pk"
+                android:gravity="center"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/iv_pk_image"
+                android:text="@string/pk_select"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:textColor="@color/text_80_color" />
+
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/iv_pk_next"
+            android:background="@drawable/iv_select_pk_bg"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="@string/how_to_pk"
+                android:textColor="@color/text_b3_color"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:text="@string/pk_answer"
+                android:textColor="@color/text_80_color"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="@string/how_to_success"
+                android:textColor="@color/text_b3_color"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:text="@string/success_answer"
+                android:textColor="@color/text_80_color"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="@string/look_others_walk"
+                android:textColor="@color/text_b3_color"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:text="@string/others_walk_answer"
+                android:textColor="@color/text_80_color"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

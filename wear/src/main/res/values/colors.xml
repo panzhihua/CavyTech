@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="background">#f6f6f6</color>
+    <color name="background_register">#eeeef1</color>
+    <color name="dividerline1">#dddddd</color>
+    <color name="dividerline2">#dbdbdb</color>
+    <color name="homepage_text_color_normal">#a3a3a3</color>
+    <color name="homepage_text_color_pressed">#68bbf6</color>
+    <color name="com_titlebar">#3e77db</color>
+    <color name="homepage_titlebar">#4c4c4c</color>
+    <color name="white">#ffffff</color>
+    <color name="red">#ff1f00</color>
+    <color name="step_bg_color_select">#9deffe</color>
+    <color name="step_bg_color_normal">#00000000</color>
+    <color name="step_name_color_select">#40d5f4</color>
+    <color name="step_name_color_normal">#b6b5b6</color>
+    <color name="splash_bg">#02c9ff</color>
+    <color name="gray">#b6b5b6</color>
+
+    <color name="text_hui">#999999</color>
+    <color name="text_color_hui">#999999</color>
+    <color name="match_setting_title_bg">#f2f2f2</color>
+
+    <drawable name="item_normal">#ffffff</drawable>
+    <drawable name="item_pressed">#dedede</drawable>
+    <drawable name="transparent">#00000000</drawable>
+    <drawable name="tab_text_normal">#555555</drawable>
+    <drawable name="tab_text_checked">#40a9eb</drawable>
+    <drawable name="tab_bg_normal">#ffffff</drawable>
+    <drawable name="tab_bg_checked">#f9f9f9</drawable>
+    <drawable name="tab_indicate_bg">#31b9f6</drawable>
+    <drawable name="bt_save_color_pressed">#4aa750</drawable>
+    <drawable name="bt_save_color_normal">#4db964</drawable>
+    <drawable name="exit_button_normal">#ff5c41</drawable>
+    <drawable name="exit_button_pressed">#fa2807</drawable>
+
+    <color name="province_line_border">#D0D0D0</color>
+    <color name="btn_left_press_color">#d3d8db</color>
+    <color name="btn_left_unpress_color">#c3c8cb</color>
+    <color name="btn_right_press_color">#0063cf</color>
+    <color name="btn_right_unpress_color">#00a8ff</color>
+
+    <color name="match_item_bg_normal">#ffffff</color>
+    <color name="match_item_bg_select">#ecf7fb </color>
+    <color name="open_drawable_status_bar_color">#33FFFFFF</color>
+
+    <color name="colorPrimary">#00afed</color>
+    <color name="colorPrimaryDark">#ff0171c9</color>
+    <color name="colorAccent">#FF00E5FF</color>
+    <color name="colorControlNormal">#b4b4b4</color>
+    <color name="colorControlActivated">#FF03A9F4</color>
+    <color name="colorSwitchThumbNormal">#FF78909C</color>
+
+    <array name="progress_colors">
+        <item>#FF3F8AF8</item>
+        <item>#FFD8433C</item>
+        <item>#FFF2AF3A</item>
+        <item>#FF279B5E</item>
+    </array>
+
+    <array name="in_colors">
+        <item>#FFB5D4FF</item>
+        <item>#FFDEEAFC</item>
+        <item>#FFFAFFFE</item>
+    </array>
+
+    <color name="rb_checked">#FF4CAF50</color>
+    <color name="rb_unchecked">#FF6D6D6D</color>
+    <color name="rb_disable">#FFB0B0B0</color>
+
+    <color name="tpi_checked">#FFFFFFFF</color>
+    <color name="tpi_unchecked">#99FFFFFF</color>
+
+    <color name="et_divider_focused">@color/colorControlActivated</color>
+    <color name="et_divider_not_focused">#FF6D6D6D</color>
+    <color name="et_divider_disable">#FFC1C1C1</color>
+
+    <color name="indicator_background">#00afed</color>
+    <color name="left_frame_bg">#414a55</color>
+    <color name="textColorHint">#cecece</color>
+
+
+    <color name="rb_text_color_normal">#414141</color>
+    <color name="rb_text_color_pressed">#00afee</color>
+
+    <color name="bt_bg_color_normal_solid">#568ae8</color>
+    <color name="bt_bg_color_normal_stroke">#3e76db</color>
+    <color name="bt_bg_color_pressed_solid">#3e76db</color>
+    <color name="bt_bg_color_pressed_stroke">#00aeed</color>
+    <color name="bt_bg_color_pressed_pause">#e6e6e6</color>
+    <color name="bt_bg_color_pressed_restart">#66cef4</color>
+    <color name="down_color">#65cff4</color>
+
+    <color name="search_bg">#f7f7f7</color>
+    <color name="edit_register_bg">#b3b3b3</color>
+    <color name="email_bt_bg">#e6e6e6</color>
+    <color name="send_verification_bg">#cccccc</color>
+    <color name="text_register_color">#a9a9a9</color>
+    <color name="text_agree_color">#808080</color>
+
+    <color name="hint_text_color">#cfcbca</color>
+    <color name="about_logo_bg">#858585</color>
+    <color name="search_hint_color">#c0effe</color>
+
+    <color name="gray_normal">#bfbfbf</color>
+</resources>

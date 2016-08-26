@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/app_special_img"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        fresco:actualImageScaleType="centerCrop"
+        fresco:fadeDuration="300"
+        fresco:failureImage="@drawable/banner_hui_3"
+        fresco:failureImageScaleType="centerCrop"
+        fresco:placeholderImage="@drawable/banner_hui_3"
+        fresco:placeholderImageScaleType="centerCrop"
+        fresco:overlayImage="@drawable/yuanjiao"
+        fresco:pressedStateOverlayImage="@drawable/image_cover"
+        fresco:roundingBorderWidth="0.5dp"
+        fresco:roundingBorderColor="@color/border_color"
+        fresco:roundedCornerRadius="6dp" />
+
+</LinearLayout>

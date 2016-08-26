@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">BaseCore</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    
+    
+     <string name="picture_cancel">取消</string>
+    <string name="picture_send">确定</string>
+    <string name="rotate">旋转</string>
+    <string name="saving_image">正在保存图片&#8230;</string>
+    <string name="preparing_card">正在准备存储卡</string>
+    <string name="no_storage_card">没有存储卡!</string>
+    <string name="not_enough_space">没有空间!</string>
+    <string name="capital_on">On</string>
+    <string name="capital_off">Off</string>
+    
+    <string name="picture_loading">加载图片...</string>
+    <string name="picture_loaded_failed">图片加载失败</string>
+
+</resources>

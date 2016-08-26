@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- From: file:/Users/doudou/CaveyAppAndroid/trunk/CavyTech/SlidingMenuLib/build/intermediates/exploded-aar/CavyTech/BaseCore/unspecified/res/values-en/values-en.xml -->
+    <eat-comment/>
+    <string name="picture_cancel">Cancel</string>
+    <string name="picture_send">OK</string>
+    <string name="rotate">Rotate</string>
+</resources>

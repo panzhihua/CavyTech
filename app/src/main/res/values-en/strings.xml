@@ -1,0 +1,247 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">CavyGame</string>
+
+    <string name="login">Login</string>
+
+    <string name="not_login">Login</string>
+    <string name="download_manager">Download</string>
+
+    <string name="my_game">Games</string>
+
+    <string name="notice">Notifications</string>
+
+
+    <string name="feedback">Feedback</string>
+
+    <string name="feedback_hint">Your feedback will help us to be better and stronger, thank you!(3-200 letters)</string>
+
+    <string name="feedback_submit">Submit</string>
+
+    <string name="feedback_isnull">Please enter your suggestions 3~200 words</string>
+
+    <string name="contact_is_wrong">Invalid mobile number/Email address</string>
+
+    <string name="feedback_success">Success! We will get back to you soon</string>
+
+    <string name="feedback_failed">Failed, please resubmit</string>
+
+
+    <string name="setting">Settings</string>
+
+    <string name="setting_download_tips_title">Download Reminder</string>
+
+    <string name="setting_download_tips_subtitle">Remind me when there is no WiFi</string>
+
+    <string name="setting_auto_install_title">Auto Installation</string>
+
+    <string name="setting_auto_install_subtitle">Install the game automatically after download</string>
+
+    <string name="setting_delete_install_package_title">Delete APK</string>
+
+    <string name="setting_delete_install_package_subtitle">Delete the game APK automatically after installation</string>
+
+    <string name="setting_download_path_title">Download Directory</string>
+
+    <string name="setting_download_path_subtitle">Show APK download directory</string>
+
+    <string name="about">About</string>
+
+    <string name="about_item_title1">Customer Service Number</string>
+
+    <string name="about_item_title2">QQ Group</string>
+
+    <string name="about_item_title3">WeChat</string>
+
+    <string name="about_item_title4">Official Website</string>
+
+    <string name="about_item_subtitle1">400-001-6333</string>
+    <string name="about_item_subtitle2">455636123</string>
+    <string name="about_item_subtitle3">tunshukj</string>
+    <string name="show_all">Show All</string>
+
+    <string name="no_data">No Data</string>
+
+    <string name="recommend">Recommend</string>
+
+    <string name="charts">Ranking</string>
+
+    <string name="classify">Category</string>
+
+    <string name="game_screenshot">Screenshot</string>
+
+    <string name="game_brief_introduction">Introduction</string>
+
+    <string name="game_info">Game Info</string>
+
+    <string name="game_comment">Comments</string>
+
+    <string name="developer">Developer:&#160;&#160;</string>
+
+    <string name="game_type">Catagory:&#160;</string>
+
+    <string name="update_time">Update:&#160;</string>
+
+    <string name="versioncode">Version:&#160;</string>
+    <string name="this_update">This update</string>
+    <string name="immediate_comment">Comment</string>
+
+    <string name="immediate_login">Login</string>
+
+    <string name="search_game">Search</string>
+
+    <string name="input_tel">Mobile number</string>
+
+    <string name="input_tel_email">Mobile number/Email address</string>
+
+    <string name="input_verification">CAPTCHA</string>
+
+    <string name="input_password">Password</string>
+
+    <string name="affirm_password">Re-enter password</string>
+
+    <string name="send_verification">CAPTCHA</string>
+
+    <string name="register_account">Sign Up</string>
+
+    <string name="register_email_account">Sign Up by email</string>
+
+    <string name="seconds"> sec</string>
+
+    <string name="input_tel_flase">Invalid mobile number</string>
+
+    <string name="input_tel_none">Please enter mobile number</string>
+
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+
+    <string name="counts_down">&#160;Downloads</string>
+
+    <string name="register">Sign Up</string>
+
+    <string name="send_success">Send Success</string>
+
+    <string name="login_success">Login Success</string>
+
+    <string name="forget_password">Forgot Password?</string>
+
+    <string name="register_success">Sign Up Success</string>
+
+	<string name="finish">Complete</string>
+
+    <string name="please_input_correct_code">Please enter correct CAPTCHA</string>
+
+    <string name="please_input_correct_password">Please enter correct password</string>
+	
+	<string name="please_input_password">Password can not be empty</string>
+
+    <string name="please_input_account">Please enter your account</string>
+
+    <string name="account_error">Invalid account format</string>
+
+    <string name="password_length">Password length should be at least 6</string>
+
+    <string name="comment_input_hint">Please enter your comment(3-200 letters)</string>
+
+    <string name="comment_length_tips">Comment length is 3-200 letters</string>
+
+    <string name="comment_empty">Comment</string>
+
+    <string name="app_detail">Details</string>
+
+
+    <string name="user_photo">Avatar</string>
+
+    <string name="gender">Gender</string>
+
+    <string name="birthday">Birthday</string>
+
+    <string name="address">Address</string>
+
+    <string name="nickname">Nickname</string>
+
+    <string name="person_info">Profile</string>
+
+    <string name="album">Choose a photo</string>
+
+    <string name="take_a_picture">Take a photo</string>
+
+    <string name="woman">Female</string>
+
+    <string name="man">Male</string>
+
+    <string name="logout">Logout</string>
+
+    <string name="nickname_length_tips">Nickname length is 1-16 words</string>
+
+    <string name="remember_password">Save password</string>
+
+    <string name="save">Save</string>
+
+    <string name="no_search_result">No result</string>
+
+    <string name="install">Install</string>
+
+    <string name="install_failed">Install failed</string>
+
+    <string name="pause">Pause</string>
+
+    <string name="already_pause">Paused</string>
+
+    <string name="try_again">Retry</string>
+
+    <string name="open">Open</string>
+
+    <string name="go_on">Proceed</string>
+
+    <string name="delete_download_task">Delete this download task?</string>
+
+    <string name="delete_download_task_success">Delete download task success</string>
+
+    <string name="delete_download_task_failed">Delete download task failed</string>
+
+    <string name="wait_install">Downloaded, to be installed</string>
+
+    <string name="download_failed">Download failed, please retry</string>
+
+    <string name="update">Update</string>
+    <string name="uninstall">Uninstall</string>
+    <string name="year">Year</string>
+
+    <string name="month">Month</string>
+
+    <string name="date">Date</string>
+
+    <string name="download_count">dls:&#160;</string>
+
+    <string name="network_not_available">Network is not available</string>
+    <string name="network_connection">Please check the network status</string>
+    <string name="wechat_moments">WeChat Moments</string>
+    <string name="wechat_friends">WeChat Friends</string>
+    <string name="download_wait">Wait for downloading</string>
+    <string name="no_download_task">No download tasks</string>
+    <string name="no_my_game">No installed games</string>
+    <string name="exit_info">Confirm to log out?</string>
+    <string name="input_password_new">New password</string>
+    <string name="special">Specials</string>
+
+    <string name="input_password_again">Re-enter new password</string>
+    <string name="retrieve_password">Password Retrieval</string>
+    <string name="tel">Mobile</string>
+    <string name="email_box">Email</string>
+    <string name="input_email">Email address</string>
+    <string name="password_inconsistent">Passwords are inconsistent</string>
+    <string name="please_read_treaty">请先阅读并接受《豚鼠科技服务协议条款》</string>
+    <string name="email_fail">Invalid email format</string>
+    <string name="register_agree">我已阅读并接受</string>
+    <string name="treaty">《豚鼠科技用户协议》</string>
+    <string name="new_version">New version </string>
+    <string name="updating">Updating</string>
+    <string name="update_cancel">Cancel update</string>
+    <string name="update_now">Update now</string>
+    <string name="update_later">Update later</string>
+    <string name="phone_email_hint">Email address/Mobile number</string>
+    <string name="sharing">Sharing</string>
+    <string name="download_network_change">There is no WiFi, do you want to proceed?</string>
+    <string name="open_app">OPEN_ANDROID_APP</string>
+</resources>

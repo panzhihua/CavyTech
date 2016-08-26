@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <!-- 设置背景色图像资源 -->
+    <item android:id="@android:id/background">
+        <nine-patch android:src="@drawable/use_progressbar_bg"/>
+    </item>
+    <!--设置第一级进度条颜色图像资源 -->
+
+    <item android:id="@android:id/progress">
+        <clip>
+            <nine-patch android:src="@drawable/update_progressbar" />
+        </clip>
+    </item>
+
+</layer-list>
+<!-- <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@android:id/background">
+        <shape>
+            <gradient
+                    android:startColor="#000001"
+                    android:centerColor="#0b131e"
+                    android:centerY="0.75"
+                    android:endColor="#0d1522"
+                    android:angle="270"
+            />
+        </shape>
+    </item>
+
+    <item android:id="@android:id/secondaryProgress">
+        <clip>
+            <shape>
+                <gradient
+                        android:startColor="#234"
+                        android:centerColor="#234"
+                        android:centerY="0.75"
+                        android:endColor="#a24"
+                        android:angle="270"
+                />
+            </shape>
+        </clip>
+    </item>
+
+    <item android:id="@android:id/progress">
+        <clip>
+            <shape>
+                <gradient
+                    android:startColor="#144281"
+                    android:centerColor="#0b1f3c"
+                    android:centerY="0.75"
+                    android:endColor="#06101d"
+                    android:angle="270"
+                />
+            </shape>
+        </clip>
+    </item>
+
+</layer-list> -->

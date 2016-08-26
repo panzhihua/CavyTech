@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true">
+        <layer-list>
+            <item>
+                <shape>
+                    <solid android:color="@color/transparent" />
+                </shape>
+            </item>
+            <item android:right="15dp" android:top="15dp" android:bottom="15dp" android:left="15dp" >
+                <shape>
+                    <!-- 中间的背景色 -->
+                    <solid android:color="@color/special_download_button_3_pressed_color_7" />
+                    <!-- 设置四个角的角度 -->
+
+                    <corners
+                        android:radius="4dp" />
+                    <!-- 边缘线的宽度和颜色 -->
+                    <stroke
+                        android:width="1dp"
+                        android:color="@color/special_download_button_3_pressed_color_7" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+    <item android:state_pressed="false">
+        <layer-list>
+            <item>
+                <shape>
+                    <solid android:color="@color/transparent" />
+                </shape>
+            </item>
+            <item android:right="15dp" android:top="15dp" android:bottom="15dp" android:left="15dp" >
+                <shape>
+                    <!-- 中间的背景色 -->
+                    <solid android:color="@color/special_download_button_3_normal_color_7" />
+                    <!-- 设置四个角的角度 -->
+
+                    <corners
+                        android:radius="4dp" />
+                    <!-- 边缘线的宽度和颜色 -->
+                    <stroke
+                        android:width="1dp"
+                        android:color="@color/special_download_button_3_normal_color_7" />
+                </shape>
+            </item>
+
+        </layer-list>
+    </item>
+</selector>

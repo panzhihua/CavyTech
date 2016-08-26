@@ -1,0 +1,26 @@
+<resources>
+
+    <style name="Toolbar" parent="Widget.AppCompat.Toolbar">
+        <item name="contentInsetStart">0dp</item><!-- 设置该属性解决空白部分-->
+    </style>
+    <style name="ActionBarTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowTranslucentNavigation" >true</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <!-- toolbar（actionbar）颜色 -->
+        <item name="colorPrimary">#673AB7</item>
+        <!-- 窗口的背景颜色 -->
+        <item name="android:windowBackground">@android:color/white</item>
+        <item name="colorPrimaryDark">@color/com_titlebar2</item>
+        <item name="toolbarStyle">@style/Toolbar</item>
+    </style>
+
+    <style name="AppblueActionBar" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowActionBar">false</item>
+        <item name="android:colorPrimary">@color/com_titlebar2</item>
+        <item name="android:windowBackground">@color/com_titlebar2</item>
+    </style>
+
+    <style name="ApptitleActionBar" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowActionBar">false</item>
+    </style>
+</resources>

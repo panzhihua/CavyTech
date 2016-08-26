@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true" android:drawable="@drawable/btn_right_press" />
+    <item android:state_enabled="false" android:drawable="@drawable/btn_right_press" />
+    <item android:drawable="@drawable/btn_right_unpress" />
+</selector><!-- From: file:/C:/Users/LiBin/Desktop/新建文件夹%20(3)/CavyTech/BaseCore/res/drawable/btn_right_selector.xml --><!-- From: file:/C:/Users/LiBin/Desktop/新建文件夹%20(3)/CavyTech/SlidingMenuLib/build/intermediates/exploded-aar/CavyTech/BaseCore/unspecified/res/drawable/btn_right_selector.xml -->

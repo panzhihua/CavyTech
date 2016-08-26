@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+<!--<item android:drawable="@drawable/down_button_blue_pressed" android:state_pressed="true"/>-->
+<!--<item android:drawable="@drawable/down_restart_normal" android:state_pressed="false"/>-->
+
+<item android:state_pressed="true">
+    <layer-list>
+        <item>
+            <shape>
+                <solid android:color="@color/transparent" />
+            </shape>
+        </item>
+        <item  >
+            <shape>
+                <!-- 中间的背景色 -->
+                <solid android:color="@color/exit_btn_press_bg" />
+                <!-- 设置四个角的角度 -->
+
+                <corners
+                    android:radius="3dp" />
+            </shape>
+        </item>
+    </layer-list>
+</item>
+<item android:state_pressed="false">
+    <layer-list>
+        <item>
+            <shape>
+                <solid android:color="@color/transparent" />
+            </shape>
+        </item>
+        <item >
+            <shape>
+                <!-- 中间的背景色 -->
+                <solid android:color="@color/text_color7" />
+                <!-- 设置四个角的角度 -->
+
+                <corners
+                    android:radius="3dp" />
+            </shape>
+        </item>
+
+    </layer-list>
+</item>
+</selector>

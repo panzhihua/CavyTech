@@ -1,0 +1,809 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:clipToPadding="false">
+
+    <include
+        android:id="@+id/main_title"
+        layout="@layout/public_title" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="105dp"
+        android:layout_below="@+id/main_title"
+        android:background="@color/white"
+        android:id="@+id/relativeLayout">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/today_steps"
+            android:id="@+id/todaysteptitle"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:includeFontPadding = "false"
+            style="@style/black21" />
+
+        <TextView
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:id="@+id/todaystepnum"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="false"
+            android:layout_marginLeft="15dp"
+            android:layout_below="@+id/todaysteptitle"
+            style="@style/green19"
+            android:includeFontPadding = "false"
+            android:gravity="center_vertical"
+            android:fontFamily="sans-serif-light"
+            android:layout_toLeftOf="@+id/nearlyseverday"
+            android:layout_toStartOf="@+id/nearlyseverday"
+            android:layout_marginTop="-4dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2015-12-06"
+            android:id="@+id/stepcounterdate"
+            android:layout_below="@+id/todaystepnum"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="-5dp"
+            style="@style/black23" />
+
+        <ImageView
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:id="@+id/imageView"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/patches"
+            android:layout_marginRight="16dp" />
+
+        <TextView
+            style="@style/black23"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/last_seven_days"
+            android:id="@+id/nearlyseverday"
+            android:layout_alignParentTop="false"
+            android:layout_alignRight="@+id/imageView"
+            android:layout_marginRight="15dp"
+            android:layout_alignParentLeft="false"
+            android:layout_marginTop="14dp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="111dp"
+        android:id="@+id/totalmsg"
+        android:background="@color/white"
+        android:layout_alignParentBottom="true">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="111dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:weightSum="3">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/avg_step"
+                        android:id="@+id/avg_step_title"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginRight="0dp"
+                        android:layout_marginTop="30dp"
+                        style="@style/black24"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:id="@+id/avg_step_value"
+                        android:layout_below="@+id/avg_step_title"
+                        android:gravity="center"
+                        android:fontFamily="sans-serif-light"
+                        android:layout_centerHorizontal="true"
+                        style="@style/black25"
+                        android:layout_marginTop="-5dp" />
+
+                    <ImageButton
+                        android:layout_width="0.5dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginTop="35dp"
+                        android:layout_marginRight="0.5dp"
+                        android:background="@color/gray_normal"
+                        android:layout_marginBottom="35dp"/>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/distance_unit"
+                        android:id="@+id/distance_unit_title"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginRight="0dp"
+                        android:layout_marginTop="30dp"
+                        style="@style/black24"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:id="@+id/distance_unit_value"
+                        android:layout_below="@+id/distance_unit_title"
+                        android:gravity="center"
+                        android:layout_centerHorizontal="true"
+                        android:fontFamily="sans-serif-light"
+                        style="@style/black25"
+                        android:layout_marginTop="-5dp" />
+
+                    <ImageButton
+                        android:layout_width="0.5dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginTop="35dp"
+                        android:layout_marginRight="0.5dp"
+                        android:background="@color/gray_normal"
+                        android:layout_marginBottom="35dp"/>
+                </RelativeLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/active_unit"
+                        android:id="@+id/active_unit_title"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginRight="0dp"
+                        android:layout_marginTop="30dp"
+                        style="@style/black24"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:id="@+id/active_unit_value"
+                        android:layout_below="@+id/active_unit_title"
+                        android:gravity="center"
+                        android:layout_centerHorizontal="true"
+                        android:fontFamily="sans-serif-light"
+                        style="@style/black25"
+                        android:layout_marginTop="-5dp" />
+
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="8dp"
+        android:id="@+id/spaceimageView"
+        android:layout_above="@+id/totalmsg"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="@color/background"/>
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dp"
+        android:id="@+id/spaceimageViewLine"
+        android:layout_above="@+id/spaceimageView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="@color/gray_normal"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/relativeLayout"
+        android:background="@color/white"
+        android:layout_above="@+id/spaceimageViewLine">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:weightSum="7">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:layout_weight="1" >
+
+                <TextView
+                    style="@style/black27"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Mon"
+                    android:id="@+id/textView_week_day7"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginBottom="16dp"
+                    android:gravity="center_horizontal"
+                    android:layout_marginTop="0dp" />
+
+                <TextView
+                    style="@style/black26"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="7"
+                    android:id="@+id/textView_day_day7"
+                    android:layout_above="@+id/textView_week_day7"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:gravity="center_horizontal"
+                    android:layout_marginBottom="-3dp" />
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.5dp"
+                    android:id="@+id/img_line_day7"
+                    android:layout_above="@+id/textView_day_day7"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginBottom="9dp"
+                    android:background="@color/gray_normal" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/img_point_day7"
+                    android:layout_above="@+id/img_line_day7"
+                    android:src="@drawable/scale"
+                    android:layout_marginBottom="-3dp"
+                    android:layout_centerHorizontal="true" />
+
+                <ImageButton
+                    android:layout_width="24dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imageButton_steps_day7"
+                    android:layout_above="@+id/img_point_day7"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="10dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="10dp"
+                    android:scaleType="centerCrop"
+                    android:background="@color/white" />
+
+                <TextView
+                    style="@style/green20"
+                    android:layout_width="fill_parent"
+                    android:layout_height="200dp"
+                    android:text="0"
+                    android:background="@color/white"
+                    android:id="@+id/textView_steps_day7"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="center_horizontal|bottom"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentBottom="false" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Tues"
+                    android:id="@+id/textView_week_day6"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginBottom="16dp"
+                    android:gravity="center_horizontal"
+                    style="@style/black27"
+                    android:layout_marginTop="0dp" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="6"
+                    android:id="@+id/textView_day_day6"
+                    android:layout_above="@+id/textView_week_day6"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    style="@style/black26"
+                    android:gravity="center_horizontal"
+                    android:layout_marginBottom="-3dp" />
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.5dp"
+                    android:id="@+id/img_line_day6"
+                    android:layout_above="@+id/textView_day_day6"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginBottom="9dp"
+                    android:background="@color/gray_normal" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/img_point_day6"
+                    android:layout_above="@+id/img_line_day6"
+                    android:src="@drawable/scale"
+                    android:layout_marginBottom="-3dp"
+                    android:layout_centerHorizontal="true" />
+
+                <ImageButton
+                    android:layout_width="24dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imageButton_steps_day6"
+                    android:layout_above="@+id/img_point_day6"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="10dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="10dp"
+                    android:scaleType="centerCrop"
+                    android:background="@color/white" />
+
+                <TextView
+                    style="@style/green20"
+                    android:layout_width="fill_parent"
+                    android:layout_height="200dp"
+                    android:text="0"
+                    android:background="@color/white"
+                    android:id="@+id/textView_steps_day6"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="center_horizontal|bottom"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentBottom="false" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Wed"
+                    android:id="@+id/textView_week_day5"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginBottom="16dp"
+                    android:gravity="center_horizontal"
+                    style="@style/black27"/>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="5"
+                    android:id="@+id/textView_day_day5"
+                    android:layout_above="@+id/textView_week_day5"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    style="@style/black26"
+                    android:gravity="center_horizontal"
+                    android:layout_marginBottom="-3dp" />
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.5dp"
+                    android:id="@+id/img_line_day5"
+                    android:layout_above="@+id/textView_day_day5"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginBottom="9dp"
+                    android:background="@color/gray_normal" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/img_point_day5"
+                    android:layout_above="@+id/img_line_day5"
+                    android:src="@drawable/scale"
+                    android:layout_marginBottom="-3dp"
+                    android:layout_centerHorizontal="true" />
+
+                <ImageButton
+                    android:layout_width="24dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imageButton_steps_day5"
+                    android:layout_above="@+id/img_point_day5"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="10dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="10dp"
+                    android:scaleType="centerCrop"
+                    android:background="@color/white" />
+
+                <TextView
+                    style="@style/green20"
+                    android:layout_width="fill_parent"
+                    android:layout_height="200dp"
+                    android:text="0"
+                    android:background="@color/white"
+                    android:id="@+id/textView_steps_day5"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="center_horizontal|bottom"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentBottom="false" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Thur"
+                    android:id="@+id/textView_week_day4"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginBottom="16dp"
+                    android:gravity="center_horizontal"
+                    style="@style/black27"/>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="4"
+                    android:id="@+id/textView_day_day4"
+                    android:layout_above="@+id/textView_week_day4"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    style="@style/black26"
+                    android:gravity="center_horizontal"
+                    android:layout_marginBottom="-3dp" />
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.5dp"
+                    android:id="@+id/img_line_day4"
+                    android:layout_above="@+id/textView_day_day4"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginBottom="9dp"
+                    android:background="@color/gray_normal" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/img_point_day4"
+                    android:layout_above="@+id/img_line_day4"
+                    android:src="@drawable/scale"
+                    android:layout_marginBottom="-3dp"
+                    android:layout_centerHorizontal="true" />
+
+                <ImageButton
+                    android:layout_width="24dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imageButton_steps_day4"
+                    android:layout_above="@+id/img_point_day4"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="10dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="10dp"
+                    android:scaleType="centerCrop"
+                    android:background="@color/white" />
+
+                <TextView
+                    style="@style/green20"
+                    android:layout_width="fill_parent"
+                    android:layout_height="200dp"
+                    android:text="0"
+                    android:background="@color/white"
+                    android:id="@+id/textView_steps_day4"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="center_horizontal|bottom"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentBottom="false" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Fri"
+                    android:id="@+id/textView_week_day3"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginBottom="16dp"
+                    android:gravity="center_horizontal"
+                    style="@style/black27"/>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="3"
+                    android:id="@+id/textView_day_day3"
+                    android:layout_above="@+id/textView_week_day3"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    style="@style/black26"
+                    android:gravity="center_horizontal"
+                    android:layout_marginBottom="-3dp" />
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.5dp"
+                    android:id="@+id/img_line_day3"
+                    android:layout_above="@+id/textView_day_day3"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginBottom="9dp"
+                    android:background="@color/gray_normal" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/img_point_day3"
+                    android:layout_above="@+id/img_line_day3"
+                    android:src="@drawable/scale"
+                    android:layout_marginBottom="-3dp"
+                    android:layout_centerHorizontal="true" />
+
+                <ImageButton
+                    android:layout_width="24dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imageButton_steps_day3"
+                    android:layout_above="@+id/img_point_day3"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="10dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="10dp"
+                    android:scaleType="centerCrop"
+                    android:background="@color/white" />
+
+                <TextView
+                    style="@style/green20"
+                    android:layout_width="fill_parent"
+                    android:layout_height="200dp"
+                    android:text="0"
+                    android:background="@color/white"
+                    android:id="@+id/textView_steps_day3"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="center_horizontal|bottom"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentBottom="false" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Sat"
+                    android:id="@+id/textView_week_day2"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginBottom="16dp"
+                    android:gravity="center_horizontal"
+                    style="@style/black27"/>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="2"
+                    android:id="@+id/textView_day_day2"
+                    android:layout_above="@+id/textView_week_day2"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    style="@style/black26"
+                    android:gravity="center_horizontal"
+                    android:layout_marginBottom="-3dp" />
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.5dp"
+                    android:id="@+id/img_line_day2"
+                    android:layout_above="@+id/textView_day_day2"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginBottom="9dp"
+                    android:background="@color/gray_normal" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/img_point_day2"
+                    android:layout_above="@+id/img_line_day2"
+                    android:src="@drawable/scale"
+                    android:layout_marginBottom="-3dp"
+                    android:layout_centerHorizontal="true" />
+
+                <ImageButton
+                    android:layout_width="24dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imageButton_steps_day2"
+                    android:layout_above="@+id/img_point_day2"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="10dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="10dp"
+                    android:scaleType="centerCrop"
+                    android:background="@color/white" />
+
+                <TextView
+                    style="@style/green20"
+                    android:layout_width="fill_parent"
+                    android:layout_height="200dp"
+                    android:text="0"
+                    android:background="@color/white"
+                    android:id="@+id/textView_steps_day2"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="center_horizontal|bottom"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentBottom="false" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Sat"
+                    android:id="@+id/textView_week_day1"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginBottom="16dp"
+                    android:gravity="center_horizontal"
+                    style="@style/black27"/>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="1"
+                    android:id="@+id/textView_day_day1"
+                    android:layout_above="@+id/textView_week_day1"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    style="@style/black26"
+                    android:gravity="center_horizontal"
+                    android:layout_marginBottom="-3dp" />
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.5dp"
+                    android:id="@+id/img_line_day1"
+                    android:layout_above="@+id/textView_day_day1"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginBottom="9dp"
+                    android:background="@color/gray_normal" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/img_point_day1"
+                    android:layout_above="@+id/img_line_day1"
+                    android:src="@drawable/scale"
+                    android:layout_marginBottom="-3dp"
+                    android:layout_centerHorizontal="true" />
+
+                <ImageButton
+                    android:layout_width="24dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imageButton_steps_day1"
+                    android:layout_above="@+id/img_point_day1"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="10dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="10dp"
+                    android:scaleType="centerCrop"
+                    android:background="@color/white" />
+
+                <TextView
+                    style="@style/green20"
+                    android:layout_width="fill_parent"
+                    android:layout_height="200dp"
+                    android:text="0"
+                    android:background="@color/white"
+                    android:id="@+id/textView_steps_day1"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="center_horizontal|bottom"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentBottom="false" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,211 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/match_setting_title_bg"
+    android:clipToPadding="false"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/main_title"
+        layout="@layout/public_title" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/hui15"
+                android:layout_width="fill_parent"
+                android:layout_height="42dp"
+                android:layout_centerVertical="true"
+                android:background="@color/match_setting_title_bg"
+                android:gravity="center_vertical"
+                android:paddingLeft="20dp"
+                android:paddingTop="15dp"
+                android:text="@string/setting_calling_vibrate" />
+
+            <View style="@style/dividerTheme1" />
+
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="60dp">
+
+
+                <TextView
+                    style="@style/black17"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:text="@string/setting_calling_vibrate_summary" />
+
+
+                <com.basecore.widget.switchbutton.SwitchButton
+                    android:id="@+id/setting_calling_vibrate_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dp"
+                    android:checked="true" />
+            </RelativeLayout>
+
+            <View style="@style/dividerTheme1" />
+
+            <TextView
+                style="@style/hui15"
+                android:layout_width="fill_parent"
+                android:layout_height="42dp"
+                android:layout_centerVertical="true"
+                android:background="@color/match_setting_title_bg"
+                android:gravity="center_vertical"
+                android:paddingLeft="20dp"
+                android:paddingTop="15dp"
+                android:text="@string/reconnect" />
+
+            <View style="@style/dividerTheme1" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="60dp">
+
+                <TextView
+                    style="@style/black17"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_toLeftOf="@+id/setting_reconnect_switch"
+                    android:text="@string/reconnect_summary" />
+
+                <com.basecore.widget.switchbutton.SwitchButton
+                    android:id="@+id/setting_reconnect_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dp"
+                    android:checked="true" />
+            </RelativeLayout>
+
+            <View style="@style/dividerTheme1" />
+
+            <TextView
+                style="@style/hui15"
+                android:layout_width="fill_parent"
+                android:layout_height="42dp"
+                android:layout_centerVertical="true"
+                android:background="@color/match_setting_title_bg"
+                android:gravity="center_vertical"
+                android:paddingLeft="20dp"
+                android:paddingTop="15dp"
+                android:text="@string/bracelet_vibrate" />
+
+            <View style="@style/dividerTheme1" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="60dp">
+
+
+                <TextView
+                    style="@style/black17"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:text="@string/bracelet_vibrate_summary" />
+
+
+                <com.basecore.widget.switchbutton.SwitchButton
+                    android:id="@+id/setting_bracelet_vibrate_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dp"
+                    android:checked="true" />
+            </RelativeLayout>
+
+            <View style="@style/dividerTheme1" />
+
+            <TextView
+                style="@style/hui15"
+                android:layout_width="fill_parent"
+                android:layout_height="42dp"
+                android:layout_centerVertical="true"
+                android:background="@color/match_setting_title_bg"
+                android:gravity="center_vertical"
+                android:paddingLeft="20dp"
+                android:paddingTop="15dp"
+                android:text="@string/setting_disconnect" />
+
+            <View style="@style/dividerTheme1" />
+
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="60dp">
+
+                <TextView
+                    style="@style/black17"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_toLeftOf="@+id/setting_disconnect1"
+                    android:text="@string/setting_disconnect_item1" />
+
+                <com.basecore.widget.switchbutton.SwitchButton
+                    android:id="@+id/setting_disconnect1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dp"
+                    android:checked="true" />
+            </RelativeLayout>
+
+            <View style="@style/dividerTheme1" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="60dp">
+
+                <TextView
+                    style="@style/black17"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_toLeftOf="@+id/setting_disconnect2"
+                    android:text="@string/setting_disconnect_item2" />
+
+                <com.basecore.widget.switchbutton.SwitchButton
+                    android:id="@+id/setting_disconnect2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dp"
+                    android:checked="true" />
+            </RelativeLayout>
+
+            <View style="@style/dividerTheme1" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

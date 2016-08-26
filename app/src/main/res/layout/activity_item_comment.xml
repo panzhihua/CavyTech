@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/user_image"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        fresco:fadeDuration="300"
+        fresco:actualImageScaleType="focusCrop"
+        fresco:placeholderImage="@drawable/face"
+        fresco:placeholderImageScaleType="centerCrop"
+        fresco:failureImage="@drawable/face"
+        fresco:failureImageScaleType="centerCrop"
+        fresco:roundAsCircle="true"
+        />
+
+    <TextView
+        android:id="@+id/user_name"
+        style="@style/black14"
+        android:layout_width="fill_parent"
+        android:layout_marginRight="15dp"
+        android:layout_height="wrap_content"
+        android:includeFontPadding="false"
+        android:layout_marginLeft="10dp"
+        android:singleLine="true"
+        android:layout_alignTop="@+id/user_image"
+        android:layout_toRightOf="@+id/user_image"
+        />
+
+    <TextView
+        android:id="@+id/comment_time"
+        style="@style/hui14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/user_name"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@+id/user_image"
+        android:includeFontPadding="false" />
+
+    <TextView
+        style="@style/black14"
+        android:id="@+id/comment_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/user_image"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="5dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/comment_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        style="@style/dividerTheme1"/>
+</RelativeLayout>

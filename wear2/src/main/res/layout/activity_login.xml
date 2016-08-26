@@ -1,0 +1,95 @@
+<com.zhy.android.percent.support.PercentLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/content_bg"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/public_title"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        app:layout_heightPercent="28%w"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <com.zhy.android.percent.support.PercentLinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.zhy.android.percent.support.PercentLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_heightPercent="24%w"
+            app:layout_marginLeftPercent="8%w"
+            app:layout_marginRightPercent="8%w"
+            android:background="@drawable/corners_bg"
+            android:orientation="vertical">
+
+            <com.cavytech.widget.ClearEditText
+                android:id="@+id/input_account"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_marginLeftPercent="4%w"
+                app:layout_marginRightPercent="4%w"
+                app:layout_heightPercent="12%sw"
+                style="@style/black16"
+                android:background="@null"
+                android:hint="@string/input_tel_email"
+                android:singleLine="true"
+                android:textColorHint="@color/hint_text_color"
+                android:textCursorDrawable="@null"/>
+
+            <View
+                style="@style/dividerTheme1"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp" />
+            <com.cavytech.widget.ClearEditText
+                android:id="@+id/input_password"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_marginLeftPercent="4%w"
+                app:layout_marginRightPercent="4%w"
+                app:layout_heightPercent="12%sw"
+                style="@style/black16"
+                android:background="@null"
+                android:hint="@string/input_password"
+                android:singleLine="true"
+                android:textColorHint="@color/hint_text_color"
+                android:inputType="textPassword"
+                android:textCursorDrawable="@null"/>
+
+        </com.zhy.android.percent.support.PercentLinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_heightPercent="12%w">
+
+            <TextView
+                android:id="@+id/forget_password"
+                style="@style/c12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/forget_password"
+                android:layout_centerInParent="true" />
+
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/login_account"
+            style="@style/text3"
+            android:layout_width="match_parent"
+            app:layout_heightPercent="12%w"
+            app:layout_marginLeftPercent="8%w"
+            app:layout_marginRightPercent="8%w"
+            android:background="@drawable/normal_button"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="@string/login_btn_text" />
+    </com.zhy.android.percent.support.PercentLinearLayout>
+    </ScrollView>
+</com.zhy.android.percent.support.PercentLinearLayout>

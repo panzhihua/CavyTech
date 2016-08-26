@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:orientation="vertical"
+   >
+
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/item_image1"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        fresco:fadeDuration="300"
+        fresco:actualImageScaleType="centerCrop"
+        fresco:placeholderImage="@drawable/icon_game"
+        fresco:placeholderImageScaleType="centerCrop"
+        fresco:failureImage="@drawable/icon_game"
+        fresco:failureImageScaleType="centerCrop"
+        fresco:pressedStateOverlayImage="@drawable/image_cover_10"
+        fresco:roundedCornerRadius="10dp"
+        />
+
+    <TextView
+        android:id="@+id/item_name1"
+        style="@style/black16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/item_image1"
+        android:layout_alignLeft="@+id/item_image1"
+        android:layout_marginTop="6dp"
+        android:includeFontPadding="false"
+        android:singleLine="true"
+        android:layout_marginRight="5dp"/>
+
+    <TextView
+        android:id="@+id/item_size1"
+        style="@style/hui13"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/item_name1"
+        android:layout_marginTop="6dp"
+        android:includeFontPadding="false"
+        android:layout_alignLeft="@+id/item_image1"
+        android:singleLine="true" />
+
+    <TextView
+        android:id="@+id/item_content1"
+        style="@style/hui13"
+        android:layout_width="90dp"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/item_size1"
+        android:layout_alignLeft="@+id/item_image1"
+        android:singleLine="true" />
+
+    <TextView
+        android:id="@+id/item_action1"
+        android:layout_width="90dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="6dp"
+        android:layout_below="@id/item_content1"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/down_button_white"
+        android:clickable="true"
+        android:gravity="center"
+        android:text="@string/download_manager"
+        android:textSize="13sp"
+        android:textColor="@drawable/bt_text_color_white" />
+
+</RelativeLayout>

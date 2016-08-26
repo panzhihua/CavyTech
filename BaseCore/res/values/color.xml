@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black_alpha">#7f000000</color>
+    <color name="white">#ffffff</color>
+    <color name="transparent">#00000000</color>
+    <color name="window_background">#FF191919</color>
+    <color name="bubble_background">#00000000</color>
+    <color name="delete_color_filter">#A5FF0000</color>
+    <color name="vpi__background_holo_dark">#d3ff4c</color>
+    <color name="vpi__background_holo_light">#000000</color>
+    <color name="vpi__bright_foreground_holo_dark">#d3ff4c</color>
+    <color name="vpi__bright_foreground_holo_light">#0000ff</color>
+    <color name="vpi__bright_foreground_disabled_holo_dark">#ffff00</color>
+    <color name="vpi__bright_foreground_disabled_holo_light">#ff0000</color>
+    <color name="vpi__bright_foreground_inverse_holo_dark">#ff0000</color>
+    <color name="vpi__bright_foreground_inverse_holo_light">#ff0000</color>
+    <!-- custom dialog color -->
+    <color name="text_color">#000000</color>
+    <color name="text_b3_color">#B3000000</color>
+    <color name="divider_color">#dbdbdb</color>
+    <color name="msg_color">#000000</color>
+    <color name="dialog_bg">#efeff4</color>
+    <color name="dialog_title_bg">#14b3fa</color>
+    <color name="btn_left_press_color">#71db82</color>
+    <color name="btn_left_unpress_color">#18aa30</color>
+    <color name="btn_right_press_color">#71db82</color>
+    <color name="btn_right_unpress_color">#18aa30</color>
+    <color name="crop_button_bg_normal_color">#00a4d9</color>
+    <color name="crop_button_bg_pressed_color">#0089b7</color>
+     <!-- custom dialog color -->
+
+    <color name="colorPrimary">#00afed</color>
+    <color name="colorPrimaryDark">#ff0171c9</color>
+    <color name="colorAccent">#FF00E5FF</color>
+    <color name="colorControlNormal">#b4b4b4</color>
+    <color name="colorControlActivated">#FF03A9F4</color>
+    <color name="colorSwitchThumbNormal">#FF78909C</color>
+
+</resources>

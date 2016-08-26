@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- From: file:/Users/doudou/CaveyAppAndroid/trunk/CavyTech/SlidingMenuLib/build/intermediates/exploded-aar/CavyTech/BaseCore/unspecified/res/values-sw720dp-land/values-sw720dp-land.xml -->
+    <eat-comment/>
+    <dimen name="activity_horizontal_margin">128dp</dimen>
+</resources>

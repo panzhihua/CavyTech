@@ -1,0 +1,71 @@
+apply plugin: 'com.android.application'
+
+android {
+    sourceSets.main{
+        jniLibs.srcDirs = ['libs']
+    }
+
+    signingConfigs {
+        debug {
+            keyAlias 'cavykeyalisas'
+            keyPassword 'com.cavykey'
+            storeFile file('/Users/doudou/CaveyAppAndroid/trunk/CavyTech/app/CavyApkKey')
+            storePassword 'com.cavykey'
+        }
+    }
+
+
+    compileSdkVersion 22
+    buildToolsVersion "22.0.1"
+
+    defaultConfig {
+        applicationId "com.tunshu"
+        minSdkVersion 14
+        targetSdkVersion 22
+        versionCode 46
+        versionName "1.0.46"
+        buildConfigField "boolean", "LOG_DEBUG", "true"
+    }
+    lintOptions {
+        abortOnError false
+        // 防止在发布的时候出现因MissingTranslation导致Build Failed!
+        disable 'MissingTranslation'
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            buildConfigField "boolean", "LOG_DEBUG", "false"
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            applicationVariants.all { variant ->
+                variant.outputs.each { output ->
+                    def outputFile = output.outputFile
+                    if (outputFile != null && outputFile.name.endsWith('.apk')) {
+                        // 输出apk名称为tunshu_v1.0.0.apk
+                        def fileName = "tunshu_v${defaultConfig.versionName}.apk"
+                        output.outputFile = new File(outputFile.parent, fileName)
+                    }
+                }
+            }
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile project(':async_http_client')
+    compile project(':BaseCore')
+    compile project(':pulltorefreshlibrary2.25')
+    compile files('libs/ShareSDK-Core-2.5.9.jar')
+    compile files('libs/ShareSDK-Wechat-Core-2.5.9.jar')
+    compile files('libs/ShareSDK-Wechat-Moments-2.5.9.jar')
+    compile files('libs/mframework.jar')
+    compile files('libs/ShareSDK-Wechat-2.5.9.jar')
+    compile project(':PhotoViewLibrary')
+    compile project(':SlidingMenuLib')
+    compile 'com.nineoldandroids:library:2.4.0'
+    compile project(':AndroidImageSlider')
+    compile 'com.facebook.fresco:fresco:0.7.0'
+    compile 'com.android.support:appcompat-v7:22.1.1'
+    compile 'com.android.support:recyclerview-v7:22.1.1'
+    compile files('libs/jpush-android-2.0.5.jar')
+}

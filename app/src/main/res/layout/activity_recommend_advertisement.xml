@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp"
+    >
+
+    <RelativeLayout
+        android:id="@+id/adv_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="100dp">
+
+        <com.daimajia.slider.library.SliderLayout
+            android:id="@+id/slider"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            custom:auto_cycle="true"
+            custom:indicator_visibility="visible"
+            custom:pager_animation="Accordion"
+            custom:pager_animation_span="1100" />
+        <View
+            android:layout_width="match_parent"
+            android:background="@drawable/yuanjiao"
+            android:layout_height="match_parent"
+            />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ad_layout"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:layout_marginTop="6dp"
+        android:orientation="horizontal">
+
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/game1_icon"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            fresco:actualImageScaleType="centerCrop"
+            fresco:fadeDuration="300"
+            fresco:failureImage="@drawable/banner_hui_3"
+            fresco:failureImageScaleType="centerCrop"
+            fresco:pressedStateOverlayImage="@drawable/image_cover"
+            fresco:placeholderImage="@drawable/banner_hui_3"
+            fresco:placeholderImageScaleType="centerCrop"
+            fresco:overlayImage="@drawable/yuanjiao"
+            fresco:roundingBorderWidth="0.5dp"
+            fresco:roundingBorderColor="@color/border_color"
+            fresco:roundedCornerRadius="6dp" />
+
+
+        <View
+            android:layout_width="6dp"
+            android:layout_height="fill_parent" />
+
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/game2_icon"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            fresco:actualImageScaleType="centerCrop"
+            fresco:fadeDuration="300"
+            fresco:failureImage="@drawable/banner_hui_3"
+            fresco:failureImageScaleType="centerCrop"
+            fresco:pressedStateOverlayImage="@drawable/image_cover"
+            fresco:placeholderImage="@drawable/banner_hui_3"
+            fresco:placeholderImageScaleType="centerCrop"
+            fresco:overlayImage="@drawable/yuanjiao"
+            fresco:roundingBorderWidth="0.5dp"
+            fresco:roundingBorderColor="@color/border_color"
+            fresco:roundedCornerRadius="6dp" />
+
+    </LinearLayout>
+</LinearLayout>

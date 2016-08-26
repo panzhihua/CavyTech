@@ -1,0 +1,10 @@
+diff a/trunk/CavyTech/wear2/src/main/AndroidManifest.xml b/trunk/CavyTech/wear2/src/main/AndroidManifest.xml	(rejected hunks)
+@@ -6,6 +6,8 @@
+         android:name="com.tunshu.permission.JPUSH_MESSAGE"
+         android:protectionLevel="signature" />
+ 
++    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
++    <uses-permission android:name="android.permission.BLUETOOTH" />
+     <uses-permission android:name="android.permission.BAIDU_LOCATION_SERVICE" />
+     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />

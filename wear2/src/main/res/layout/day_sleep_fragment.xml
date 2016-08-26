@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/top_bg_color"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:orientation="vertical">
+
+        <com.cavytech.widget.StepsPick
+            android:id="@+id/day_wheel"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/steps_select" />
+    </LinearLayout>
+
+
+    <com.github.mikephil.charting.charts.PieChart
+        android:id="@+id/day_sleep_fragment_bar_chart"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_above="@+id/seekBar1"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/top_bg_color" />
+
+    <include layout="@layout/sleep_chatr_base"></include>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="horizontal" />
+
+</LinearLayout>

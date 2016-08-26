@@ -1,0 +1,124 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_left_menu"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="150dp" />
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/menu_photo"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_gravity="center_horizontal"
+        fresco:actualImageScaleType="focusCrop"
+        fresco:fadeDuration="300"
+        fresco:failureImage="@drawable/face"
+        fresco:failureImageScaleType="centerInside"
+        fresco:placeholderImage="@drawable/face"
+        fresco:placeholderImageScaleType="centerCrop"
+        fresco:roundAsCircle="true" />
+
+    <TextView
+        android:id="@+id/menu_name"
+        style="@style/white16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="13dp" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="28dp"
+        android:background="#808080" />
+
+    <TextView
+        android:id="@+id/menu_download"
+        style="@style/white18"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/menu_item_bg"
+        android:drawableLeft="@drawable/menu_icon_down"
+        android:drawablePadding="10dp"
+        android:drawableRight="@drawable/icon_enter"
+        android:gravity="center_vertical"
+        android:paddingLeft="28dp"
+        android:paddingRight="36dp"
+        android:text="@string/download_manager" />
+
+    <TextView
+        android:id="@+id/menu_game"
+        style="@style/white18"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/menu_item_bg"
+        android:drawableLeft="@drawable/menu_icon_mygame"
+        android:drawablePadding="10dp"
+        android:drawableRight="@drawable/icon_enter"
+        android:gravity="center_vertical"
+        android:paddingLeft="28dp"
+        android:paddingRight="36dp"
+        android:text="@string/my_game" />
+
+    <TextView
+        android:id="@+id/menu_notice"
+        style="@style/white18"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/menu_item_bg"
+        android:drawableLeft="@drawable/menu_icon_message"
+        android:drawablePadding="10dp"
+        android:drawableRight="@drawable/icon_enter"
+        android:gravity="center_vertical"
+        android:paddingLeft="28dp"
+        android:paddingRight="36dp"
+        android:text="@string/notice" />
+
+    <TextView
+        android:id="@+id/menu_feedback"
+        style="@style/white18"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/menu_item_bg"
+        android:drawableLeft="@drawable/menu_icon_feedback"
+        android:drawablePadding="10dp"
+        android:drawableRight="@drawable/icon_enter"
+        android:gravity="center_vertical"
+        android:paddingLeft="28dp"
+        android:paddingRight="36dp"
+        android:text="@string/feedback" />
+
+    <TextView
+        android:id="@+id/menu_setting"
+        style="@style/white18"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/menu_item_bg"
+        android:drawableLeft="@drawable/menu_icon_setting"
+        android:drawablePadding="10dp"
+        android:drawableRight="@drawable/icon_enter"
+        android:gravity="center_vertical"
+        android:paddingLeft="28dp"
+        android:paddingRight="36dp"
+        android:text="@string/setting" />
+
+
+    <TextView
+        android:id="@+id/menu_about"
+        style="@style/white18"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/menu_item_bg"
+        android:drawableLeft="@drawable/menu_icon_about"
+        android:drawablePadding="10dp"
+        android:drawableRight="@drawable/icon_enter"
+        android:gravity="center_vertical"
+        android:paddingLeft="28dp"
+        android:paddingRight="36dp"
+        android:text="@string/about" />
+
+</LinearLayout>

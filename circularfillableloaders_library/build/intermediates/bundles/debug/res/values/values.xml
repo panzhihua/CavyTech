@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CircularFillableLoaders"><attr format="integer" name="cfl_progress"/><attr format="boolean" name="cfl_border"/><attr format="dimension" name="cfl_border_width"/><attr format="color" name="cfl_wave_color"/><attr format="float" name="cfl_wave_amplitude"/></declare-styleable>
+</resources>

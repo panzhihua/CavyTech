@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    android:background="@color/com_titlebar2">
+
+    <include layout="@layout/toobar"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <ImageView
+                android:id="@+id/iv_foot"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@drawable/notice_bg" />
+
+            <ListView
+                android:divider="@color/white"
+                android:background="@color/white"
+                android:id="@+id/ls_know_clock"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+            <ImageView
+                android:id="@+id/iv_head"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@drawable/notice1_bg" />
+
+            <TextView
+                android:id="@+id/tv_head"
+                android:layout_marginTop="28dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/com_titlebar2"
+                android:gravity="center"
+                android:text="@string/notice_colock"
+                android:textColor="#ffffff"
+                android:textSize="12sp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/no_colock_bg"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="暂无闹钟"/>
+        </LinearLayout>
+
+    </FrameLayout>
+
+</LinearLayout>

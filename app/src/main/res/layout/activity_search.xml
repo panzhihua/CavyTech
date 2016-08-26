@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:clipToPadding="false"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@color/com_titlebar">
+        <ImageButton
+            android:id="@+id/back"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:background="@null"
+            android:padding="7dp"
+            android:cropToPadding="true"
+            android:adjustViewBounds="true"
+            android:src="@drawable/icon_back" />
+
+
+        <EditText
+            android:id="@+id/search_context"
+            android:layout_width="fill_parent"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/back"
+            android:textColor="@color/white"
+            android:layout_toLeftOf="@+id/home_page_search"
+            android:background="@drawable/search_edittext_bg"
+            android:hint="@string/search_game"
+            android:paddingLeft="10dp"
+            android:imeOptions="actionSearch"
+            android:singleLine="true"
+            android:textSize="16sp"
+            android:textCursorDrawable="@drawable/cursor"
+            android:textColorHint="@color/search_hint_color" />
+
+
+        <ImageView
+            android:id="@+id/home_page_search"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:adjustViewBounds="true"
+            android:background="@null"
+            android:padding="7dp"
+            android:cropToPadding="true"
+            android:src="@drawable/icon_search" />
+    </RelativeLayout>
+
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:ptr="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/main_pull_refresh_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:cacheColorHint="@color/transparent"
+        android:divider="@null"
+        android:fadingEdge="none"
+        android:fastScrollEnabled="false"
+        android:footerDividersEnabled="false"
+        android:headerDividersEnabled="false"
+        android:listSelector="@color/transparent"
+        android:overScrollMode="never"
+        android:smoothScrollbar="true"
+        ptr:ptrAnimationStyle="flip"
+        ptr:ptrMode="both" />
+    <include layout="@layout/public_empty_text"/>
+</LinearLayout>

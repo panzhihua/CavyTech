@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.cavytech.wear2"
+    android:versionCode="2"
+    android:versionName="1.0.1">
+    <uses-sdk android:minSdkVersion="4"></uses-sdk>
+    <uses-permission android:name="android.permission.WAKE_LOCK" /> <!-- 常亮 -->
+    <uses-permission android:name="android.permission.RESTART_PACKAGES"/>
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+     <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BAIDU_LOCATION_SERVICE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!--<uses-permission android:name="android.permission.WRITE_SETTINGS" />-->
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.microphone" />
+
+    <application xmlns:tools="http://schemas.android.com/tools"
+        android:name=".application.CommonApplication"
+        android:allowBackup="true"
+        android:configChanges="orientation|keyboard|locale|layoutDirection|screenSize"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name_wear"
+        android:screenOrientation="portrait"
+        android:theme="@style/ActionBarTheme"
+        tools:replace="android:label">
+        <activity
+            android:name="com.cavytech.wear2.activity.SplashActivity"
+            android:theme="@style/AppActionTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+        <activity
+            android:name=".activity.TestActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".activity.LoginActivity"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:name=".activity.GuideActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:name=".activity.RegisterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.BirthDayAcivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ForgetPwdActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.SexActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.HomePager"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppblueActionBar" />
+        <activity
+            android:name=".activity.HeightActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.WeightActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".slidingmenu.FriendActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.AccountInfoActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.TargetActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.BandSettingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.BandConnectActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ContaxtSearchActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.SearchInaccurateActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.NewFriendActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.VerficatonActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.HelpFeedBackActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.RecommandActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/StyledIndicators" />
+        <activity
+            android:name=".fragment.PublicUserInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.WebActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.FeedbackActivity"
+            android:screenOrientation="portrait" />
+
+         <activity
+            android:name=".activity.PermissionsActivity"
+            android:screenOrientation="portrait" />
+
+      <!--  <receiver
+            android:name="cn.jpush.android.service.AlarmReceiver"
+            android:exported="false" />-->
+
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote">
+            <intent-filter>
+                <action android:name="com.baidu.location.service_v2.2" />
+            </intent-filter>
+        </service>
+        <!-- jpush -->
+        <!-- Required SDK核心功能 -->
+        <!--<activity
+            android:name="cn.jpush.android.ui.PushActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:exported="false"
+            android:theme="@android:style/Theme.NoTitleBar">
+            <intent-filter>
+                <action android:name="cn.jpush.android.ui.PushActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.tunshu" />
+            </intent-filter>
+        </activity>-->
+        <!-- Required  SDK核心功能 -->
+        <!--<service
+            android:name="cn.jpush.android.service.DownloadService"
+            android:enabled="true"
+            android:exported="false" />-->
+        <!-- Required SDK 核心功能 -->
+        <!-- 可配置android:process参数将PushService放在其他进程中 -->
+        <!--<service
+            android:name="cn.jpush.android.service.PushService"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTER" />
+                <action android:name="cn.jpush.android.intent.REPORT" />
+                <action android:name="cn.jpush.android.intent.PushService" />
+                <action android:name="cn.jpush.android.intent.PUSH_TIME" />
+            </intent-filter>
+        </service>-->
+        <!-- since 1.8.0 option 可选项。用于同一设备中不同应用的JPush服务相互拉起的功能。 -->
+        <!-- 若不启用该功能可删除该组件，将不拉起其他应用也不能被其他应用拉起 -->
+        <!-- Required SDK核心功能 -->
+        <!--<receiver
+            android:name="cn.jpush.android.service.PushReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter android:priority="1000">
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY" /> &lt;!&ndash; Required  显示通知栏 &ndash;&gt;
+                <category android:name="com.tunshu" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+            &lt;!&ndash; Optional &ndash;&gt;
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+            <intent-filter android:priority="1000">
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+
+                <category android:name="android.intent.category.HOME" />
+            </intent-filter>
+        </receiver>-->
+        <!-- Required SDK核心功能 -->
+        <!--<receiver
+            android:name="cn.jpush.android.service.AlarmReceiver"
+            android:exported="false" />-->
+        <!-- User defined.  For test only  用户自定义的广播接收器 -->
+        <!--<receiver
+            android:name=".service.MyReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTRATION" /> &lt;!&ndash; Required  用户注册SDK的intent &ndash;&gt;
+                <action android:name="cn.jpush.android.intent.UNREGISTRATION" />
+                <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED" /> &lt;!&ndash; Required  用户接收SDK消息的intent &ndash;&gt;
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" /> &lt;!&ndash; Required  用户接收SDK通知栏信息的intent &ndash;&gt;
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" /> &lt;!&ndash; Required  用户打开自定义通知栏的intent &ndash;&gt;
+                <action android:name="cn.jpush.android.intent.ACTION_RICHPUSH_CALLBACK" /> &lt;!&ndash; Optional 用户接受Rich Push Javascript 回调函数的intent &ndash;&gt;
+                <action android:name="cn.jpush.android.intent.CONNECTION" /> &lt;!&ndash; 接收网络变化 连接/断开 since 1.6.3 &ndash;&gt;
+                <category android:name="com.tunshu" />
+
+                <intent-filter android:priority="1000">
+                    <action android:name="android.intent.action.BOOT_COMPLETED" />
+
+                    <category android:name="android.intent.category.HOME" />
+                </intent-filter>
+            </intent-filter>
+        </receiver>-->
+
+        <!-- Required  . Enable it you can get statistics data with channel -->
+    <!--    <meta-data
+            android:name="JPUSH_CHANNEL"
+            android:value="developer-default" />
+        <meta-data
+            android:name="JPUSH_APPKEY"
+            android:value="d9af5e152cd24ed42778cd1e" /> &lt;!&ndash; </>值来自开发者平台取得的AppKey &ndash;&gt;-->
+        <!-- jpush end -->
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="34mQlpiuXAsX1SUUGctFbkGK" />
+        <!-- <activity android:name=".activity.HomePager"></activity> -->
+
+        <activity
+            android:name=".slidingmenu.KnowClockActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.KnowClickDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.picker"/>
+        <activity
+            android:name=".slidingmenu.NoticeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.NoActionBar"/>
+        <activity
+            android:name=".activity.SleepActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/TabNoTableActionBar" />
+        <activity
+            android:name=".slidingmenu.PkActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.InvitationDuelActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.RivalSelectActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.SelectDuelActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.PkAtateActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ApptitleActionBar" />
+        <activity
+            android:name=".activity.PkHelpActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.PkStateDaiHuiYingActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyNoactionBaaMinwidth" />
+        <activity
+            android:name=".activity.PkStateDaijingxinActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyNoactionBaaMinwidth" />
+        <activity
+            android:name=".activity.ChengjiuActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyNoactionBaaMinwidth" />
+        <activity
+            android:name=".activity.PkStateSuccessYingActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyNoactionBaaMinwidth" />
+        <activity
+            android:name=".activity.SingleSetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ingleDetailMoshengActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".slidingmenu.AboutActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.StepsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/TabNoTableActionBar" />
+        <!-- <activity android:name=".activity.KnowClickDetailChangeActivity"></activity> -->
+        <activity
+            android:name="com.basecore.util.crop.CropImageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.BeizhuActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.SingleSetailsMoShengActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.OtherActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.SecurityActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.WebViewActivity"
+            android:screenOrientation="portrait" />
+
+        <!--
+        <service android:name="com.cavytech.wear2.application.PhoneService">
+            <intent-filter>
+                <action android:name="com.cavytech.wear2.application.PhoneService"/>
+            </intent-filter>
+        </service>
+        -->
+        <activity
+            android:name=".activity.AchieveAlertDialogActivity"
+            android:theme="@style/MyNoactionBaaMinwidth" />
+        <activity
+            android:name="com.mob.tools.MobUIShell"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <intent-filter>
+                <data android:scheme="tencent100371282" />
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <!-- 调用新浪原生SDK，需要注册的回调activity -->
+            <intent-filter>
+                <action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- 微信分享回调 -->
+        <activity
+            android:name="com.cavytech.com.cavytech.wear2.wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity android:name=".test.test" />
+        <activity
+            android:name="net.sourceforge.opencamera.MainActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.media.action.IMAGE_CAPTURE" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.media.action.IMAGE_CAPTURE_SECURE" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.media.action.STILL_IMAGE_CAMERA" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.media.action.STILL_IMAGE_CAMERA_SECURE" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.media.action.VIDEO_CAMERA" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.media.action.VIDEO_CAPTURE" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.ProgressbarAcitvity"
+            android:theme="@style/MyNoactionBaaMinwidth" />
+        <activity
+            android:name=".activity.AchieveActivity"
+            android:theme="@style/MyNoactionBaaMinwidthOnTouch" />
+
+        <!-- 注册自定义静态广播接收器 -->
+        <receiver android:name=".service.StatusReceiver">
+            <intent-filter>
+                <action android:name="com.cavytech.wear2.service.StatusReceiver" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".activity.FunctionActivity"></activity>
+
+        <meta-data android:value="57a98f6ee0f55ab74000129e" android:name="UMENG_APPKEY"></meta-data>
+
+        <meta-data android:value="yyb" android:name="UMENG_CHANNEL"/>
+
+    </application>
+
+</manifest>

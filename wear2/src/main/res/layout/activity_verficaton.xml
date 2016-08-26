@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.cavytech.wear2.slidingmenu.FriendActivity"
+    android:fitsSystemWindows="true"
+    android:background="@color/com_titlebar2"
+    >
+
+    <include layout="@layout/toobar"/>
+
+    <EditText
+        android:id="@+id/et_send_test"
+        android:layout_marginTop="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:maxLength="10"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:hint="@string/yanzheng"
+        android:textSize="14dp"
+        android:textColor="@color/black"
+        android:paddingLeft="16dp"
+        android:textColorHint="#4d000000"
+        android:background="@color/white"
+        />
+
+    <Button
+        android:textColor="#b46e00"
+        android:background="@drawable/btn_send_test"
+        android:id="@+id/send_test"
+        android:layout_marginTop="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:textSize="18dp"
+        android:text="@string/send_test"/>
+
+</LinearLayout>

@@ -1,0 +1,79 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_swipe_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="66dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:visibility="invisible"
+            android:id="@+id/tv_count_head"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="A"
+            android:textColor="#b3000000"
+            android:textSize="16sp" />
+
+
+        <ImageView
+            android:id="@+id/iv_nearby_icon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="12dp"
+            android:src="@drawable/head_boy_normal" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/tv_swipe_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:layout_toEndOf="@+id/iv_icon"
+            android:text="name">
+
+            <TextView
+                android:id="@+id/tv_nearby_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="name"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/tv_nearby_juli"
+                android:layout_marginTop="7dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:text="100米以内"
+                android:textColor="@color/pull_refrsh_list_name_text"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/ll_nearby_add"
+        android:layout_width="66dp"
+        android:layout_height="28dp"
+        android:orientation="horizontal"
+        android:background="@drawable/pull_refrsh_item_button_drawable"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="20dp"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="#ffffff"
+            android:text="@string/pull_refrsh__list_button_text"/>
+    </LinearLayout>
+</RelativeLayout>

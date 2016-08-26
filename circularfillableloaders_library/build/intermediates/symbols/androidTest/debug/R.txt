@@ -1,0 +1,11 @@
+int attr cfl_border 0x7f010001
+int attr cfl_border_width 0x7f010002
+int attr cfl_progress 0x7f010000
+int attr cfl_wave_amplitude 0x7f010004
+int attr cfl_wave_color 0x7f010003
+int[] styleable CircularFillableLoaders { 0x7f010000, 0x7f010001, 0x7f010002, 0x7f010003, 0x7f010004 }
+int styleable CircularFillableLoaders_cfl_border 1
+int styleable CircularFillableLoaders_cfl_border_width 2
+int styleable CircularFillableLoaders_cfl_progress 0
+int styleable CircularFillableLoaders_cfl_wave_amplitude 4
+int styleable CircularFillableLoaders_cfl_wave_color 3

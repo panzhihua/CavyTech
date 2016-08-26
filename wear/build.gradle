@@ -1,0 +1,60 @@
+apply plugin: 'com.android.application'
+
+android {
+    signingConfigs {
+        debug {
+            keyAlias 'cavytech'
+            keyPassword 'cavytech'
+            storeFile file('/Users/longjining/Desktop/project/CaveyAppAndroid/CaveyAppAndroid/trunk/CavyTech/wear/cavytechwear')
+            storePassword 'cavytech'
+        }
+
+        release{
+            keyAlias 'cavytech'
+            keyPassword 'cavytech'
+            storeFile file('/Users/longjining/Desktop/project/CaveyAppAndroid/CaveyAppAndroid/trunk/CavyTech/wear/cavytechwear')
+            storePassword 'cavytech'
+        }
+    }
+    compileSdkVersion 22
+    buildToolsVersion "22.0.1"
+    defaultConfig {
+        applicationId "com.cavytech.wear"
+        minSdkVersion 8
+        targetSdkVersion 22
+        versionCode 7
+        versionName "1.7"
+        buildConfigField "boolean", "LOG_DEBUG", "true"
+    }
+    lintOptions {
+        abortOnError false
+        // 防止在发布的时候出现因MissingTranslation导致Build Failed!
+        disable 'MissingTranslation'
+    }
+    buildTypes {
+        release {
+            signingConfig signingConfigs.release
+            minifyEnabled false
+            buildConfigField "boolean", "LOG_DEBUG", "false"
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            applicationVariants.all { variant ->
+                variant.outputs.each { output ->
+                    def outputFile = output.outputFile
+                    if (outputFile != null && outputFile.name.endsWith('.apk')) {
+                        def fileName = "tunshuwear_v${defaultConfig.versionName}.apk"
+                        output.outputFile = new File(outputFile.parent, fileName)
+                    }
+                }
+            }
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile project(':async_http_client')
+    compile project(':BaseCore')
+    compile files('libs/BaiduLBS_Android.jar')
+    compile 'com.android.support:appcompat-v7:22.1.1'
+    compile 'com.android.support:support-v4:22.1.1'
+}

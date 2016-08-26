@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.android.percent.support.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/setting_green_background"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true">
+    <com.zhy.android.percent.support.PercentLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/setting_green_background"
+        android:clipToPadding="true"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical"
+        android:weightSum="1">
+
+        <include layout="@layout/activity_guidsetting_top"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            app:layout_heightPercent="25%w"/>
+        <com.zhy.android.percent.support.PercentRelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_marginLeftPercent="4%w"
+            app:layout_marginRightPercent="4%w"
+            android:layout_weight="1">
+
+            <com.zhy.android.percent.support.PercentLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/corners_bg"
+                android:orientation="vertical">
+            </com.zhy.android.percent.support.PercentLinearLayout>
+
+            <com.zhy.android.percent.support.PercentLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:id="@+id/body"
+                android:weightSum="100">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:orientation="vertical"
+                    android:layout_weight="20">
+                    <com.zhy.android.percent.support.PercentRelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <TextView
+                            android:textSize="16sp"
+                            android:id="@+id/subtitle_text"
+                            android:textColor="@color/smalltitle_tips_color"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerHorizontal="true"
+                            android:text="@string/openwear"
+                            android:gravity="center" />
+                        <TextView
+                            android:id="@+id/small_subtitle_text"
+                            android:textSize="12sp"
+                            android:textColor="@color/smalltitle_tips_color2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerHorizontal="true"
+                            android:text="@string/openwear_tips1"
+                            android:gravity="center|bottom"
+                            android:paddingBottom="5dp" />
+                    </com.zhy.android.percent.support.PercentRelativeLayout>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:orientation="vertical"
+                    android:layout_weight="60">
+
+                    <com.zhy.android.percent.support.PercentRelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/band_open_img"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/banner_open"/>
+                        <com.cavytech.widget.gif.GifView
+                            android:id="@+id/connetting_gif_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:visibility="gone"/>
+                    </com.zhy.android.percent.support.PercentRelativeLayout>
+
+                </LinearLayout>
+                <TextView
+                    android:id="@+id/small_tips_text"
+                    android:textSize="12sp"
+                    android:textColor="@color/smalltitle_tips_color2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/openwear_tips2"
+                    android:gravity="center|bottom"
+                    android:paddingBottom="5dp" />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="20" />
+
+            </com.zhy.android.percent.support.PercentLinearLayout>
+
+        </com.zhy.android.percent.support.PercentRelativeLayout>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            app:layout_heightPercent="28%w" />
+    </com.zhy.android.percent.support.PercentLinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:id="@+id/layout_next"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:layout_marginBottom="68dp">
+
+        <ImageButton
+            android:id="@+id/img_next"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:background="@drawable/button_next"
+            android:clickable="true"
+            android:scaleType="centerInside"
+            android:layout_gravity="center">
+        </ImageButton>
+    </LinearLayout>
+</com.zhy.android.percent.support.PercentRelativeLayout>

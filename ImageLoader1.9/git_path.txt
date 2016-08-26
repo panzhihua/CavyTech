@@ -1,0 +1,1 @@
+https://coding.net/webber/image_loader_lib.git

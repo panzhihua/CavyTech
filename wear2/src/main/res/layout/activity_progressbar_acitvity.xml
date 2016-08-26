@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    tools:context="com.cavytech.wear2.activity.ProgressbarAcitvity"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:gravity="center">
+
+    <TextView
+        android:id="@+id/tv_progress"
+        android:textColor="#ff9138"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="等待升级中"
+        android:textSize="16sp"/>
+
+    <ProgressBar
+        android:layout_marginTop="12dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:id="@+id/progressBar"
+        android:layout_width="match_parent"
+        android:layout_height="6dp"
+        android:max="100"
+        android:progress="0"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:progressDrawable="@drawable/progress_horizontal"/>
+
+    <TextView
+        android:textColor="#b8b8b8"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="请勿退出应用或者关闭手环"/>
+</LinearLayout>

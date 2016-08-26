@@ -1,0 +1,449 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppBaseTheme" parent="android:Theme.Light" />
+
+    <!--<style name="AppTheme" parent="AppBaseTheme">-->
+    <!--<item name="android:windowNoTitle">true</item>-->
+    <!--</style>-->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">false</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorControlNormal">@color/colorControlNormal</item>
+        <item name="colorControlActivated">@color/colorControlActivated</item>
+        <item name="colorSwitchThumbNormal">@color/colorSwitchThumbNormal</item>
+    </style>
+
+    <style name="AppActionTheme" parent="AppBaseTheme">
+        <item name="android:windowBackground">@drawable/splash_bg</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorControlNormal">@color/colorControlNormal</item>
+        <item name="colorControlActivated">@color/colorControlActivated</item>
+        <item name="colorSwitchThumbNormal">@color/colorSwitchThumbNormal</item>
+    </style>
+
+    <style name="dividerTheme1">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">0.5dp</item>
+        <item name="android:background">@color/dividerline1</item>
+    </style>
+
+    <style name="dividerTheme2">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">0.5dp</item>
+        <item name="android:background">@color/dividerline2</item>
+    </style>
+
+    <style name="hui10">
+        <item name="android:textSize">10sp</item>
+        <item name="android:textColor">#b3b2b2</item>
+    </style>
+
+    <style name="hui11">
+        <item name="android:textSize">11sp</item>
+        <item name="android:textColor">@color/text_hui</item>
+    </style>
+
+    <style name="hui12">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/text_hui</item>
+    </style>
+
+    <style name="hui13">
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">@color/text_hui</item>
+    </style>
+
+    <style name="hui14">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/text_hui</item>
+    </style>
+
+    <style name="hui15">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/text_hui</item>
+    </style>
+
+    <style name="hui16">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/text_hui</item>
+    </style>
+
+    <style name="hui18">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/text_hui</item>
+    </style>
+
+    <style name="hui20">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/text_hui</item>
+    </style>
+
+    <style name="black12">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">#555555</item>
+    </style>
+
+    <style name="black13">
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">#555555</item>
+    </style>
+
+    <style name="black14">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#555555</item>
+    </style>
+
+    <style name="black15">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">#414141</item>
+    </style>
+
+    <style name="black16">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">#555555</item>
+    </style>
+
+    <style name="black17">
+        <item name="android:textSize">17sp</item>
+        <item name="android:textColor">#555555</item>
+    </style>
+
+    <style name="black18">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">#555555</item>
+    </style>
+
+    <style name="black20">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">#555555</item>
+    </style>
+
+    <style name="black21">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">#868686</item>
+    </style>
+
+    <style name="white12">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">#ffffff</item>
+    </style>
+
+    <style name="white13">
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">#ffffff</item>
+    </style>
+
+    <style name="white14">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#ffffff</item>
+    </style>
+    <style name="white15">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">#ffffff</item>
+    </style>
+
+    <style name="white16">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">#ffffff</item>
+    </style>
+
+    <style name="white17">
+        <item name="android:textSize">17sp</item>
+        <item name="android:textColor">#ffffff</item>
+    </style>
+
+    <style name="white18">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">#ffffff</item>
+    </style>
+
+    <style name="white19">
+        <item name="android:textSize">19sp</item>
+        <item name="android:textColor">#ffffff</item>
+    </style>
+
+    <style name="white20">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">#ffffff</item>
+    </style>
+
+    <style name="blue16">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">#00a4dc</item>
+    </style>
+
+    <style name="blue18">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">#00a4dc</item>
+    </style>
+
+    <style name="green12">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">#55e83f</item>
+    </style>
+    <style name="green13">
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">#55e83f</item>
+    </style>
+
+    <style name="green16">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">#55e83f</item>
+    </style>
+
+    <style name="green18">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">#55e83f</item>
+    </style>
+
+    <style name="red16">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/red</item>
+    </style>
+
+    <style name="darkgray18">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">#666666</item>
+    </style>
+
+    <style name="shareDilaogStyle" parent="android:style/Theme.Dialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+    <!--white-->
+    <style name="download_button_text_0_1">
+        <item name="android:textColor">@drawable/bt_text_color_white</item>
+    </style>
+
+    <style name="download_button_text_0_2">
+        <item name="android:textColor">@drawable/bt_text_color_hui</item>
+    </style>
+
+    <style name="download_button_text_0_3">
+        <item name="android:textColor">@color/white</item>
+    </style>
+    <!--orange-->
+    <style name="download_button_text_1_1">
+        <item name="android:textColor">@drawable/special_down_text_1_1</item>
+    </style>
+
+    <style name="download_button_text_1_2">
+        <item name="android:textColor">@drawable/special_down_text_1_2</item>
+    </style>
+
+    <style name="download_button_text_1_3">
+        <item name="android:textColor">@drawable/special_down_text_1_3</item>
+    </style>
+    <!--black-->
+    <style name="download_button_text_2_1">
+        <item name="android:textColor">@drawable/special_down_text_2_1</item>
+    </style>
+
+    <style name="download_button_text_2_2">
+        <item name="android:textColor">@drawable/special_down_text_2_2</item>
+    </style>
+
+    <style name="download_button_text_2_3">
+        <item name="android:textColor">@drawable/special_down_text_2_3</item>
+    </style>
+    <!--purple-->
+    <style name="download_button_text_3_1">
+        <item name="android:textColor">@drawable/special_down_text_3_1</item>
+    </style>
+
+    <style name="download_button_text_3_2">
+        <item name="android:textColor">@drawable/special_down_text_3_2</item>
+    </style>
+
+    <style name="download_button_text_3_3">
+        <item name="android:textColor">@drawable/special_down_text_3_3</item>
+    </style>
+    <!--blue-->
+    <style name="download_button_text_4_1">
+        <item name="android:textColor">@drawable/special_down_text_4_1</item>
+    </style>
+
+    <style name="download_button_text_4_2">
+        <item name="android:textColor">@drawable/special_down_text_4_2</item>
+    </style>
+    <style name="download_button_text_4_3">
+        <item name="android:textColor">@drawable/special_down_text_4_3</item>
+    </style>
+    <!--red-->
+    <style name="download_button_text_5_1">
+        <item name="android:textColor">@drawable/special_down_text_5_1</item>
+    </style>
+
+    <style name="download_button_text_5_2">
+        <item name="android:textColor">@drawable/special_down_text_5_2</item>
+    </style>
+    <style name="download_button_text_5_3">
+        <item name="android:textColor">@drawable/special_down_text_5_3</item>
+    </style>
+    <!--green-->
+    <style name="download_button_text_6_1">
+        <item name="android:textColor">@drawable/special_down_text_6_1</item>
+    </style>
+
+    <style name="download_button_text_6_2">
+        <item name="android:textColor">@drawable/special_down_text_6_2</item>
+    </style>
+    <style name="download_button_text_6_3">
+        <item name="android:textColor">@drawable/special_down_text_6_3</item>
+    </style>
+    <!--yellow&&white-->
+    <style name="download_button_text_7_1">
+        <item name="android:textColor">@drawable/special_down_text_7_1</item>
+    </style>
+
+    <style name="download_button_text_7_2">
+        <item name="android:textColor">@drawable/special_down_text_7_2</item>
+    </style>
+    <style name="download_button_text_7_3">
+        <item name="android:textColor">@drawable/special_down_text_7_3</item>
+    </style>
+    <!--white-->
+    <style name="Special_Theme_0">
+        <item name="special_bg">@color/special_bg_0</item>
+        <item name="special_top_cover">@drawable/bannre_mengban_white</item>
+        <item name="special_item_bg">@drawable/special_item_bg_0</item>
+        <item name="special_item_divider">@color/special_item_divider_0</item>
+        <item name="special_item_title_color">@color/special_item_title_color_0</item>
+        <item name="special_item_content_color">@color/special_item_content_color_0</item>
+        <item name="special_item_intro_title_color">@color/special_item_intro_title_color_0</item>
+        <item name="special_button_text_1">@style/download_button_text_0_1</item>
+        <item name="special_button_bg_1">@drawable/down_button_white_padding</item>
+        <item name="special_button_text_2">@style/download_button_text_0_2</item>
+        <item name="special_button_bg_2">@drawable/down_pause_padding</item>
+        <item name="special_button_text_3">@style/download_button_text_0_3</item>
+        <item name="special_button_bg_3">@drawable/down_button_blue_padding</item>
+    </style>
+    <!--orange-->
+    <style name="Special_Theme_1">
+        <item name="special_bg">@color/special_bg_1</item>
+        <item name="special_top_cover">@drawable/bannre_mengban_orange</item>
+        <item name="special_item_bg">@drawable/special_item_bg_1</item>
+        <item name="special_item_divider">@color/special_item_divider_1</item>
+        <item name="special_item_title_color">@color/special_item_title_color_1</item>
+        <item name="special_item_content_color">@color/special_item_content_color_1</item>
+        <item name="special_item_intro_title_color">@color/special_item_intro_title_color_1</item>
+        <item name="special_button_text_1">@style/download_button_text_1_1</item>
+        <item name="special_button_bg_1">@drawable/special_down_button_1_1</item>
+        <item name="special_button_text_2">@style/download_button_text_1_2</item>
+        <item name="special_button_bg_2">@drawable/special_down_button_1_2</item>
+        <item name="special_button_text_3">@style/download_button_text_1_3</item>
+        <item name="special_button_bg_3">@drawable/special_down_button_1_3</item>
+    </style>
+    <!--black-->
+    <style name="Special_Theme_2">
+        <item name="special_bg">@color/special_bg_2</item>
+        <item name="special_top_cover">@drawable/bannre_mengban_black</item>
+        <item name="special_item_bg">@drawable/special_item_bg_2</item>
+        <item name="special_item_divider">@color/special_item_divider_2</item>
+        <item name="special_item_title_color">@color/special_item_title_color_2</item>
+        <item name="special_item_content_color">@color/special_item_content_color_2</item>
+        <item name="special_item_intro_title_color">@color/special_item_intro_title_color_2</item>
+        <item name="special_button_text_1">@style/download_button_text_2_1</item>
+        <item name="special_button_bg_1">@drawable/special_down_button_2_1</item>
+        <item name="special_button_text_2">@style/download_button_text_2_2</item>
+        <item name="special_button_bg_2">@drawable/special_down_button_2_2</item>
+        <item name="special_button_text_3">@style/download_button_text_2_3</item>
+        <item name="special_button_bg_3">@drawable/special_down_button_2_3</item>
+    </style>
+    <!--purple-->
+    <style name="Special_Theme_3">
+        <item name="special_bg">@color/special_bg_3</item>
+        <item name="special_top_cover">@drawable/bannre_mengban_purple</item>
+        <item name="special_item_bg">@drawable/special_item_bg_3</item>
+        <item name="special_item_divider">@color/special_item_divider_3</item>
+        <item name="special_item_title_color">@color/special_item_title_color_3</item>
+        <item name="special_item_content_color">@color/special_item_content_color_3</item>
+        <item name="special_item_intro_title_color">@color/special_item_intro_title_color_3</item>
+        <item name="special_button_text_1">@style/download_button_text_3_1</item>
+        <item name="special_button_bg_1">@drawable/special_down_button_3_1</item>
+        <item name="special_button_text_2">@style/download_button_text_3_2</item>
+        <item name="special_button_bg_2">@drawable/special_down_button_3_2</item>
+        <item name="special_button_text_3">@style/download_button_text_3_3</item>
+        <item name="special_button_bg_3">@drawable/special_down_button_3_3</item>
+    </style>
+    <!--blue-->
+    <style name="Special_Theme_4">
+        <item name="special_bg">@color/special_bg_4</item>
+        <item name="special_top_cover">@drawable/bannre_mengban_blue</item>
+        <item name="special_item_bg">@drawable/special_item_bg_4</item>
+        <item name="special_item_divider">@color/special_item_divider_4</item>
+        <item name="special_item_title_color">@color/special_item_title_color_4</item>
+        <item name="special_item_content_color">@color/special_item_content_color_4</item>
+        <item name="special_item_intro_title_color">@color/special_item_intro_title_color_4</item>
+        <item name="special_button_text_1">@style/download_button_text_4_1</item>
+        <item name="special_button_bg_1">@drawable/special_down_button_4_1</item>
+        <item name="special_button_text_2">@style/download_button_text_4_2</item>
+        <item name="special_button_bg_2">@drawable/special_down_button_4_2</item>
+        <item name="special_button_text_3">@style/download_button_text_4_3</item>
+        <item name="special_button_bg_3">@drawable/special_down_button_4_3</item>
+    </style>
+    <!--red-->
+    <style name="Special_Theme_5">
+        <item name="special_bg">@color/special_bg_5</item>
+        <item name="special_top_cover">@drawable/bannre_mengban_red</item>
+        <item name="special_item_bg">@drawable/special_item_bg_5</item>
+        <item name="special_item_divider">@color/special_item_divider_5</item>
+        <item name="special_item_title_color">@color/special_item_title_color_5</item>
+        <item name="special_item_content_color">@color/special_item_content_color_5</item>
+        <item name="special_item_intro_title_color">@color/special_item_intro_title_color_5</item>
+        <item name="special_button_text_1">@style/download_button_text_5_1</item>
+        <item name="special_button_bg_1">@drawable/special_down_button_5_1</item>
+        <item name="special_button_text_2">@style/download_button_text_5_2</item>
+        <item name="special_button_bg_2">@drawable/special_down_button_5_2</item>
+        <item name="special_button_text_3">@style/download_button_text_5_3</item>
+        <item name="special_button_bg_3">@drawable/special_down_button_5_3</item>
+    </style>
+    <!--green-->
+    <style name="Special_Theme_6">
+        <item name="special_bg">@color/special_bg_6</item>
+        <item name="special_top_cover">@drawable/bannre_mengban_green</item>
+        <item name="special_item_bg">@drawable/special_item_bg_6</item>
+        <item name="special_item_divider">@color/special_item_divider_6</item>
+        <item name="special_item_title_color">@color/special_item_title_color_6</item>
+        <item name="special_item_content_color">@color/special_item_content_color_6</item>
+        <item name="special_item_intro_title_color">@color/special_item_intro_title_color_6</item>
+        <item name="special_button_text_1">@style/download_button_text_6_1</item>
+        <item name="special_button_bg_1">@drawable/special_down_button_6_1</item>
+        <item name="special_button_text_2">@style/download_button_text_6_2</item>
+        <item name="special_button_bg_2">@drawable/special_down_button_6_2</item>
+        <item name="special_button_text_3">@style/download_button_text_6_3</item>
+        <item name="special_button_bg_3">@drawable/special_down_button_6_3</item>
+    </style>
+    <!--yellow&&white-->
+    <style name="Special_Theme_7">
+        <item name="special_bg">@color/special_bg_7</item>
+        <item name="special_top_cover">@drawable/bannre_mengban_white</item>
+        <item name="special_item_bg">@drawable/special_item_bg_7</item>
+        <item name="special_item_divider">@color/special_item_divider_7</item>
+        <item name="special_item_title_color">@color/special_item_title_color_7</item>
+        <item name="special_item_content_color">@color/special_item_content_color_7</item>
+        <item name="special_item_intro_title_color">@color/special_item_intro_title_color_7</item>
+        <item name="special_button_text_1">@style/download_button_text_7_1</item>
+        <item name="special_button_bg_1">@drawable/special_down_button_7_1</item>
+        <item name="special_button_text_2">@style/download_button_text_7_2</item>
+        <item name="special_button_bg_2">@drawable/special_down_button_7_2</item>
+        <item name="special_button_text_3">@style/download_button_text_7_3</item>
+        <item name="special_button_bg_3">@drawable/special_down_button_7_3</item>
+    </style>
+
+
+</resources>

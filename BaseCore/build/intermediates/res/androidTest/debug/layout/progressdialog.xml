@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal" >
+
+        <ProgressBar
+            android:id="@+id/oahprogressbar"
+            style="@android:style/Widget.ProgressBar.Large"
+            android:layout_width="48dip"
+            android:layout_height="48dip"
+            android:indeterminateDrawable="@drawable/progress_medium_holo" />
+        <TextView android:id="@+id/progressbar_text"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:gravity="center"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            />
+
+    </LinearLayout>
+
+</FrameLayout><!-- From: file:/Users/doudou/CaveyAppAndroid/trunk/CavyTech/BaseCore/res/layout/progressdialog.xml --><!-- From: file:/Users/doudou/CaveyAppAndroid/trunk/CavyTech/BaseCore/build/intermediates/bundles/debug/res/layout/progressdialog.xml -->

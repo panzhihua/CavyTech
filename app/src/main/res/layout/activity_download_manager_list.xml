@@ -1,0 +1,29 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:fitsSystemWindows="true"
+    android:clipToPadding="false"
+    android:background="@color/background"
+     >
+
+    <include
+        android:id="@+id/title_layout"
+        layout="@layout/public_title" />
+
+    <ListView
+        android:id="@+id/example_lv_list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/title_layout"
+        android:divider="@null"
+        android:headerDividersEnabled="true"
+        android:fadingEdge="none" />
+
+    <include
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        layout="@layout/public_empty_text" />
+
+</RelativeLayout>

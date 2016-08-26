@@ -1,0 +1,160 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:clipToPadding="false"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/main_title"
+        layout="@layout/public_title" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@color/about_logo_bg"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_version"
+            style="@style/white17"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="27dp"
+            android:drawablePadding="5dp"
+            android:drawableTop="@drawable/about_logo"
+            android:gravity="center" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="55dp"
+                android:clickable="true">
+
+                <TextView
+                    style="@style/black16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:text="@string/about_item_title1" />
+
+                <TextView
+                    android:id="@+id/setting_version_num"
+                    style="@style/hui14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dp"
+                    android:text="@string/about_item_subtitle1" />
+            </RelativeLayout>
+
+            <View
+                style="@style/dividerTheme1"
+                android:layout_marginLeft="21dp"
+                android:layout_marginRight="21dp" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="55dp"
+                android:clickable="true">
+
+                <TextView
+                    style="@style/black16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:text="@string/about_item_title2" />
+
+                <TextView
+                    style="@style/hui14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dp"
+                    android:text="@string/about_item_subtitle2" />
+            </RelativeLayout>
+
+            <View
+                style="@style/dividerTheme1"
+                android:layout_marginLeft="21dp"
+                android:layout_marginRight="21dp" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="55dp"
+                android:clickable="true">
+
+                <TextView
+                    style="@style/black16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:text="@string/about_item_title3" />
+
+                <TextView
+                    style="@style/hui14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dp"
+                    android:text="@string/about_item_subtitle3" />
+            </RelativeLayout>
+
+            <View
+                style="@style/dividerTheme1"
+                android:layout_marginLeft="21dp"
+                android:layout_marginRight="21dp" />
+
+            <RelativeLayout
+                android:id="@+id/home_web"
+                android:layout_width="fill_parent"
+                android:layout_height="55dp"
+                android:background="@drawable/item_white_bg"
+                android:clickable="true">
+
+                <TextView
+                    style="@style/black16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:text="@string/about_item_title4" />
+
+                <TextView
+                    style="@style/hui14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dp"
+                    android:drawableRight="@drawable/ico_left_edit1" />
+
+            </RelativeLayout>
+
+            <View
+                style="@style/dividerTheme1"
+                android:layout_marginLeft="21dp"
+                android:layout_marginRight="21dp" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

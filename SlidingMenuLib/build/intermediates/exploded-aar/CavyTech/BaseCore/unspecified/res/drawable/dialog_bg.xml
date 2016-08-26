@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" >
+
+	<corners android:radius="4dp" />
+	<solid android:color="@color/dialog_bg" />
+</shape><!-- From: file:/C:/Users/LiBin/Desktop/新建文件夹%20(3)/CavyTech/BaseCore/res/drawable/dialog_bg.xml -->

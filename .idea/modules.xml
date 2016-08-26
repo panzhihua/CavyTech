@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/AndroidImageSlider/AndroidImageSlider.iml" filepath="$PROJECT_DIR$/AndroidImageSlider/AndroidImageSlider.iml" />
+      <module fileurl="file://$PROJECT_DIR$/BaseCore/BaseCore.iml" filepath="$PROJECT_DIR$/BaseCore/BaseCore.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CavyTech.iml" filepath="$PROJECT_DIR$/CavyTech.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ImageLoader1.9/ImageLoader1.9.iml" filepath="$PROJECT_DIR$/ImageLoader1.9/ImageLoader1.9.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MPChart_libary/MPChart_libary.iml" filepath="$PROJECT_DIR$/MPChart_libary/MPChart_libary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/NineOldAndroidsLibrary/NineOldAndroidsLibrary.iml" filepath="$PROJECT_DIR$/NineOldAndroidsLibrary/NineOldAndroidsLibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PhotoViewLibrary/PhotoViewLibrary.iml" filepath="$PROJECT_DIR$/PhotoViewLibrary/PhotoViewLibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SlidingMenuLib/SlidingMenuLib.iml" filepath="$PROJECT_DIR$/SlidingMenuLib/SlidingMenuLib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ViewPagerIndicator_library/ViewPagerIndicator_library.iml" filepath="$PROJECT_DIR$/ViewPagerIndicator_library/ViewPagerIndicator_library.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/async_http_client/async_http_client.iml" filepath="$PROJECT_DIR$/async_http_client/async_http_client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/circularfillableloaders_library/circularfillableloaders_library.iml" filepath="$PROJECT_DIR$/circularfillableloaders_library/circularfillableloaders_library.iml" />
+      <module fileurl="file://$PROJECT_DIR$/openCamera/openCamera.iml" filepath="$PROJECT_DIR$/openCamera/openCamera.iml" />
+      <module fileurl="file://$PROJECT_DIR$/percent-support-extends/percent-support-extends.iml" filepath="$PROJECT_DIR$/percent-support-extends/percent-support-extends.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pulltorefreshlibrary2.25/pulltorefreshlibrary2.25.iml" filepath="$PROJECT_DIR$/pulltorefreshlibrary2.25/pulltorefreshlibrary2.25.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sector_progress_view_library/sector_progress_view_library.iml" filepath="$PROJECT_DIR$/sector_progress_view_library/sector_progress_view_library.iml" />
+      <module fileurl="file://$PROJECT_DIR$/seekbar-compat/seekbar-compat.iml" filepath="$PROJECT_DIR$/seekbar-compat/seekbar-compat.iml" />
+      <module fileurl="file://$PROJECT_DIR$/swipe_menu_list_library/swipe_menu_list_library.iml" filepath="$PROJECT_DIR$/swipe_menu_list_library/swipe_menu_list_library.iml" />
+      <module fileurl="file://$PROJECT_DIR$/wear/wear.iml" filepath="$PROJECT_DIR$/wear/wear.iml" />
+      <module fileurl="file://$PROJECT_DIR$/wear2/wear2.iml" filepath="$PROJECT_DIR$/wear2/wear2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xutils_library/xutils_library.iml" filepath="$PROJECT_DIR$/xutils_library/xutils_library.iml" />
+    </modules>
+  </component>
+</project>

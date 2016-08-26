@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:clipToPadding="false"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/title_layout"
+        layout="@layout/public_title" />
+
+    <TextView
+        android:id="@+id/logout"
+        style="@style/white18"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/exit_button"
+        android:gravity="center"
+        android:text="@string/logout" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/logout"
+        android:layout_below="@+id/title_layout">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <View style="@style/dividerTheme1" />
+
+            <RelativeLayout
+                android:id="@+id/user_photo"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:background="@drawable/item_white_bg"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp">
+
+                <TextView
+                    style="@style/black16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/user_photo" />
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/user_photo_img"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    fresco:actualImageScaleType="focusCrop"
+                    fresco:fadeDuration="300"
+                    fresco:failureImage="@drawable/face"
+                    fresco:failureImageScaleType="centerInside"
+                    fresco:placeholderImage="@drawable/face"
+                    fresco:placeholderImageScaleType="centerCrop"
+                    fresco:roundAsCircle="true"
+                    fresco:roundingBorderColor="#dddddd"
+                    fresco:roundingBorderWidth="1dp" />
+
+
+                <View
+                    style="@style/dividerTheme1"
+                    android:layout_alignParentBottom="true" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/nickname"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/item_white_bg"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp">
+
+                <TextView
+                    style="@style/black16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/nickname" />
+
+                <TextView
+                    android:id="@+id/nickname_text"
+                    style="@style/hui16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true" />
+
+                <View
+                    style="@style/dividerTheme1"
+                    android:layout_alignParentBottom="true" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/gender"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/item_white_bg"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp">
+
+                <TextView
+                    style="@style/black16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/gender" />
+
+                <TextView
+                    android:id="@+id/gender_text"
+                    style="@style/hui16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true" />
+
+                <View
+                    style="@style/dividerTheme1"
+                    android:layout_alignParentBottom="true" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/birthday"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/item_white_bg"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp">
+
+                <TextView
+                    style="@style/black16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/birthday" />
+
+                <TextView
+                    android:id="@+id/birthday_text"
+                    style="@style/hui16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true" />
+
+                <View
+                    style="@style/dividerTheme1"
+                    android:layout_alignParentBottom="true" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/address"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/item_white_bg"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp">
+
+                <TextView
+                    style="@style/black16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/address" />
+
+                <TextView
+                    android:id="@+id/address_text"
+                    style="@style/hui16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true" />
+
+            </RelativeLayout>
+
+            <View style="@style/dividerTheme1" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

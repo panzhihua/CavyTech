@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.android.percent.support.PercentLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent"
+    android:weightSum="23">
+    <com.zhy.android.percent.support.PercentLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:layout_weight="6"
+        android:weightSum="2">
+        <TextView
+            android:id="@+id/target_title"
+            android:textSize="14sp"
+            android:textColor="@color/tips_color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="@string/walk_step"
+            android:layout_weight="1"
+            android:gravity="center_vertical|left"
+            android:layout_gravity="bottom" />
+        <TextView
+            android:id="@+id/target_value1"
+            android:textSize="19sp"
+            android:textColor="@color/tips_color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="0"
+            android:layout_weight="1"
+            android:gravity="bottom|right"
+            app:layout_marginRightPercent="2%w"
+            android:textStyle="bold"
+            android:layout_gravity="top" />
+        <TextView
+            android:id="@+id/target_value1_unit"
+            android:textSize="14sp"
+            android:textColor="@color/tips_color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            app:layout_marginRightPercent="2%w"
+            android:text="h"
+            android:layout_weight="1"
+            android:gravity="center_vertical|right"
+            android:layout_gravity="bottom" />
+        <TextView
+            android:id="@+id/target_value2"
+            android:textSize="19sp"
+            android:textColor="@color/tips_color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="0"
+            android:layout_weight="1"
+            android:gravity="bottom|right"
+            app:layout_marginRightPercent="2%w"
+            android:textStyle="bold"
+            android:layout_gravity="top" />
+        <TextView
+            android:id="@+id/target_value2_unit"
+            android:textSize="14sp"
+            android:textColor="@color/tips_color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="@string/step"
+            android:gravity="center_vertical|right"
+            android:layout_gravity="bottom" />
+
+    </com.zhy.android.percent.support.PercentLinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:layout_weight="4">
+
+    </LinearLayout>
+    <com.zhy.android.percent.support.PercentLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:layout_weight="13">
+        <com.zhy.android.percent.support.PercentRelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <com.zhy.android.percent.support.PercentLinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/linear_average"
+                app:layout_paddingBottomPercent="4%w"
+                android:layout_alignParentBottom="true">
+                <TextView
+                    android:textSize="12sp"
+                    android:textColor="@color/tips_color"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/average"
+                    android:layout_gravity="top" />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_gravity="center">
+
+                </View>
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="15dp"
+                    android:background="@color/gray"
+                    android:layout_gravity="center">
+
+                </View>
+            </com.zhy.android.percent.support.PercentLinearLayout>
+            <com.zhy.android.percent.support.PercentLinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_alignParentRight="false"
+                app:layout_paddingBottomPercent="4%w"
+                android:id="@+id/linear_recommend"
+                android:layout_alignParentBottom="true">
+                <TextView
+                    android:textSize="12sp"
+                    android:textColor="@color/tips_color"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/recommend"
+                    android:id="@+id/text_recommend"
+                    android:layout_gravity="top" />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_gravity="center">
+
+                </View>
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="15dp"
+                    android:background="@color/gray"
+                    android:layout_gravity="center">
+
+                </View>
+            </com.zhy.android.percent.support.PercentLinearLayout>
+
+            <app.minimize.com.seek_bar_compat.SeekBarCompat
+                android:id="@+id/seekBar"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_alignParentBottom="true"
+                app:layout_heightPercent="8%w"
+                app:progressColor="#1dbcff"
+                app:progressBackgroundColor="#cccccc"
+                app:thumbColor="#1dbcff"
+                app:thumbAlpha="1.0"/>
+        </com.zhy.android.percent.support.PercentRelativeLayout>
+
+    </com.zhy.android.percent.support.PercentLinearLayout>
+
+</com.zhy.android.percent.support.PercentLinearLayout>

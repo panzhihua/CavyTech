@@ -1,0 +1,126 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="5dp"
+        android:background="@color/background" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="96dp"
+        android:background="@drawable/item_white_bg"
+        android:orientation="vertical">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/item_image"
+            android:layout_width="66dp"
+            android:layout_height="66dp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            fresco:actualImageScaleType="focusCrop"
+            fresco:fadeDuration="300"
+            fresco:failureImage="@drawable/icon_game"
+            fresco:failureImageScaleType="centerInside"
+            fresco:placeholderImage="@drawable/icon_game"
+            fresco:placeholderImageScaleType="centerCrop"
+            fresco:roundedCornerRadius="10dp" />
+
+        <TextView
+            android:id="@+id/item_title"
+            style="@style/black14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/item_image"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="80dp"
+            android:layout_toRightOf="@+id/item_image"
+            android:singleLine="true" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/item_image"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@+id/item_image"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/item_state_info"
+                style="@style/hui12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="已安装"
+                android:visibility="invisible" />
+
+            <LinearLayout
+                android:id="@+id/item_speed_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/item_speed"
+                    style="@style/green12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/item_percent"
+                    style="@style/hui12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <ProgressBar
+                android:id="@+id/item_progress"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="5dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="109dp"
+                android:layout_marginTop="3dp"
+                android:max="100"
+                android:progressDrawable="@drawable/custom_progressbar" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/item_action"
+            android:layout_width="68dp"
+            android:layout_height="28dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/down_button_blue"
+            android:gravity="center"
+            android:textColor="@drawable/skin_color_button"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:id="@+id/item_delete"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/item_action"
+            android:cropToPadding="true"
+            android:paddingBottom="12dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="4dp"
+            android:paddingTop="12dp"
+            android:src="@drawable/icon_delete" />
+
+        <View
+            android:id="@+id/divider_layout"
+            style="@style/dividerTheme1"
+            android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="3dp"
+        android:background="@color/background" />
+</LinearLayout>

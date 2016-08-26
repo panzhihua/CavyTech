@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ExpandableTextView">
+        <attr name="maxCollapsedLines" format="integer" />
+        <attr name="animDuration" format="integer" />
+        <attr name="animAlphaStart" format="float" />
+        <attr name="expandDrawable" format="reference" />
+        <attr name="collapseDrawable" format="reference" />
+    </declare-styleable>
+    <declare-styleable name="SpecialTheme">
+        <attr name="special_bg" format="reference" />
+        <attr name="special_item_bg" format="reference" />
+        <attr name="special_item_divider" format="reference" />
+        <attr name="special_top_cover" format="reference" />
+        <attr name="special_item_title_color" format="reference" />
+        <attr name="special_item_intro_title_color" format="reference" />
+        <attr name="special_item_content_color" format="reference" />
+        <attr name="special_button_text_1" format="reference" />
+        <attr name="special_button_bg_1" format="reference" />
+        <attr name="special_button_text_2" format="reference" />
+        <attr name="special_button_bg_2" format="reference" />
+        <attr name="special_button_text_3" format="reference" />
+        <attr name="special_button_bg_3" format="reference" />
+    </declare-styleable>
+</resources>

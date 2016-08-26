@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@drawable/crop_button_bg_normal" android:state_pressed="false"/>
+    <item android:drawable="@drawable/crop_button_bg_pressed" android:state_pressed="true"/>
+</selector><!-- From: file:/C:/Users/LiBin/Desktop/新建文件夹%20(3)/CavyTech/BaseCore/res/drawable/crop_button_bg.xml --><!-- From: file:/C:/Users/LiBin/Desktop/新建文件夹%20(3)/CavyTech/SlidingMenuLib/build/intermediates/exploded-aar/CavyTech/BaseCore/unspecified/res/drawable/crop_button_bg.xml -->

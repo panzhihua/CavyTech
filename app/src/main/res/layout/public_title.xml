@@ -1,0 +1,56 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="50dp"
+    android:background="@color/com_titlebar"
+    >
+
+    <TextView
+        android:id="@+id/title"
+        style="@style/white20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="54dp"
+        android:layout_marginRight="62dp"
+        android:ellipsize="marquee"
+        android:focusable="true"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:focusableInTouchMode="true"
+        android:singleLine="true" />
+
+    <ImageButton
+        android:id="@+id/back"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@null"
+        android:padding="7dp"
+        android:cropToPadding="true"
+        android:adjustViewBounds="true"
+        android:src="@drawable/icon_back" />
+
+    <ImageButton
+        android:id="@+id/go"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:adjustViewBounds="true"
+        android:background="@null"
+        android:padding="7dp"
+        android:cropToPadding="true"
+        android:visibility="gone" />
+    <TextView
+        android:id="@+id/go_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minHeight="50dp"
+        android:minWidth="50dp"
+        android:layout_alignParentRight="true"
+        android:gravity="center"
+        android:visibility="gone"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        style="@style/white16"/>
+</RelativeLayout>

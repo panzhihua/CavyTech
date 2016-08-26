@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="package_entries">
+        <item>com.wisedu.ibuluo</item>
+        <item>com.wisedu.hostel</item>
+    </string-array>
+    
+    <string-array name="package_values">
+        <item>@style/cikeSytle</item>
+        <item>@style/hostelSytle</item>
+    </string-array>
+</resources>

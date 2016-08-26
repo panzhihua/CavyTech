@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="net.sourceforge.opencamera"
+    android:versionCode="1"
+    android:versionName="1.0" > <!-- <uses-sdk -->
+    <!-- android:minSdkVersion="15" -->
+    <!-- android:targetSdkVersion="22" /> &lt;!&ndash; don't update to 23 yet, need to update for permissions https://developer.android.com/training/permissions/requesting.html &ndash;&gt; -->
+    <!-- <supports-screens android:xlargeScreens="true" android:largeScreens="true" android:normalScreens="true" android:smallScreens="true" android:anyDensity="true"/> -->
+    <!-- <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/> -->
+    <!-- <uses-permission android:name="android.permission.CAMERA" /> -->
+    <!-- <uses-permission android:name="android.permission.RECORD_AUDIO" /> -->
+    <!-- <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> -->
+    <!-- <uses-feature android:name="android.hardware.camera" /> -->
+    <!-- <uses-feature android:name="android.hardware.microphone" /> -->
+    <!--  -->
+    <!-- <application -->
+    <!-- android:allowBackup="true" -->
+    <!-- android:icon="@drawable/ic_launcher" -->
+    <!-- android:label="@string/app_name" -->
+    <!-- android:theme="@style/AppTheme" -->
+    <!-- android:largeHeap="true" -->
+    <!-- &gt; -->
+    <!-- &lt;!&ndash; should not change the android:name, including moving to a subpackage - see http://android-developers.blogspot.co.uk/2011/06/things-that-cannot-change.html &ndash;&gt; -->
+    <!-- <activity -->
+    <!-- android:name="net.sourceforge.opencamera.MainActivity" -->
+    <!-- android:label="@string/app_name" -->
+    <!-- android:screenOrientation="landscape" -->
+    <!-- android:configChanges="orientation|screenSize|keyboardHidden" -->
+    <!-- &gt; -->
+    <!-- <intent-filter> -->
+    <!-- <action android:name="android.intent.action.MAIN" /> -->
+    <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+    <!-- <category android:name="android.intent.category.DEFAULT"/> -->
+    <!-- </intent-filter> -->
+    <!-- <intent-filter> -->
+    <!-- <action android:name="android.media.action.IMAGE_CAPTURE" /> -->
+    <!-- <category android:name="android.intent.category.DEFAULT" /> -->
+    <!-- </intent-filter> -->
+    <!-- <intent-filter> -->
+    <!-- <action android:name="android.media.action.IMAGE_CAPTURE_SECURE" /> -->
+    <!-- <category android:name="android.intent.category.DEFAULT" /> -->
+    <!-- </intent-filter> -->
+    <!-- <intent-filter> -->
+    <!-- <action android:name="android.media.action.STILL_IMAGE_CAMERA" /> -->
+    <!-- <category android:name="android.intent.category.DEFAULT" /> -->
+    <!-- </intent-filter> -->
+    <!-- <intent-filter> -->
+    <!-- <action android:name="android.media.action.STILL_IMAGE_CAMERA_SECURE" /> -->
+    <!-- <category android:name="android.intent.category.DEFAULT" /> -->
+    <!-- </intent-filter> -->
+    <!-- <intent-filter> -->
+    <!-- <action android:name="android.media.action.VIDEO_CAMERA" /> -->
+    <!-- <category android:name="android.intent.category.DEFAULT" /> -->
+    <!-- </intent-filter> -->
+    <!-- <intent-filter> -->
+    <!-- <action android:name="android.media.action.VIDEO_CAPTURE"/> -->
+    <!-- <category android:name="android.intent.category.DEFAULT"/> -->
+    <!-- </intent-filter> -->
+    <!-- </activity> -->
+    <!-- &lt;!&ndash; should not change the android:name, including moving to a subpackage - see http://android-developers.blogspot.co.uk/2011/06/things-that-cannot-change.html &ndash;&gt; -->
+    <!-- <activity -->
+    <!-- android:name="TakePhoto" -->
+    <!-- android:label="@string/take_photo" -->
+    <!-- android:icon="@drawable/ic_launcher_take_photo" -->
+    <!-- android:screenOrientation="landscape" -->
+    <!-- android:configChanges="orientation|screenSize|keyboardHidden" -->
+    <!-- android:taskAffinity="" -->
+    <!-- android:excludeFromRecents="true" -->
+    <!-- &gt; -->
+    <!-- </activity> -->
+    <!-- &lt;!&ndash; should not change the android:name, including moving to a subpackage - see http://android-developers.blogspot.co.uk/2011/06/things-that-cannot-change.html &ndash;&gt; -->
+    <!-- <receiver -->
+    <!-- android:icon="@drawable/ic_launcher" -->
+    <!-- android:label="@string/app_name" -->
+    <!-- android:name="MyWidgetProvider" > -->
+    <!-- <intent-filter > -->
+    <!-- <action android:name="android.appwidget.action.APPWIDGET_UPDATE" /> -->
+    <!-- </intent-filter> -->
+    <!-- &lt;!&ndash; <intent-filter> -->
+    <!-- <action android:name="net.sourceforge.opencamera.LAUNCH_OPEN_CAMERA"/> -->
+    <!-- </intent-filter>  &ndash;&gt; -->
+    <!-- <meta-data -->
+    <!-- android:name="android.appwidget.provider" -->
+    <!-- android:resource="@xml/widget_info" /> -->
+    <!-- </receiver> -->
+    <!-- &lt;!&ndash; should not change the android:name, including moving to a subpackage - see http://android-developers.blogspot.co.uk/2011/06/things-that-cannot-change.html &ndash;&gt; -->
+    <!-- <receiver -->
+    <!-- android:icon="@drawable/ic_launcher_take_photo" -->
+    <!-- android:label="@string/take_photo" -->
+    <!-- android:name="MyWidgetProviderTakePhoto" > -->
+    <!-- <intent-filter > -->
+    <!-- <action android:name="android.appwidget.action.APPWIDGET_UPDATE" /> -->
+    <!-- </intent-filter> -->
+    <!-- <meta-data -->
+    <!-- android:name="android.appwidget.provider" -->
+    <!-- android:resource="@xml/widget_info_take_photo" /> -->
+    <!-- </receiver> -->
+    <!-- </application> -->
+    <uses-sdk
+        android:minSdkVersion="15"
+        android:targetSdkVersion="23" />
+
+</manifest>

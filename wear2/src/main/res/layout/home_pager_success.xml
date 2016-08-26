@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="76dp"
+    android:gravity="center_vertical">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="#e0e0e0" />
+
+    <RelativeLayout
+        android:layout_marginLeft="20dp"
+        android:layout_width="46dp"
+        android:layout_height="76dp"
+        android:id="@+id/relativeLayout"
+        android:gravity="center">
+
+        <ImageView
+            android:visibility="invisible"
+            android:layout_width="2dp"
+            android:layout_height="58dp"
+            android:background="#e5e5e5"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/iv_first_sleep_line_top" />
+
+        <ImageView
+            android:visibility="invisible"
+            android:layout_width="2dp"
+            android:layout_height="58dp"
+            android:background="#e5e5e5"
+            android:layout_alignParentBottom="true"
+            android:layout_alignStart="@+id/iv_first_sleep_line_top"
+            android:id="@+id/iv_first_sleep_line_bottom" />
+
+        <ImageView
+            android:id="@+id/iv_first_success_shou"
+            android:layout_width="46dp"
+            android:layout_height="46dp"
+            android:src="@drawable/icon_honor"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true" />
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@+id/relativeLayout">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="@string/text_first_success"
+            android:textColor="@color/text_color_first_name"
+            android:textSize="14dp" />
+
+        <TextView
+            android:visibility="invisible"
+            android:id="@+id/tv_first_success_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="18:26"
+            android:textColor="@color/text_color_first_time"
+            android:textSize="14dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="20dp">
+
+        <TextView
+            android:id="@+id/tv_first_success_result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textColor="@color/text_color_first_health_result"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/textView5_sleep"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="步徽章"
+            android:textColor="@color/text_color_first_name"
+            android:textSize="12sp"
+
+            />
+    </LinearLayout>
+
+</RelativeLayout>

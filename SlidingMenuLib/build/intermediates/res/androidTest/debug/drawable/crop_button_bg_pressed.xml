@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <!-- 中间的背景色 -->
+    <solid android:color="@color/crop_button_bg_pressed_color" />
+    <!-- 设置四个角的角度 -->
+    <corners
+        android:bottomLeftRadius="6dp"
+        android:bottomRightRadius="6dp"
+        android:topLeftRadius="6dp"
+        android:topRightRadius="6dp" />
+
+</shape><!-- From: file:/Users/doudou/CaveyAppAndroid/trunk/CavyTech/BaseCore/res/drawable/crop_button_bg_pressed.xml --><!-- From: file:/Users/doudou/CaveyAppAndroid/trunk/CavyTech/SlidingMenuLib/build/intermediates/exploded-aar/CavyTech/BaseCore/unspecified/res/drawable/crop_button_bg_pressed.xml -->

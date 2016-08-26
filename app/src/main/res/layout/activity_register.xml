@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:clipToPadding="false"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/public_title" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="165dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <View style="@style/dividerTheme1" />
+
+                <com.tunshu.widget.ClearEditText
+                    android:id="@+id/input_account"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:layout_marginLeft="20dp"
+                    style="@style/black16"
+                    android:layout_marginRight="20dp"
+                    android:background="@null"
+                    android:hint="@string/input_tel"
+                    android:inputType="number"
+                    android:singleLine="true"
+                    android:textColorHint="@color/hint_text_color" />
+
+                <View
+                    style="@style/dividerTheme1"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@null"
+                    android:orientation="horizontal">
+
+
+                    <EditText
+                        android:id="@+id/input_verification"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_toLeftOf="@+id/view"
+                        android:layout_weight="20"
+                        android:background="@null"
+                        style="@style/black16"
+                        android:hint="@string/input_verification"
+                        android:inputType="number"
+                        android:singleLine="true"
+                        android:textColorHint="@color/hint_text_color" />
+
+                    <View
+                        android:id="@+id/view"
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="11dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="11dp"
+                        android:background="@color/cut_off_rule" />
+
+                    <TextView
+                        android:id="@+id/send_verification"
+                        style="@style/black16"
+                        android:layout_width="90dp"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:clickable="true"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center"
+                        android:text="@string/send_verification" />
+
+                    <ImageView
+                        android:id="@+id/image_verification"
+                        android:layout_width="90dp"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:scaleType="fitXY"
+                        android:visibility="gone" />
+
+
+                </LinearLayout>
+
+                <View
+                    style="@style/dividerTheme1"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp" />
+
+                <com.tunshu.widget.ClearEditText
+                    android:id="@+id/input_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@null"
+                    style="@style/black16"
+                    android:hint="@string/input_password"
+                    android:singleLine="true"
+                    android:textColorHint="@color/hint_text_color" />
+
+            </LinearLayout>
+            <View style="@style/dividerTheme1" />
+
+            <LinearLayout
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/box_agree"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/check_box"
+                    android:gravity="center"
+                    android:drawablePadding="3dp"
+                    android:button="@null"
+                    android:text="@string/register_agree"
+                    android:textColor="@color/text_agree_color"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:includeFontPadding="false"
+                    android:id="@+id/agree_context"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/treaty"
+                    android:textColor="@color/treaty_text_color"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/regter_account"
+                style="@style/white18"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/down_button_blue"
+                android:clickable="true"
+                android:gravity="center"
+                android:text="@string/register_account" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

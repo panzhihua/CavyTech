@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context="com.cavytech.wear2.slidingmenu.FriendActivity">
+
+    <include layout="@layout/toobar" />
+
+    <!--<FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">-->
+
+        <com.baoyz.swipemenulistview.SwipeMenuListView
+            android:id="@+id/smlv_content_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </com.baoyz.swipemenulistview.SwipeMenuListView>
+
+        <!--<LinearLayout xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/ll_no_data_layout"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/ll_add_friend_no_data"
+                android:layout_width="match_parent"
+                android:layout_height="66dp"
+                android:layout_marginTop="16dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:text="A"
+                    android:textColor="#b3000000"
+                    android:textSize="16sp"
+                    android:visibility="invisible" />
+
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="12dp"
+                    android:src="@drawable/icon_head_add" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="16dp"
+                    android:layout_toEndOf="@+id/iv_icon"
+                    android:text="@string/add_friend"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll_new_friend_no_data"
+                android:layout_width="match_parent"
+                android:layout_height="66dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:text="A"
+                    android:textColor="#b3000000"
+                    android:textSize="16sp"
+                    android:visibility="invisible" />
+
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="12dp"
+                    android:src="@drawable/icon_head_new" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="16dp"
+                    android:layout_toEndOf="@+id/iv_icon"
+                    android:text="@string/new_friend"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll_tunshu_no_data"
+                android:layout_width="match_parent"
+                android:layout_height="66dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:text="A"
+                    android:textColor="#b3000000"
+                    android:textSize="16sp"
+                    android:visibility="invisible" />
+
+
+                <ImageView
+                    android:id="@+id/iv_swipe_icon"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="12dp"
+                    android:src="@drawable/icon_head_logo" />
+
+                <TextView
+                    android:id="@+id/tv_swipe_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="16dp"
+                    android:layout_toEndOf="@+id/iv_icon"
+                    android:text="@string/life_cavy"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </FrameLayout>-->
+
+
+</LinearLayout>

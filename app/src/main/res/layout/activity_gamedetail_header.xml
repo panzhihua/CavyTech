@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:expandableTextView="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="750dp"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="94dp"
+            android:background="@color/gamedetail_head_bg">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/game_icon"
+                android:layout_width="71dp"
+                android:layout_height="71dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                fresco:actualImageScaleType="centerCrop"
+                fresco:fadeDuration="300"
+                fresco:failureImage="@drawable/icon_game"
+                fresco:failureImageScaleType="centerCrop"
+                fresco:placeholderImage="@drawable/icon_game"
+                fresco:placeholderImageScaleType="centerCrop"
+                fresco:roundedCornerRadius="10dp"
+                fresco:roundingBorderWidth="1dp"
+                fresco:roundingBorderColor="@color/white"
+                />
+
+            <TextView
+                android:id="@+id/game_title"
+                style="@style/white15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/game_icon"
+                android:layout_marginLeft="10dp"
+                android:includeFontPadding="false"
+                android:layout_toRightOf="@id/game_icon" />
+
+            <TextView
+                android:id="@+id/game_size"
+                style="@style/white12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/game_title"
+                android:layout_marginTop="1dp"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/game_icon"
+                android:includeFontPadding="false" />
+
+            <TextView
+                android:id="@+id/game_info"
+                style="@style/white12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/game_icon"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_toRightOf="@+id/game_icon"
+                android:includeFontPadding="false"
+                android:lineSpacingExtra="1dp"
+                android:maxLines="2"/>
+        </RelativeLayout>
+
+
+        <TextView
+            style="@style/black18"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="14dp"
+            android:gravity="center_vertical"
+            android:text="@string/game_screenshot" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/hz_listView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginTop="6dp"
+            android:spacing="5dp" />
+
+        <include
+            layout="@layout/activity_item_screenshot_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal" />
+
+        <TextView
+            style="@style/black18"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="14dp"
+            android:gravity="center_vertical"
+            android:text="@string/game_brief_introduction" />
+
+        <!--<com.tunshu.widget.ExpandableTextView
+            android:id="@+id/expand_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:orientation="vertical"
+            expandableTextView:maxCollapsedLines="30">
+
+            <TextView
+                android:id="@id/expandable_text"
+                style="@style/black16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-light" />
+
+            <ImageButton
+                android:id="@id/expand_collapse"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="right|bottom"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_collapse_small_holo_light" />
+        </com.tunshu.widget.ExpandableTextView>-->
+        <TextView
+            android:id="@+id/game_desc"
+            style="@style/hui14"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:lineSpacingExtra="3dp" />
+
+        <TextView
+            android:id="@+id/this_update_title"
+            style="@style/black18"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="14dp"
+            android:gravity="center_vertical"
+            android:text="@string/this_update" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/this_update_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp">
+
+                <TextView
+                    style="@style/hui14"
+                    android:id="@+id/this_update_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/update_time" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp">
+
+                <TextView
+                    style="@style/hui14"
+                    android:id="@+id/this_update_situation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/update_time" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            style="@style/black18"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="14dp"
+            android:gravity="center_vertical"
+            android:text="@string/game_info" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp">
+
+                <TextView
+                    style="@style/hui14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/developer" />
+
+                <TextView
+                    android:id="@+id/game_company"
+                    style="@style/hui14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp">
+
+                <TextView
+                    style="@style/hui14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/game_type" />
+
+                <TextView
+                    android:id="@+id/game_type"
+                    style="@style/hui14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp">
+
+                <TextView
+                    style="@style/hui14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/update_time" />
+
+                <TextView
+                    android:id="@+id/game_update_time"
+                    style="@style/hui14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp">
+
+                <TextView
+                    style="@style/hui14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/versioncode" />
+
+                <TextView
+                    android:id="@+id/game_version_num"
+                    style="@style/hui14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <View
+                style="@style/dividerTheme1"
+                android:layout_marginTop="15dp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="8dp"
+            android:background="@color/background" />
+
+        <TextView
+            style="@style/black18"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="14dp"
+            android:gravity="center_vertical"
+            android:text="@string/game_comment" />
+
+        <TextView
+            android:id="@+id/game_comment"
+            android:layout_width="fill_parent"
+            android:layout_height="35dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/down_button_white"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="@string/immediate_comment"
+            android:textColor="@drawable/bt_text_color_white"
+            android:textSize="16sp" />
+    </LinearLayout>
+</ScrollView>

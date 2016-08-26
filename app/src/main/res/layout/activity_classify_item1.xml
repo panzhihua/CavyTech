@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/special_bg"
+    android:orientation="vertical">
+    <View
+        android:id="@+id/divider_layout1"
+        android:layout_width="fill_parent"
+        android:layout_height="5dp"
+        android:background="@color/background" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="15dp"
+        android:background="@color/white" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <View
+            android:layout_width="10dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"/>
+        <RelativeLayout
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/app_img"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                fresco:actualImageScaleType="focusCrop"
+                fresco:fadeDuration="300"
+                fresco:failureImage="@drawable/icon_game"
+                fresco:failureImageScaleType="centerCrop"
+                fresco:placeholderImage="@drawable/icon_game"
+                fresco:placeholderImageScaleType="centerCrop"
+                fresco:roundedCornerRadius="10dp"
+                android:foregroundGravity="center_vertical"
+                android:layout_centerVertical="true" />
+
+        </RelativeLayout>
+        <View
+            android:layout_width="10dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1" >
+            </View>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="90dp"
+            android:layout_height="fill_parent">
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+                <include
+                    android:id="@+id/item1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    layout="@layout/activity_classify_item_line"
+                    android:layout_above="@+id/spaceview1" />
+                <View
+                    android:layout_centerInParent="true"
+                    android:id="@+id/spaceview1"
+                    android:layout_width="90dp"
+                    android:layout_height="20dp" >
+                </View>
+                <include
+                    android:id="@+id/item3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    layout="@layout/activity_classify_item_line"
+                    android:layout_below="@+id/spaceview1" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="10dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1">
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+                <ImageView
+                    android:layout_width="0.5dp"
+                    android:layout_height="16dp"
+                    android:id="@+id/centerline_img1"
+                    android:background="@color/border_color"
+                    android:layout_above="@+id/spaceview2"
+                    android:layout_centerInParent="true" />
+                <View
+                    android:layout_centerInParent="true"
+                    android:id="@+id/spaceview2"
+                    android:layout_width="10dp"
+                    android:layout_height="20dp" >
+                </View>
+                <ImageView
+                    android:layout_width="0.5dp"
+                    android:layout_height="16dp"
+                    android:id="@+id/centerline_img2"
+                    android:background="@color/border_color"
+                    android:layout_below="@+id/spaceview2"
+                    android:layout_centerInParent="true" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent">
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+                <include
+                    android:id="@+id/item2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    layout="@layout/activity_classify_item_line"
+                    android:layout_above="@+id/spaceview3" />
+                <View
+                    android:layout_centerInParent="true"
+                    android:id="@+id/spaceview3"
+                    android:layout_width="90dp"
+                    android:layout_height="20dp" >
+                </View>
+                <include
+                    android:id="@+id/item4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    layout="@layout/activity_classify_item_line"
+                    android:layout_below="@+id/spaceview3" />
+            </RelativeLayout>
+        </LinearLayout>
+        <View
+            android:layout_width="10dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="17dp"
+        android:background="@color/white" />
+    <View
+        android:id="@+id/divider_1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="?attr/special_item_divider" />
+    <View
+        android:id="@+id/divider_layout2"
+        android:layout_width="fill_parent"
+        android:layout_height="3dp"
+        android:background="@color/background" />
+</LinearLayout>

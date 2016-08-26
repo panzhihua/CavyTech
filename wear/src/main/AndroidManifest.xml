@@ -1,0 +1,175 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.cavytech.wear">
+
+    <supports-screens android:xlargeScreens="true" android:largeScreens="true" android:normalScreens="true" android:smallScreens="true" android:anyDensity="true"/>
+
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <!-- opencamara begin -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.microphone" />
+    <!-- opencamara end -->
+
+    <application
+        android:name="com.cavytech.wear.application.CommonApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".activity.SplashActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppActionTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!-- opencamara begin -->
+        <activity
+            android:name="net.sourceforge.opencamera.MainActivity"
+            android:screenOrientation="landscape"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            >
+            <intent-filter>
+                 <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.media.action.IMAGE_CAPTURE" />
+                 <category android:name="android.intent.category.DEFAULT" />
+             </intent-filter>
+            <intent-filter>
+                <action android:name="android.media.action.IMAGE_CAPTURE_SECURE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.media.action.STILL_IMAGE_CAMERA" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.media.action.STILL_IMAGE_CAMERA_SECURE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.media.action.VIDEO_CAMERA" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.media.action.VIDEO_CAPTURE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+       	<!-- should not change the android:name, including moving to a subpackage - see http://android-developers.blogspot.co.uk/2011/06/things-that-cannot-change.html -->
+        <activity
+            android:name="TakePhoto"
+            android:label="@string/take_photo"
+            android:icon="@drawable/ic_launcher_take_photo"
+            android:screenOrientation="landscape"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:taskAffinity=""
+            android:excludeFromRecents="true"
+            >
+        </activity>
+        <!-- opencamara end -->
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="5619d2e7e0f55a4e5f0038e1" />
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="local" />
+        <service
+            android:name="com.cavytech.wear.BraceletService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.cavytech.BraceletService" />
+            </intent-filter>
+        </service>
+
+        <receiver android:name="com.cavytech.wear.ServiceStarter">
+            <intent-filter>
+                <action android:name="com.cavytech.wear.invoke_service" />
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+
+                <category android:name="android.intent.category.HOME" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+            </intent-filter>
+        </receiver>
+        <!-- opencamara begin -->
+        <!-- should not change the android:name, including moving to a subpackage - see http://android-developers.blogspot.co.uk/2011/06/things-that-cannot-change.html -->
+        <receiver
+            android:icon="@drawable/ic_launcher"
+            android:label="@string/app_name"
+            android:name="MyWidgetProvider" >
+            <intent-filter >
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <!-- <intent-filter>
+            	<action android:name="net.sourceforge.opencamera.LAUNCH_OPEN_CAMERA"/>
+             </intent-filter>  -->
+            <meta-data
+            android:name="android.appwidget.provider"
+            android:resource="@xml/widget_info" />
+        </receiver>
+       	<!-- should not change the android:name, including moving to a subpackage - see http://android-developers.blogspot.co.uk/2011/06/things-that-cannot-change.html -->
+        <receiver
+            android:icon="@drawable/ic_launcher_take_photo"
+            android:label="@string/take_photo"
+            android:name="MyWidgetProviderTakePhoto" >
+            <intent-filter >
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+            android:name="android.appwidget.provider"
+            android:resource="@xml/widget_info_take_photo" />
+        </receiver>
+        <!-- opencamara end -->
+        <activity
+            android:name=".activity.MatchActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.MatchSettingActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="pedometer.StepCountActivity"
+            android:screenOrientation="portrait" />
+
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote">
+            <intent-filter>
+                <action android:name="com.baidu.location.service_v2.2" />
+            </intent-filter>
+        </service>
+
+        <service android:name="pedometer.StepService"/>
+        <!-- meta-data需要写在application中 -->
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="34mQlpiuXAsX1SUUGctFbkGK" />
+    </application>
+
+</manifest>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/AndroidImageSlider" />
+            <option value="$PROJECT_DIR$/BaseCore" />
+            <option value="$PROJECT_DIR$/ImageLoader1.9" />
+            <option value="$PROJECT_DIR$/MPChart_libary" />
+            <option value="$PROJECT_DIR$/NineOldAndroidsLibrary" />
+            <option value="$PROJECT_DIR$/PhotoViewLibrary" />
+            <option value="$PROJECT_DIR$/SlidingMenuLib" />
+            <option value="$PROJECT_DIR$/ViewPagerIndicator_library" />
+            <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/async_http_client" />
+            <option value="$PROJECT_DIR$/circularfillableloaders_library" />
+            <option value="$PROJECT_DIR$/openCamera" />
+            <option value="$PROJECT_DIR$/percent-support-extends" />
+            <option value="$PROJECT_DIR$/pulltorefreshlibrary2.25" />
+            <option value="$PROJECT_DIR$/sector_progress_view_library" />
+            <option value="$PROJECT_DIR$/seekbar-compat" />
+            <option value="$PROJECT_DIR$/swipe_menu_list_library" />
+            <option value="$PROJECT_DIR$/wear" />
+            <option value="$PROJECT_DIR$/wear2" />
+            <option value="$PROJECT_DIR$/xutils_library" />
+          </set>
+        </option>
+        <option name="myModules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/AndroidImageSlider" />
+            <option value="$PROJECT_DIR$/BaseCore" />
+            <option value="$PROJECT_DIR$/ImageLoader1.9" />
+            <option value="$PROJECT_DIR$/MPChart_libary" />
+            <option value="$PROJECT_DIR$/NineOldAndroidsLibrary" />
+            <option value="$PROJECT_DIR$/PhotoViewLibrary" />
+            <option value="$PROJECT_DIR$/SlidingMenuLib" />
+            <option value="$PROJECT_DIR$/ViewPagerIndicator_library" />
+            <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/async_http_client" />
+            <option value="$PROJECT_DIR$/circularfillableloaders_library" />
+            <option value="$PROJECT_DIR$/openCamera" />
+            <option value="$PROJECT_DIR$/percent-support-extends" />
+            <option value="$PROJECT_DIR$/pulltorefreshlibrary2.25" />
+            <option value="$PROJECT_DIR$/sector_progress_view_library" />
+            <option value="$PROJECT_DIR$/seekbar-compat" />
+            <option value="$PROJECT_DIR$/swipe_menu_list_library" />
+            <option value="$PROJECT_DIR$/wear" />
+            <option value="$PROJECT_DIR$/wear2" />
+            <option value="$PROJECT_DIR$/xutils_library" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>
