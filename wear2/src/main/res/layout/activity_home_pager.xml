@@ -388,7 +388,7 @@
                             android:id="@+id/tv_first_jibu_hour_list"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="10"
+                            android:text="0"
                             android:textColor="@color/text_color_first_name"
                             android:textSize="30sp"
                             android:textStyle="bold"

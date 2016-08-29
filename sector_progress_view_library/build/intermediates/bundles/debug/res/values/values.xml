@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/Users/doudou/CaveyAppAndroid/trunk/CavyTech/sector_progress_view_library/src/main/res/values/attrs.xml -->
+    <!-- From: file:/C:/Users/LiBin/Desktop/CavyTech/sector_progress_view_library/src/main/res/values/attrs.xml -->
     <eat-comment/>
     <attr format="color" name="bgColor"/>
     <attr format="color" name="fgColor"/>
@@ -8,7 +8,7 @@
     <attr format="float" name="startAngle"/>
     <declare-styleable name="ColorfulRingProgressView"><attr name="bgColor"/><attr format="color" name="fgColorStart"/><attr format="color" name="fgColorEnd"/><attr format="dimension" name="progressStrokeWidth"/><attr format="boolean" name="showPath"/><attr format="color" name="pathColor"/><attr name="percent"/><attr name="startAngle"/></declare-styleable>
     <declare-styleable name="SectorProgressView"><attr name="bgColor"/><attr name="fgColor"/><attr name="percent"/><attr name="startAngle"/></declare-styleable>
-    <!-- From: file:/Users/doudou/CaveyAppAndroid/trunk/CavyTech/sector_progress_view_library/src/main/res/values/strings.xml -->
+    <!-- From: file:/C:/Users/LiBin/Desktop/CavyTech/sector_progress_view_library/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="action_settings">Settings</string>
     <string name="app_name">library</string>

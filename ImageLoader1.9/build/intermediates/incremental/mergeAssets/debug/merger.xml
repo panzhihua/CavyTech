@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merger version="3"><dataSet config="main"><source path="/Users/doudou/CaveyAppAndroid/trunk/CavyTech/ImageLoader1.9/assets"/></dataSet><dataSet config="debug"><source path="/Users/doudou/CaveyAppAndroid/trunk/CavyTech/ImageLoader1.9/build-types/debug/assets"/></dataSet></merger>
+<merger version="3"><dataSet config="main"><source path="C:\Users\LiBin\Desktop\CavyTech\ImageLoader1.9\assets"/></dataSet><dataSet config="debug"><source path="C:\Users\LiBin\Desktop\CavyTech\ImageLoader1.9\build-types\debug\assets"/></dataSet></merger>

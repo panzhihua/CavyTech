@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/C:/Users/LiBin/Desktop/新建文件夹%20(3)/CavyTech/BaseCore/res/values/fileendings.xml -->
+    <!-- From: file:/C:/Users/LiBin/Desktop/CavyTech/BaseCore/res/values/fileendings.xml -->
     <eat-comment/>
     <array name="fileEndingAudio">
         <item>.mp3</item>
@@ -60,10 +60,10 @@
         <item>.doc</item>
         <item>.docx</item>
     </array>
-    <!-- From: file:/C:/Users/LiBin/Desktop/新建文件夹%20(3)/CavyTech/BaseCore/res/values/attrs.xml -->
+    <!-- From: file:/C:/Users/LiBin/Desktop/CavyTech/BaseCore/res/values/attrs.xml -->
     <eat-comment/>
     <attr format="reference" name="autoScaleTextViewStyle"/>
-    <!-- From: file:/C:/Users/LiBin/Desktop/新建文件夹%20(3)/CavyTech/BaseCore/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.1.1/res/values/values.xml -->
+    <!-- From: file:/C:/Users/LiBin/Desktop/CavyTech/BaseCore/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.1.1/res/values/values.xml -->
     <eat-comment/>
     <attr format="reference" name="drawerArrowStyle"/>
     <attr format="dimension" name="height"/>
@@ -76,10 +76,10 @@
     <bool name="abc_config_allowActionMenuItemTextWithIcon">false</bool>
     <bool name="abc_config_closeDialogWhenTouchOutside">true</bool>
     <bool name="abc_config_showMenuShortcutsWhenKeyboardPresent">false</bool>
-    <!-- From: file:/C:/Users/LiBin/Desktop/新建文件夹%20(3)/CavyTech/BaseCore/res/values/bools.xml -->
+    <!-- From: file:/C:/Users/LiBin/Desktop/CavyTech/BaseCore/res/values/bools.xml -->
     <eat-comment/>
     <bool name="portrait">true</bool>
-    <!-- From: file:/C:/Users/LiBin/Desktop/新建文件夹%20(3)/CavyTech/BaseCore/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.1.1/res/values/values.xml -->
+    <!-- From: file:/C:/Users/LiBin/Desktop/CavyTech/BaseCore/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.1.1/res/values/values.xml -->
     <eat-comment/>
     <color name="abc_input_method_navigation_guard">@android:color/black</color>
     <color name="abc_search_url_text_normal">#7fa87f</color>
@@ -91,10 +91,10 @@
     <color name="background_floating_material_light">#ffeeeeee</color>
     <color name="background_material_dark">#ff303030</color>
     <color name="background_material_light">#ffeeeeee</color>
-    <!-- From: file:/C:/Users/LiBin/Desktop/新建文件夹%20(3)/CavyTech/BaseCore/res/values/color.xml -->
+    <!-- From: file:/C:/Users/LiBin/Desktop/CavyTech/BaseCore/res/values/color.xml -->
     <eat-comment/>
     <color name="black_alpha">#7f000000</color>
-    <!-- From: file:/C:/Users/LiBin/Desktop/新建文件夹%20(3)/CavyTech/BaseCore/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.1.1/res/values/values.xml -->
+    <!-- From: file:/C:/Users/LiBin/Desktop/CavyTech/BaseCore/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.1.1/res/values/values.xml -->
     <eat-comment/>
     <color name="bright_foreground_disabled_material_dark">#80ffffff</color>
     <color name="bright_foreground_disabled_material_light">#80000000</color>
@@ -102,18 +102,18 @@
     <color name="bright_foreground_inverse_material_light">@color/bright_foreground_material_dark</color>
     <color name="bright_foreground_material_dark">@android:color/white</color>
     <color name="bright_foreground_material_light">@android:color/black</color>
-    <!-- From: file:/C:/Users/LiBin/Desktop/新建文件夹%20(3)/CavyTech/BaseCore/res/values/color.xml -->
+    <!-- From: file:/C:/Users/LiBin/Desktop/CavyTech/BaseCore/res/values/color.xml -->
     <eat-comment/>
     <color name="btn_left_press_color">#71db82</color>
     <color name="btn_left_unpress_color">#18aa30</color>
     <color name="btn_right_press_color">#71db82</color>
     <color name="btn_right_unpress_color">#18aa30</color>
     <color name="bubble_background">#00000000</color>
-    <!-- From: file:/C:/Users/LiBin/Desktop/新建文件夹%20(3)/CavyTech/BaseCore/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.1.1/res/values/values.xml -->
+    <!-- From: file:/C:/Users/LiBin/Desktop/CavyTech/BaseCore/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.1.1/res/values/values.xml -->
     <eat-comment/>
     <color name="button_material_dark">#ff5a595b</color>
     <color name="button_material_light">#ffd6d7d7</color>
-    <!-- From: file:/C:/Users/LiBin/Desktop/新建文件夹%20(3)/CavyTech/BaseCore/res/values/color.xml -->
+    <!-- From: file:/C:/Users/LiBin/Desktop/CavyTech/BaseCore/res/values/color.xml -->
     <eat-comment/>
     <color name="colorAccent">#FF00E5FF</color>
     <color name="colorControlActivated">#FF03A9F4</color>
@@ -126,16 +126,16 @@
     <color name="delete_color_filter">#A5FF0000</color>
     <color name="dialog_bg">#efeff4</color>
     <color name="dialog_title_bg">#14b3fa</color>
-    <!-- From: file:/C:/Users/LiBin/Desktop/新建文件夹%20(3)/CavyTech/BaseCore/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.1.1/res/values/values.xml -->
+    <!-- From: file:/C:/Users/LiBin/Desktop/CavyTech/BaseCore/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.1.1/res/values/values.xml -->
     <eat-comment/>
     <color name="dim_foreground_disabled_material_dark">#80bebebe</color>
     <color name="dim_foreground_disabled_material_light">#80323232</color>
     <color name="dim_foreground_material_dark">#ffbebebe</color>
     <color name="dim_foreground_material_light">#ff323232</color>
-    <!-- From: file:/C:/Users/LiBin/Desktop/新建文件夹%20(3)/CavyTech/BaseCore/res/values/color.xml -->
+    <!-- From: file:/C:/Users/LiBin/Desktop/CavyTech/BaseCore/res/values/color.xml -->
     <eat-comment/>
     <color name="divider_color">#dbdbdb</color>
-    <!-- From: file:/C:/Users/LiBin/Desktop/新建文件夹%20(3)/CavyTech/BaseCore/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.1.1/res/values/values.xml -->
+    <!-- From: file:/C:/Users/LiBin/Desktop/CavyTech/BaseCore/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.1.1/res/values/values.xml -->
     <eat-comment/>
     <color name="highlighted_text_material_dark">#6680cbc4</color>
     <color name="highlighted_text_material_light">#66009688</color>
@@ -148,10 +148,10 @@
     <color name="material_blue_grey_950">#ff21272b</color>
     <color name="material_deep_teal_200">#ff80cbc4</color>
     <color name="material_deep_teal_500">#ff009688</color>
-    <!-- From: file:/C:/Users/LiBin/Desktop/新建文件夹%20(3)/CavyTech/BaseCore/res/values/color.xml -->
+    <!-- From: file:/C:/Users/LiBin/Desktop/CavyTech/BaseCore/res/values/color.xml -->
     <eat-comment/>
     <color name="msg_color">#000000</color>
-    <!-- From: file:/C:/Users/LiBin/Desktop/新建文件夹%20(3)/CavyTech/BaseCore/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.1.1/res/values/values.xml -->
+    <!-- From: file:/C:/Users/LiBin/Desktop/CavyTech/BaseCore/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.1.1/res/values/values.xml -->
     <eat-comment/>
     <color name="primary_dark_material_dark">#ff000000</color>
     <color name="primary_dark_material_light">#ff757575</color>
@@ -171,7 +171,7 @@
     <color name="switch_thumb_disabled_material_light">#ffbdbdbd</color>
     <color name="switch_thumb_normal_material_dark">#ffbdbdbd</color>
     <color name="switch_thumb_normal_material_light">#fff1f1f1</color>
-    <!-- From: file:/C:/Users/LiBin/Desktop/新建文件夹%20(3)/CavyTech/BaseCore/res/values/color.xml -->
+    <!-- From: file:/C:/Users/LiBin/Desktop/CavyTech/BaseCore/res/values/color.xml -->
     <eat-comment/>
     <color name="text_b3_color">#B3000000</color>
     <color name="text_color">#000000</color>
@@ -220,7 +220,7 @@
     <declare-styleable name="View"><attr format="dimension" name="paddingStart"/><attr format="dimension" name="paddingEnd"/><attr name="android:focusable"/><attr format="reference" name="theme"/><attr name="android:theme"/><attr format="color" name="backgroundTint"/><attr name="backgroundTintMode"><enum name="src_over" value="3"/><enum name="src_in" value="5"/><enum name="src_atop" value="9"/><enum name="multiply" value="14"/><enum name="screen" value="15"/></attr></declare-styleable>
     <declare-styleable name="ViewStubCompat"><attr name="android:layout"/><attr name="android:inflatedId"/><attr name="android:id"/></declare-styleable>
     <declare-styleable name="Workspace"><attr format="integer" name="defaultScreen"/></declare-styleable>
-    <!-- From: file:/C:/Users/LiBin/Desktop/新建文件夹%20(3)/CavyTech/BaseCore/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.1.1/res/values/values.xml -->
+    <!-- From: file:/C:/Users/LiBin/Desktop/CavyTech/BaseCore/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.1.1/res/values/values.xml -->
     <eat-comment/>
     <dimen name="abc_action_bar_content_inset_material">16dp</dimen>
     <dimen name="abc_action_bar_default_height_material">56dp</dimen>
@@ -282,20 +282,20 @@
     <dimen name="abc_text_size_subtitle_material_toolbar">16dp</dimen>
     <dimen name="abc_text_size_title_material">20sp</dimen>
     <dimen name="abc_text_size_title_material_toolbar">20dp</dimen>
-    <!-- From: file:/C:/Users/LiBin/Desktop/新建文件夹%20(3)/CavyTech/BaseCore/res/values/dimens.xml -->
+    <!-- From: file:/C:/Users/LiBin/Desktop/CavyTech/BaseCore/res/values/dimens.xml -->
     <eat-comment/>
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
-    <!-- From: file:/C:/Users/LiBin/Desktop/新建文件夹%20(3)/CavyTech/BaseCore/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.1.1/res/values/values.xml -->
+    <!-- From: file:/C:/Users/LiBin/Desktop/CavyTech/BaseCore/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.1.1/res/values/values.xml -->
     <eat-comment/>
     <item name="dialog_fixed_height_major" type="dimen">80%</item>
     <item name="dialog_fixed_height_minor" type="dimen">100%</item>
     <item name="dialog_fixed_width_major" type="dimen">320dp</item>
     <item name="dialog_fixed_width_minor" type="dimen">320dp</item>
-    <!-- From: file:/C:/Users/LiBin/Desktop/新建文件夹%20(3)/CavyTech/BaseCore/res/values/dimens.xml -->
+    <!-- From: file:/C:/Users/LiBin/Desktop/CavyTech/BaseCore/res/values/dimens.xml -->
     <eat-comment/>
     <dimen name="dialog_padding">55dp</dimen>
-    <!-- From: file:/C:/Users/LiBin/Desktop/新建文件夹%20(3)/CavyTech/BaseCore/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.1.1/res/values/values.xml -->
+    <!-- From: file:/C:/Users/LiBin/Desktop/CavyTech/BaseCore/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.1.1/res/values/values.xml -->
     <eat-comment/>
     <item format="float" name="disabled_alpha_material_dark" type="dimen">0.30</item>
     <item format="float" name="disabled_alpha_material_light" type="dimen">0.26</item>
@@ -328,7 +328,7 @@
     <string name="abc_shareactionprovider_share_with">Share with</string>
     <string name="abc_shareactionprovider_share_with_application">Share with %s</string>
     <string name="abc_toolbar_collapse_description">Collapse</string>
-    <!-- From: file:/C:/Users/LiBin/Desktop/新建文件夹%20(3)/CavyTech/BaseCore/res/values/strings.xml -->
+    <!-- From: file:/C:/Users/LiBin/Desktop/CavyTech/BaseCore/res/values/strings.xml -->
     <eat-comment/>
     <string name="action_settings">Settings</string>
     <string name="app_name">BaseCore</string>
@@ -344,13 +344,13 @@
     <string name="preparing_card">正在准备存储卡</string>
     <string name="rotate">旋转</string>
     <string name="saving_image">正在保存图片…</string>
-    <!-- From: file:/C:/Users/LiBin/Desktop/新建文件夹%20(3)/CavyTech/BaseCore/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.1.1/res/values/values.xml -->
+    <!-- From: file:/C:/Users/LiBin/Desktop/CavyTech/BaseCore/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.1.1/res/values/values.xml -->
     <eat-comment/>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>
     <style name="AlertDialog.AppCompat.Light" parent="Base.AlertDialog.AppCompat.Light"/>
     <style name="Animation.AppCompat.Dialog" parent="Base.Animation.AppCompat.Dialog"/>
     <style name="Animation.AppCompat.DropDownUp" parent="Base.Animation.AppCompat.DropDownUp"/>
-    <!-- From: file:/C:/Users/LiBin/Desktop/新建文件夹%20(3)/CavyTech/BaseCore/build/intermediates/exploded-aar/CavyTech/ImageLoader1.9/unspecified/res/values/values.xml -->
+    <!-- From: file:/C:/Users/LiBin/Desktop/CavyTech/BaseCore/build/intermediates/exploded-aar/CavyTech/ImageLoader1.9/unspecified/res/values/values.xml -->
     <eat-comment/>
     <style name="AppBaseTheme" parent="android:Theme.Light">
         <!--
@@ -362,7 +362,7 @@
     <style name="AppTheme" parent="AppBaseTheme">
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
     </style>
-    <!-- From: file:/C:/Users/LiBin/Desktop/新建文件夹%20(3)/CavyTech/BaseCore/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.1.1/res/values/values.xml -->
+    <!-- From: file:/C:/Users/LiBin/Desktop/CavyTech/BaseCore/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.1.1/res/values/values.xml -->
     <eat-comment/>
     <style name="Base.AlertDialog.AppCompat" parent="android:Widget">
         <item name="android:layout">@layout/abc_alert_dialog_material</item>
@@ -1273,7 +1273,7 @@
         <item name="android:scaleType">center</item>
         <item name="android:background">?attr/selectableItemBackground</item>
     </style>
-    <!-- From: file:/C:/Users/LiBin/Desktop/新建文件夹%20(3)/CavyTech/BaseCore/res/values/styles.xml -->
+    <!-- From: file:/C:/Users/LiBin/Desktop/CavyTech/BaseCore/res/values/styles.xml -->
     <eat-comment/>
     <style name="CropButton">
         <item name="android:layout_margin">1dp</item>
@@ -1289,7 +1289,7 @@
         <item name="android:textSize">16sp</item>
         <item name="android:textColor">@color/text_color</item>
     </style>
-    <!-- From: file:/C:/Users/LiBin/Desktop/新建文件夹%20(3)/CavyTech/BaseCore/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.1.1/res/values/values.xml -->
+    <!-- From: file:/C:/Users/LiBin/Desktop/CavyTech/BaseCore/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.1.1/res/values/values.xml -->
     <eat-comment/>
     <style name="Platform.AppCompat" parent="android:Theme">
         <item name="android:windowNoTitle">true</item>
@@ -1516,10 +1516,10 @@
     <style name="ThemeOverlay.AppCompat.Dark" parent="Base.ThemeOverlay.AppCompat.Dark"/>
     <style name="ThemeOverlay.AppCompat.Dark.ActionBar" parent="Base.ThemeOverlay.AppCompat.Dark.ActionBar"/>
     <style name="ThemeOverlay.AppCompat.Light" parent="Base.ThemeOverlay.AppCompat.Light"/>
-    <!-- From: file:/C:/Users/LiBin/Desktop/新建文件夹%20(3)/CavyTech/BaseCore/res/values/styles.xml -->
+    <!-- From: file:/C:/Users/LiBin/Desktop/CavyTech/BaseCore/res/values/styles.xml -->
     <eat-comment/>
     <style name="Widget"/>
-    <!-- From: file:/C:/Users/LiBin/Desktop/新建文件夹%20(3)/CavyTech/BaseCore/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.1.1/res/values/values.xml -->
+    <!-- From: file:/C:/Users/LiBin/Desktop/CavyTech/BaseCore/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.1.1/res/values/values.xml -->
     <eat-comment/>
     <style name="Widget.AppCompat.ActionBar" parent="Base.Widget.AppCompat.ActionBar">
     </style>
@@ -1612,7 +1612,7 @@
     <style name="Widget.AppCompat.TextView.SpinnerItem" parent="Base.Widget.AppCompat.TextView.SpinnerItem"/>
     <style name="Widget.AppCompat.Toolbar" parent="Base.Widget.AppCompat.Toolbar"/>
     <style name="Widget.AppCompat.Toolbar.Button.Navigation" parent="RtlOverlay.Widget.AppCompat.Toolbar.Button.Navigation"/>
-    <!-- From: file:/C:/Users/LiBin/Desktop/新建文件夹%20(3)/CavyTech/BaseCore/res/values/styles.xml -->
+    <!-- From: file:/C:/Users/LiBin/Desktop/CavyTech/BaseCore/res/values/styles.xml -->
     <eat-comment/>
     <style name="dialog" parent="@android:style/Theme.Dialog">
         <item name="android:windowFrame">@null</item>

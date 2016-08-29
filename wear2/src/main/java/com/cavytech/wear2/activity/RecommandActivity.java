@@ -9,7 +9,6 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.view.View;
-import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ImageView;
@@ -62,6 +61,8 @@ public class RecommandActivity extends FragmentActivity {//页面列表
             SystemBarTintManager tintManager = new SystemBarTintManager(this);
             tintManager.setStatusBarTintEnabled(true);
             tintManager.setStatusBarTintResource(R.color.top_bg_color);//通知栏所需颜色
+            tintManager.setNavigationBarTintEnabled(true);
+            tintManager.setNavigationBarTintResource(R.color.black);
         }
 
         super.onCreate(savedInstanceState);

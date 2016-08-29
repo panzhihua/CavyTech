@@ -4,4 +4,4 @@
 
     <corners android:radius="2dp" />
     <solid android:color="@color/btn_right_unpress_color" />
-</shape><!-- From: file:/Users/doudou/CaveyAppAndroid/trunk/CavyTech/BaseCore/res/drawable/btn_right_unpress.xml --><!-- From: file:/Users/doudou/CaveyAppAndroid/trunk/CavyTech/BaseCore/build/intermediates/bundles/debug/res/drawable/btn_right_unpress.xml -->
+</shape><!-- From: file:/C:/Users/LiBin/Desktop/CavyTech/BaseCore/res/drawable/btn_right_unpress.xml --><!-- From: file:/C:/Users/LiBin/Desktop/CavyTech/BaseCore/build/intermediates/bundles/debug/res/drawable/btn_right_unpress.xml -->

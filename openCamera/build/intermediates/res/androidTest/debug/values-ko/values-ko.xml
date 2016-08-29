@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/Users/doudou/CaveyAppAndroid/trunk/CavyTech/openCamera/build/intermediates/bundles/debug/res/values-ko/values-ko.xml -->
+    <!-- From: file:/C:/Users/LiBin/Desktop/CavyTech/openCamera/build/intermediates/bundles/debug/res/values-ko/values-ko.xml -->
     <eat-comment/>
     <string-array name="flash_entries">
         <item>플래시 꺼짐</item>

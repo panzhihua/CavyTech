@@ -56,7 +56,7 @@ public class WeightActivity extends GuideSetComActivity implements WeightView.On
 
     @Override
     public void onValueChangeEnd(View wheel, float value) {
-        weight = (int)value + "";
+        weight = value + "";
     }
 
     @Override

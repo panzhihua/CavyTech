@@ -86,6 +86,7 @@ import org.xutils.ex.DbException;
 import org.xutils.view.annotation.ViewInject;
 import org.xutils.x;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.IdentityHashMap;
@@ -199,7 +200,6 @@ public class HomePager extends SlidingFragmentActivity implements TextPick.OnVal
 
     BroadcastReceiver mItemViewListClickReceiver;
 
-
     /**
      * 成就列表
      */
@@ -239,6 +239,16 @@ public class HomePager extends SlidingFragmentActivity implements TextPick.OnVal
 
 //    private List<GetSleepBean.SleepListBean> sleepList;
     //private GetStepCountBean.StepListBean startbean;
+    private Handler callHandler = new Handler();
+
+    private Runnable callReminder =new Runnable() {
+        @Override
+        public void run() {
+            for (int i = 0; i < 10; i++) {
+                LifeBandBLEUtil.getInstance().DoVibrate(1, 100, 200, 0);
+            }
+        }
+    };
 
     private Handler handler = new Handler() {
         @Override
@@ -349,6 +359,8 @@ public class HomePager extends SlidingFragmentActivity implements TextPick.OnVal
             SystemBarTintManager tintManager = new SystemBarTintManager(this);
             tintManager.setStatusBarTintEnabled(true);
             tintManager.setStatusBarTintResource(R.color.top_bg_color);//通知栏所需颜色
+            tintManager.setNavigationBarTintEnabled(true);
+            tintManager.setNavigationBarTintResource(R.color.black);
         }
         CommonApplication.isLogin = true;
 
@@ -842,14 +854,18 @@ public class HomePager extends SlidingFragmentActivity implements TextPick.OnVal
     public void intDateWheel() {
 
         ArrayList whellDateArray = new ArrayList();
-
+        SimpleDateFormat formatter =new SimpleDateFormat("yyyy.MM.dd");
+        String date = formatter.format(new java.util.Date());
         for (int i = 0; i < dateCount.length; i++) {
 
             String subStringData = dateCount[i];
 
             String replace = subStringData.replace("-", ".");
-
-            whellDateArray.add(replace);
+            if(replace.equals(date)){
+                whellDateArray.add("今天");
+            }else {
+                whellDateArray.add(replace);
+            }
         }
 
         dateWheel.setTextAttrs(16, 12,
@@ -2038,27 +2054,22 @@ public class HomePager extends SlidingFragmentActivity implements TextPick.OnVal
 
             switch (state) {
                 case TelephonyManager.CALL_STATE_IDLE://空闲
+                    Log.e("pipa","空闲");
                     break;
                 case TelephonyManager.CALL_STATE_RINGING://来电
-                    Log.e("TAG", "---------------------来电----------------");
+                    Log.e("pipa","来电");
                     int minute = 0;
                     minute = CacheUtils.getInt(HomePager.this, Constants.PHONENOTICE) * 1000;
                     Log.e("TAG", minute + "-=-=-=-=-=-=-=");
                     if (CacheUtils.getBoolean(HomePager.this, Constants.PHONEISCHECKED)) {
-                        new Handler().postDelayed(new Runnable() {
-                            @Override
-                            public void run() {
-                                for (int i = 0; i < 10; i++) {
-                                    LifeBandBLEUtil.getInstance().DoVibrate(1, 100, 200, 0);
-                                }
-                            }
-                        }, minute);
-
+                        callHandler.postDelayed(callReminder, minute);
                     } else {
                         break;
                     }
                     break;
                 case TelephonyManager.CALL_STATE_OFFHOOK://摘机（正在通话中）
+                    callHandler.removeCallbacks(callReminder);
+                    Log.e("pipa","摘机（正在通话中）");
                     break;
             }
         }

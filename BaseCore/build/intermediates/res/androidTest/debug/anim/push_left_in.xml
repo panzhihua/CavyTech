@@ -3,4 +3,4 @@
         android:duration="300"
         android:fromXDelta="100%"
         android:toXDelta="0" />
-</set><!-- From: file:/Users/doudou/CaveyAppAndroid/trunk/CavyTech/BaseCore/res/anim/push_left_in.xml --><!-- From: file:/Users/doudou/CaveyAppAndroid/trunk/CavyTech/BaseCore/build/intermediates/bundles/debug/res/anim/push_left_in.xml -->
+</set><!-- From: file:/C:/Users/LiBin/Desktop/CavyTech/BaseCore/res/anim/push_left_in.xml --><!-- From: file:/C:/Users/LiBin/Desktop/CavyTech/BaseCore/build/intermediates/bundles/debug/res/anim/push_left_in.xml -->

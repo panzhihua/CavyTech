@@ -91,7 +91,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:id="@+id/linear_average"
-                app:layout_paddingBottomPercent="4%w"
+                app:layout_paddingBottomPercent="2%w"
                 android:layout_alignParentBottom="true">
                 <TextView
                     android:textSize="12sp"
@@ -120,7 +120,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:layout_alignParentRight="false"
-                app:layout_paddingBottomPercent="4%w"
+                app:layout_paddingBottomPercent="2%w"
                 android:id="@+id/linear_recommend"
                 android:layout_alignParentBottom="true">
                 <TextView
@@ -152,7 +152,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_alignParentBottom="true"
-                app:layout_heightPercent="8%w"
+                app:layout_heightPercent="4%w"
                 app:progressColor="#1dbcff"
                 app:progressBackgroundColor="#cccccc"
                 app:thumbColor="#1dbcff"

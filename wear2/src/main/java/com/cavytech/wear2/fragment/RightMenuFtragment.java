@@ -359,8 +359,6 @@ public class RightMenuFtragment extends BaseFragment {
                 CacheUtils.putInt(mActivity, Constants.STATUS, bandStatus);
                 circularFillableLoaders.setProgress(100 - bandStatus);
                 tv_electricityProgress.setText(bandStatus + "%");
-
-
             }
         };
         broadcastManager.registerReceiver(mItemViewListClickReceiver, intentFilter);
@@ -444,20 +442,20 @@ public class RightMenuFtragment extends BaseFragment {
 
         @Override
         public void onClick(View v) {
-            if (v == ll_comtral_camera) {
+            if (v == ll_comtral_camera) {//遥控相机
 
                 startActivity(new Intent(getActivity(), MainActivity.class));
 
-            } else if (v == ll_know_clock) {
+            } else if (v == ll_know_clock) {//手环闹钟
                 startActivity(new Intent(getActivity(), KnowClockActivity.class));
                 //Toast.makeText(getActivity(),"ll_know_clock",Toast.LENGTH_SHORT).show();
-            } else if (v == ll_band_notice) {
+            } else if (v == ll_band_notice) {//来电提醒
                 startActivity(new Intent(getActivity(), NoticeActivity.class));
                 // Toast.makeText(getActivity(),"ll_band_notice",Toast.LENGTH_SHORT).show();
-            } else if (v == ll_safe) {
+            } else if (v == ll_safe) {//紧急求救
                 //Toast.makeText(getActivity(), "ll_safe", Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(getActivity(), SecurityActivity.class));
-            } else if (v == ll_rom_update) {
+            } else if (v == ll_rom_update) {//固件升级
                 Toast.makeText(getActivity(), "检测中...", Toast.LENGTH_SHORT).show();
                 HttpUtils.getInstance().getGuJianVersion(mActivity, new RequestCallback<CheckVersionBean>() {
                     @Override
@@ -562,7 +560,7 @@ public class RightMenuFtragment extends BaseFragment {
                 });
 
                 //LifeBandBLEUtil.getInstance().UpdateFirmwareByFilePath(FileUtils.getFilePath()+"Cavy2H23F15D3.bin");
-            } else if (v == ll_new_band_cavy) {
+            } else if (v == ll_new_band_cavy) {//绑定新手环
                 AlertDialog.Builder dialog = new AlertDialog.Builder(mActivity);
                 dialog.setCancelable(false);
                 dialog.setMessage(R.string.bind_new_bracelets_bracelets);

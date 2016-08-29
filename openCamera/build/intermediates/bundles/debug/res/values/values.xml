@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/Users/doudou/CaveyAppAndroid/trunk/CavyTech/openCamera/src/main/res/values/arrays.xml -->
+    <!-- From: file:/C:/Users/LiBin/Desktop/CavyTech/openCamera/src/main/res/values/arrays.xml -->
     <eat-comment/>
     <string-array name="flash_entries">
         <item>Flash Off</item>
@@ -574,11 +574,11 @@
         <item>volume_nothing</item><!-- actually means change device volume! -->
         <item>volume_really_nothing</item>
     </string-array>
-    <!-- From: file:/Users/doudou/CaveyAppAndroid/trunk/CavyTech/openCamera/src/main/res/values/dimens.xml -->
+    <!-- From: file:/C:/Users/LiBin/Desktop/CavyTech/openCamera/src/main/res/values/dimens.xml -->
     <eat-comment/>
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
-    <!-- From: file:/Users/doudou/CaveyAppAndroid/trunk/CavyTech/openCamera/src/main/res/values/strings.xml -->
+    <!-- From: file:/C:/Users/LiBin/Desktop/CavyTech/openCamera/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="about_available">Available</string>
     <string name="about_copy_to_clipboard">Copy to clipboard</string>
@@ -852,7 +852,7 @@
     <string name="video_quality_summary">Set the resolution of videos</string>
     <string name="white_balance">White balance</string>
     <string name="zoom">Zoom</string>
-    <!-- From: file:/Users/doudou/CaveyAppAndroid/trunk/CavyTech/openCamera/src/main/res/values/styles.xml -->
+    <!-- From: file:/C:/Users/LiBin/Desktop/CavyTech/openCamera/src/main/res/values/styles.xml -->
     <eat-comment/>
     <style name="AppBaseTheme" parent="android:Theme.NoTitleBar.Fullscreen">
         <!--

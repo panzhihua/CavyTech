@@ -4,4 +4,4 @@
     <item android:state_pressed="true" android:drawable="@drawable/btn_left_press" />
     <item android:state_enabled="false" android:drawable="@drawable/btn_left_press" />
     <item android:drawable="@drawable/btn_left_unpress" />
-</selector><!-- From: file:/C:/Users/LiBin/Desktop/新建文件夹%20(3)/CavyTech/BaseCore/res/drawable/btn_left_selector.xml -->
+</selector><!-- From: file:/C:/Users/LiBin/Desktop/CavyTech/BaseCore/res/drawable/btn_left_selector.xml -->

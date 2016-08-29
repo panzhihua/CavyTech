@@ -33,6 +33,7 @@
         />
 
     <SeekBar
+        android:visibility="gone"
         android:id="@+id/zoom_seekbar"
         android:contentDescription="@string/zoom"
         android:layout_width="150dp"
@@ -52,7 +53,7 @@
         android:layout_marginRight="10dp"
         android:layout_marginTop="0dp"
         android:layout_marginBottom="0dp"
-        android:visibility="invisible"
+        android:visibility="gone"
         />
     
     <Button
@@ -86,6 +87,7 @@
         />
 
     <ImageButton
+        android:visibility="gone"
         android:id="@+id/popup"
         android:layout_width="50dp"
         android:layout_height="50dp"
@@ -97,6 +99,7 @@
         />
     
     <ImageButton
+        android:visibility="gone"
         android:id="@+id/exposure_lock"
         android:layout_width="50dp"
         android:layout_height="50dp"
@@ -107,6 +110,7 @@
         />
 
     <ImageButton
+        android:visibility="gone"
         android:id="@+id/exposure"
         android:layout_width="50dp"
         android:layout_height="50dp"
@@ -118,6 +122,7 @@
         />
 
     <ImageButton
+        android:visibility="gone"
         android:id="@+id/switch_video"
         android:layout_width="50dp"
         android:layout_height="50dp"
@@ -129,6 +134,7 @@
         />
 
     <ImageButton
+        android:visibility="gone"
         android:id="@+id/switch_camera"
         android:layout_width="50dp"
         android:layout_height="50dp"
@@ -140,6 +146,7 @@
         />
 
     <ImageButton
+        android:visibility="gone"
         android:id="@+id/audio_control"
         android:layout_width="50dp"
         android:layout_height="50dp"
@@ -239,4 +246,4 @@
         />
     
 </RelativeLayout>
-<!-- From: file:/Users/doudou/CaveyAppAndroid/trunk/CavyTech/openCamera/src/main/res/layout/activity_camera_main.xml -->
+<!-- From: file:/C:/Users/LiBin/Desktop/CavyTech/openCamera/src/main/res/layout/activity_camera_main.xml -->

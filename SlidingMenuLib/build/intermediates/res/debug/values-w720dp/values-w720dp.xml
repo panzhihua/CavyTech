@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/Users/doudou/CaveyAppAndroid/trunk/CavyTech/SlidingMenuLib/build/intermediates/exploded-aar/CavyTech/BaseCore/unspecified/res/values-w720dp/values-w720dp.xml -->
+    <!-- From: file:/C:/Users/LiBin/Desktop/CavyTech/SlidingMenuLib/build/intermediates/exploded-aar/CavyTech/BaseCore/unspecified/res/values-w720dp/values-w720dp.xml -->
     <eat-comment/>
     <dimen name="dialog_padding">120dp</dimen>
 </resources>

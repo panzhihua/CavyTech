@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <shape xmlns:android="http://schemas.android.com/apk/res/android" >
     <gradient android:startColor="#FF3B3B3B" android:endColor="#FFAFAFAF" android:angle="270"/>
-</shape><!-- From: file:/C:/Users/LiBin/Desktop/新建文件夹%20(3)/CavyTech/BaseCore/res/drawable/image_holder.xml --><!-- From: file:/C:/Users/LiBin/Desktop/新建文件夹%20(3)/CavyTech/SlidingMenuLib/build/intermediates/exploded-aar/CavyTech/BaseCore/unspecified/res/drawable/image_holder.xml -->
+</shape><!-- From: file:/C:/Users/LiBin/Desktop/CavyTech/BaseCore/res/drawable/image_holder.xml --><!-- From: file:/C:/Users/LiBin/Desktop/CavyTech/SlidingMenuLib/build/intermediates/exploded-aar/CavyTech/BaseCore/unspecified/res/drawable/image_holder.xml -->

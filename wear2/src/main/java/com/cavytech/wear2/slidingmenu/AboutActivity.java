@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.annotation.Nullable;
 import android.view.View;
 import android.widget.ImageView;
@@ -50,7 +51,7 @@ public class AboutActivity extends AppCompatActivityEx {
     private TextView textView11;
 
 
- @ViewInject(R.id.xiyi)
+    @ViewInject(R.id.xiyi)
     private TextView xiyi;
 
 
@@ -64,6 +65,8 @@ public class AboutActivity extends AppCompatActivityEx {
     private String downloadUrl;
     private int appsize;
     private int localVersion = 0;
+
+    private Handler callHandler = new Handler();
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -121,6 +124,18 @@ public class AboutActivity extends AppCompatActivityEx {
                             }
                         } catch (JSONException e1) {
                             e1.printStackTrace();
+                        } finally {
+                            callHandler.postDelayed(new Runnable() {
+                                @Override
+                                public void run() {
+                                    runOnUiThread(new Runnable() {
+                                        @Override
+                                        public void run() {
+                                            textView11.setText("检测更新");
+                                        }
+                                    });
+                                }
+                            }, 5000);
                         }
                     }
 
@@ -160,6 +175,18 @@ public class AboutActivity extends AppCompatActivityEx {
                             }
                         } catch (Exception e) {
                             e.printStackTrace();
+                        } finally {
+                            callHandler.postDelayed(new Runnable() {
+                                @Override
+                                public void run() {
+                                    runOnUiThread(new Runnable() {
+                                        @Override
+                                        public void run() {
+                                            textView11.setText("检测更新");
+                                        }
+                                    });
+                                }
+                            }, 5000);
                         }
                     }
                 });

@@ -4,4 +4,4 @@
 
     <corners android:radius="2dp" />
     <solid android:color="@color/btn_left_unpress_color" />
-</shape><!-- From: file:/C:/Users/LiBin/Desktop/新建文件夹%20(3)/CavyTech/BaseCore/res/drawable/btn_left_unpress.xml --><!-- From: file:/C:/Users/LiBin/Desktop/新建文件夹%20(3)/CavyTech/SlidingMenuLib/build/intermediates/exploded-aar/CavyTech/BaseCore/unspecified/res/drawable/btn_left_unpress.xml -->
+</shape><!-- From: file:/C:/Users/LiBin/Desktop/CavyTech/BaseCore/res/drawable/btn_left_unpress.xml --><!-- From: file:/C:/Users/LiBin/Desktop/CavyTech/SlidingMenuLib/build/intermediates/exploded-aar/CavyTech/BaseCore/unspecified/res/drawable/btn_left_unpress.xml -->

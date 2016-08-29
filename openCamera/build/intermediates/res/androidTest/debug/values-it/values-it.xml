@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/Users/doudou/CaveyAppAndroid/trunk/CavyTech/openCamera/build/intermediates/bundles/debug/res/values-it/values-it.xml -->
+    <!-- From: file:/C:/Users/LiBin/Desktop/CavyTech/openCamera/build/intermediates/bundles/debug/res/values-it/values-it.xml -->
     <eat-comment/>
     <string-array name="flash_entries">
         <item>Flash Off</item>

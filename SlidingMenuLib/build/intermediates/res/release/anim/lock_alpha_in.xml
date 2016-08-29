@@ -3,4 +3,4 @@
 
     <alpha android:fromAlpha="0" android:toAlpha="1.0" android:duration="1" />
 
-</set><!-- From: file:/C:/Users/LiBin/Desktop/新建文件夹%20(3)/CavyTech/BaseCore/res/anim/lock_alpha_in.xml --><!-- From: file:/C:/Users/LiBin/Desktop/新建文件夹%20(3)/CavyTech/SlidingMenuLib/build/intermediates/exploded-aar/CavyTech/BaseCore/unspecified/res/anim/lock_alpha_in.xml -->
+</set><!-- From: file:/C:/Users/LiBin/Desktop/CavyTech/BaseCore/res/anim/lock_alpha_in.xml --><!-- From: file:/C:/Users/LiBin/Desktop/CavyTech/SlidingMenuLib/build/intermediates/exploded-aar/CavyTech/BaseCore/unspecified/res/anim/lock_alpha_in.xml -->

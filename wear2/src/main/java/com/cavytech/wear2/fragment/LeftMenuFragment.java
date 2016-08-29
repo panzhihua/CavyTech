@@ -168,7 +168,7 @@ public class LeftMenuFragment extends BaseFragment {
         @Override
         public void onClick(View v) {
 
-            if(v == ll_target){
+            if(v == ll_target){//目标
 
                 Intent intent = new Intent(mActivity, TargetActivity.class);
                 intent.putExtra(Constants.INTENT_EXTRA_ISEDIT,true);
@@ -212,15 +212,15 @@ public class LeftMenuFragment extends BaseFragment {
 
 //                startActivity(new Intent(getActivity(),PkAtateActivity.class));
 
-            }else if( v == ll_about){
+            }else if( v == ll_about){//关于
 
                 startActivity(new Intent(getActivity(),AboutActivity.class));
 
-            }else if( v == ll_feedback){
+            }else if( v == ll_feedback){//帮助与反馈
 
                 startActivity(new Intent(getActivity(),HelpFeedBackActivity.class));
 
-            }else if( v == ll_realative){
+            }else if( v == ll_realative){//体感应用
                 startActivity(new Intent(getActivity(),OtherActivity.class));
 
             }

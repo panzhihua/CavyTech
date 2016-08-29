@@ -3,4 +3,4 @@
 	<translate android:fromXDelta="-100%" android:toXDelta="0"
 		android:duration="300" />
 </set>
-<!-- From: file:/Users/doudou/CaveyAppAndroid/trunk/CavyTech/BaseCore/res/anim/push_right_in.xml --><!-- From: file:/Users/doudou/CaveyAppAndroid/trunk/CavyTech/SlidingMenuLib/build/intermediates/exploded-aar/CavyTech/BaseCore/unspecified/res/anim/push_right_in.xml -->
+<!-- From: file:/C:/Users/LiBin/Desktop/CavyTech/BaseCore/res/anim/push_right_in.xml --><!-- From: file:/C:/Users/LiBin/Desktop/CavyTech/SlidingMenuLib/build/intermediates/exploded-aar/CavyTech/BaseCore/unspecified/res/anim/push_right_in.xml -->

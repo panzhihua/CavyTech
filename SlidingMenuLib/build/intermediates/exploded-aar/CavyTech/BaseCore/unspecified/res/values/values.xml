@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/C:/Users/LiBin/Desktop/新建文件夹%20(3)/CavyTech/BaseCore/res/values/fileendings.xml -->
+    <!-- From: file:/C:/Users/LiBin/Desktop/CavyTech/BaseCore/res/values/fileendings.xml -->
     <eat-comment/>
     <array name="fileEndingAudio">
         <item>.mp3</item>
@@ -60,13 +60,13 @@
         <item>.doc</item>
         <item>.docx</item>
     </array>
-    <!-- From: file:/C:/Users/LiBin/Desktop/新建文件夹%20(3)/CavyTech/BaseCore/res/values/attrs.xml -->
+    <!-- From: file:/C:/Users/LiBin/Desktop/CavyTech/BaseCore/res/values/attrs.xml -->
     <eat-comment/>
     <attr format="reference" name="autoScaleTextViewStyle"/>
-    <!-- From: file:/C:/Users/LiBin/Desktop/新建文件夹%20(3)/CavyTech/BaseCore/res/values/bools.xml -->
+    <!-- From: file:/C:/Users/LiBin/Desktop/CavyTech/BaseCore/res/values/bools.xml -->
     <eat-comment/>
     <bool name="portrait">true</bool>
-    <!-- From: file:/C:/Users/LiBin/Desktop/新建文件夹%20(3)/CavyTech/BaseCore/res/values/color.xml -->
+    <!-- From: file:/C:/Users/LiBin/Desktop/CavyTech/BaseCore/res/values/color.xml -->
     <eat-comment/>
     <color name="black_alpha">#7f000000</color>
     <color name="btn_left_press_color">#71db82</color>
@@ -110,12 +110,12 @@
     <declare-styleable name="PosterView"><attr format="reference" name="defaultDrawable"/></declare-styleable>
     <declare-styleable name="TextAppearance"><attr name="android:textColor"/><attr name="android:textSize"/><attr name="android:textStyle"/><attr name="android:typeface"/><attr name="android:textColorHighlight"/><attr name="android:textColorHint"/><attr name="android:textColorLink"/></declare-styleable>
     <declare-styleable name="Workspace"><attr format="integer" name="defaultScreen"/></declare-styleable>
-    <!-- From: file:/C:/Users/LiBin/Desktop/新建文件夹%20(3)/CavyTech/BaseCore/res/values/dimens.xml -->
+    <!-- From: file:/C:/Users/LiBin/Desktop/CavyTech/BaseCore/res/values/dimens.xml -->
     <eat-comment/>
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="dialog_padding">55dp</dimen>
-    <!-- From: file:/C:/Users/LiBin/Desktop/新建文件夹%20(3)/CavyTech/BaseCore/res/values/strings.xml -->
+    <!-- From: file:/C:/Users/LiBin/Desktop/CavyTech/BaseCore/res/values/strings.xml -->
     <eat-comment/>
     <string name="action_settings">Settings</string>
     <string name="app_name">BaseCore</string>
@@ -131,7 +131,7 @@
     <string name="preparing_card">正在准备存储卡</string>
     <string name="rotate">旋转</string>
     <string name="saving_image">正在保存图片…</string>
-    <!-- From: file:/C:/Users/LiBin/Desktop/新建文件夹%20(3)/CavyTech/BaseCore/res/values/styles.xml -->
+    <!-- From: file:/C:/Users/LiBin/Desktop/CavyTech/BaseCore/res/values/styles.xml -->
     <eat-comment/>
     <style name="CropButton">
         <item name="android:layout_margin">1dp</item>

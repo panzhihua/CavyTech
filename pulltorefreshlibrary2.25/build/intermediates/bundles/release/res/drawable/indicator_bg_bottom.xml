@@ -15,4 +15,4 @@
         android:topLeftRadius="@dimen/indicator_corner_radius"
         android:topRightRadius="@dimen/indicator_corner_radius" />
 
-</shape><!-- From: file:/C:/Users/LiBin/Desktop/新建文件夹%20(3)/CavyTech/pulltorefreshlibrary2.25/res/drawable/indicator_bg_bottom.xml -->
+</shape><!-- From: file:/C:/Users/LiBin/Desktop/CavyTech/pulltorefreshlibrary2.25/res/drawable/indicator_bg_bottom.xml -->

@@ -3,4 +3,4 @@
 
 	<corners android:radius="4dp" />
 	<solid android:color="@color/dialog_bg" />
-</shape><!-- From: file:/C:/Users/LiBin/Desktop/新建文件夹%20(3)/CavyTech/BaseCore/res/drawable/dialog_bg.xml --><!-- From: file:/C:/Users/LiBin/Desktop/新建文件夹%20(3)/CavyTech/SlidingMenuLib/build/intermediates/exploded-aar/CavyTech/BaseCore/unspecified/res/drawable/dialog_bg.xml -->
+</shape><!-- From: file:/C:/Users/LiBin/Desktop/CavyTech/BaseCore/res/drawable/dialog_bg.xml --><!-- From: file:/C:/Users/LiBin/Desktop/CavyTech/SlidingMenuLib/build/intermediates/exploded-aar/CavyTech/BaseCore/unspecified/res/drawable/dialog_bg.xml -->

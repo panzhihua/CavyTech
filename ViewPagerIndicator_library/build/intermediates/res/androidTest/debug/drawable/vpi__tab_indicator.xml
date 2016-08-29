@@ -32,4 +32,4 @@
     <item android:state_focused="true" android:state_selected="false" android:state_pressed="true" android:drawable="@android:color/transparent" />
     <item android:state_focused="true" android:state_selected="true"  android:state_pressed="true" android:drawable="@drawable/tab_title_select" />
 </selector>
-<!-- From: file:/Users/doudou/CaveyAppAndroid/trunk/CavyTech/ViewPagerIndicator_library/src/main/res/drawable/vpi__tab_indicator.xml --><!-- From: file:/Users/doudou/CaveyAppAndroid/trunk/CavyTech/ViewPagerIndicator_library/build/intermediates/bundles/debug/res/drawable/vpi__tab_indicator.xml -->
+<!-- From: file:/C:/Users/LiBin/Desktop/CavyTech/ViewPagerIndicator_library/src/main/res/drawable/vpi__tab_indicator.xml --><!-- From: file:/C:/Users/LiBin/Desktop/CavyTech/ViewPagerIndicator_library/build/intermediates/bundles/debug/res/drawable/vpi__tab_indicator.xml -->

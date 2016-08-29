@@ -20,10 +20,11 @@ public class AppCompatActivityEx extends AppCompatActivity {
             SystemBarTintManager tintManager = new SystemBarTintManager(this);
             tintManager.setStatusBarTintEnabled(true);
             tintManager.setStatusBarTintResource(R.color.com_titlebar2);
+            tintManager.setNavigationBarTintEnabled(true);
+            tintManager.setNavigationBarTintResource(R.color.black);
         }
 
         mToolbar = (Toolbar) findViewById(R.id.toolbar);
-
         setSupportActionBar(mToolbar);
     }
 }

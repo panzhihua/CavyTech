@@ -22,13 +22,10 @@ import com.cavytech.wear2.R;
 import com.cavytech.wear2.entity.PklistBean;
 import com.cavytech.wear2.http.HttpUtils;
 import com.cavytech.wear2.http.RequestCallback;
-import com.cavytech.wear2.slidingmenu.PkActivity;
 import com.cavytech.wear2.util.CircleTransform;
-import com.cavytech.wear2.util.Constants;
 import com.cavytech.widget.NoScrollListview;
 import com.squareup.okhttp.Request;
 import com.squareup.picasso.Picasso;
-import com.zhy.http.okhttp.OkHttpUtils;
 
 import org.xutils.view.annotation.ViewInject;
 import org.xutils.x;
@@ -79,6 +76,8 @@ public class PkAtateActivity extends Activity {
             SystemBarTintManager tintManager = new SystemBarTintManager(this);
             tintManager.setStatusBarTintEnabled(true);
             tintManager.setStatusBarTintResource(R.color.top_bg_color);//通知栏所需颜色
+            tintManager.setNavigationBarTintEnabled(true);
+            tintManager.setNavigationBarTintResource(R.color.black);
         }
         setContentView(R.layout.activity_pk_atate);
         x.view().inject(this);

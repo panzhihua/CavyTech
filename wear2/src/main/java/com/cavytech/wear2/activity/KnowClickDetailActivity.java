@@ -84,6 +84,8 @@ public class KnowClickDetailActivity extends Activity {
             SystemBarTintManager tintManager = new SystemBarTintManager(this);
             tintManager.setStatusBarTintEnabled(true);
             tintManager.setStatusBarTintResource(R.color.top_bg_color);//通知栏所需颜色
+            tintManager.setNavigationBarTintEnabled(true);
+            tintManager.setNavigationBarTintResource(R.color.black);
         }
         setContentView(R.layout.activity_know_click_detail);
         x.view().inject(this);
@@ -136,7 +138,7 @@ public class KnowClickDetailActivity extends Activity {
         }else{
             mListItems = new ArrayList<ClockBean>();
 
-            mListItems.add(new ClockBean());
+            mListItems.add(new ClockBean(true));
             position = 0;
         }
         initListCheckBox();

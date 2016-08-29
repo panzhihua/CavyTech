@@ -20,4 +20,4 @@
         android:shadowRadius="1"
         android:text="@string/take_photo" />
 </LinearLayout>
-<!-- From: file:/C:/Users/LiBin/Desktop/新建文件夹%20(3)/CavyTech/openCamera/src/main/res/layout/widget_layout_take_photo.xml -->
+<!-- From: file:/C:/Users/LiBin/Desktop/CavyTech/openCamera/src/main/res/layout/widget_layout_take_photo.xml -->

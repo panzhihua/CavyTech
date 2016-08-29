@@ -169,9 +169,7 @@ public class KnowClockActivity extends AppCompatActivityEx {
             if(mListItems.get(i).isNotSelect()){
                 clockType = 1;
             }
-
             setBandClock(clockType,minuteBand,weekBand);
-
         }
     }
 

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/C:/Users/LiBin/Desktop/新建文件夹%20(3)/CavyTech/openCamera/src/main/res/values-cs/arrays.xml -->
+    <!-- From: file:/C:/Users/LiBin/Desktop/CavyTech/openCamera/src/main/res/values-cs/arrays.xml -->
     <eat-comment/>
     <string-array name="flash_entries">
         <item>Blesk Vypnut</item>
@@ -532,7 +532,7 @@
         <item>volume_nothing</item><!-- actually means change device volume! -->
         <item>volume_really_nothing</item>
     </string-array>
-    <!-- From: file:/C:/Users/LiBin/Desktop/新建文件夹%20(3)/CavyTech/openCamera/src/main/res/values-cs/strings.xml -->
+    <!-- From: file:/C:/Users/LiBin/Desktop/CavyTech/openCamera/src/main/res/values-cs/strings.xml -->
     <eat-comment/>
     <string name="about_available">Dostupné</string>
     <string name="about_copy_to_clipboard">Kopírovat do schránky</string>

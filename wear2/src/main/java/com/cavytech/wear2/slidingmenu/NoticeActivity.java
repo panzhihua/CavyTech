@@ -57,6 +57,8 @@ public class NoticeActivity extends Activity implements TextPick.OnValueChangeLi
             SystemBarTintManager tintManager = new SystemBarTintManager(this);
             tintManager.setStatusBarTintEnabled(true);
             tintManager.setStatusBarTintResource(R.color.top_bg_color);//通知栏所需颜色
+            tintManager.setNavigationBarTintEnabled(true);
+            tintManager.setNavigationBarTintResource(R.color.black);
         }
         CommonApplication.isLogin = true;
 

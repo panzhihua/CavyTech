@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/Users/doudou/CaveyAppAndroid/trunk/CavyTech/openCamera/src/main/res/values-az/arrays.xml -->
+    <!-- From: file:/C:/Users/LiBin/Desktop/CavyTech/openCamera/src/main/res/values-az/arrays.xml -->
     <eat-comment/>
     <string-array name="flash_entries">
         <item>İşıq bağlandı</item>
@@ -452,7 +452,7 @@
         <item>volume_nothing</item><!-- actually means change device volume! -->
         <item>volume_really_nothing</item>
     </string-array>
-    <!-- From: file:/Users/doudou/CaveyAppAndroid/trunk/CavyTech/openCamera/src/main/res/values-az/strings.xml -->
+    <!-- From: file:/C:/Users/LiBin/Desktop/CavyTech/openCamera/src/main/res/values-az/strings.xml -->
     <eat-comment/>
     <string name="about_available">Mövcuddur</string>
     <string name="about_copy_to_clipboard">Mübadilə buferinə köçür</string>
