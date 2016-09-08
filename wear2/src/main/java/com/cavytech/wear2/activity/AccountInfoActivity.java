@@ -19,6 +19,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.basecore.widget.CustomToast;
+import com.bumptech.glide.Glide;
 import com.cavytech.wear2.R;
 import com.cavytech.wear2.application.CommonApplication;
 import com.cavytech.wear2.entity.BandSleepStepBean;
@@ -32,14 +33,13 @@ import com.cavytech.wear2.entity.UserInfoKVEntity;
 import com.cavytech.wear2.http.HttpUtils;
 import com.cavytech.wear2.http.RequestCallback;
 import com.cavytech.wear2.util.CacheUtils;
-import com.cavytech.wear2.util.CircleTransform;
 import com.cavytech.wear2.util.Constants;
 import com.cavytech.wear2.util.FileUtils;
+import com.cavytech.wear2.util.GlideCircleTransform;
 import com.cavytech.wear2.util.LifeBandBLEUtil;
 import com.cavytech.wear2.util.PhoneUtils;
 import com.cavytech.wear2.util.SerializeUtils;
 import com.squareup.okhttp.Request;
-import com.squareup.picasso.Picasso;
 import com.taig.pmc.PopupMenuCompat;
 import com.umeng.analytics.MobclickAgent;
 
@@ -409,8 +409,10 @@ public class AccountInfoActivity extends CommonActivity {
                 userInfo = response.getProfile();
 
                 makeUserInfo();
-                if(!userInfo.getNickname().equals("")){
-                    nickname.setText(userInfo.getNickname());
+                if(userInfo.getNickname()!=null) {
+                    if (!userInfo.getNickname().equals("")) {
+                        nickname.setText(userInfo.getNickname());
+                    }
                 }
                 accout.setText(CacheUtils.getString(AccountInfoActivity.this, Constants.USERNAME));
 
@@ -513,17 +515,17 @@ public class AccountInfoActivity extends CommonActivity {
             return;
         }
         if (userInfo.getAvatar() != null && !userInfo.getAvatar().isEmpty()) {
-            Log.e("pipa","----头像上传---"+userInfo.getAvatar());
-            Picasso.with(AccountInfoActivity.this)
+            Glide.with(AccountInfoActivity.this)
                     .load(userInfo.getAvatar())
-                    .transform(new CircleTransform())
+                    .transform(new GlideCircleTransform(this))
                     .placeholder(R.drawable.head)
                     .error(R.drawable.head)
                     .into(avatar);
         }
-
-        if(!userInfo.getNickname().equals("")){
-            nickname.setText(userInfo.getNickname());
+        if(userInfo.getNickname()!=null) {
+            if (!userInfo.getNickname().equals("")) {
+                nickname.setText(userInfo.getNickname());
+            }
         }
 
         accout.setText(CacheUtils.getString(AccountInfoActivity.this, Constants.USERNAME));
@@ -938,9 +940,9 @@ public class AccountInfoActivity extends CommonActivity {
                     }catch(Exception e){
                         e.getMessage();
                     }
-                    Picasso.with(AccountInfoActivity.this)
+                    Glide.with(AccountInfoActivity.this)
                             .load(userInfo.getAvatar())
-                            .transform(new CircleTransform())
+                            .transform(new GlideCircleTransform(AccountInfoActivity.this))
                             .placeholder(null)
                             .error(R.drawable.head)
                             .into(avatar);

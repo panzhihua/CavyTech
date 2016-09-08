@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.cavytech.wear2"
-    android:versionCode="4"
-    android:versionName="1.0.3">
+    android:versionCode="6"
+    android:versionName="1.0.5">
     <uses-sdk android:minSdkVersion="4"></uses-sdk>
     <uses-permission android:name="android.permission.WAKE_LOCK" /> <!-- 常亮 -->
     <uses-permission android:name="android.permission.RESTART_PACKAGES"/>
@@ -444,7 +444,7 @@
 
         <meta-data android:value="57a98f6ee0f55ab74000129e" android:name="UMENG_APPKEY"></meta-data>
 
-        <meta-data android:value="gw" android:name="UMENG_CHANNEL"/>
+        <meta-data android:value="yyb" android:name="UMENG_CHANNEL"/>
 
     </application>
 

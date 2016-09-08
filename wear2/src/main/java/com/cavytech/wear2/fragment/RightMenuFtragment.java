@@ -119,6 +119,9 @@ public class RightMenuFtragment extends BaseFragment {
     @ViewInject(R.id.iv_right_sercity)
     private ImageView iv_right_sercity;
 
+    @ViewInject(R.id.iv_fw)
+    private ImageView iv_fw;
+
 
     @ViewInject(R.id.ll_new_band_cavy)
     private LinearLayout ll_new_band_cavy;
@@ -253,6 +256,8 @@ public class RightMenuFtragment extends BaseFragment {
         ll_know_clock.setClickable(false);
         ll_safe.setClickable(false);
         ll_rom_update.setClickable(false);
+
+        iv_fw.setVisibility(View.GONE);
 
     }
 
@@ -408,9 +413,7 @@ public class RightMenuFtragment extends BaseFragment {
                 ll_safe.setClickable(true);
                 ll_rom_update.setClickable(true);
 
-
-
-
+                iv_fw.setVisibility(View.GONE);
             }
         }
     }
@@ -586,5 +589,8 @@ public class RightMenuFtragment extends BaseFragment {
         }
     }
 
+    public ImageView getIv_fw() {
+        return iv_fw;
+    }
 
 }

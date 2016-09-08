@@ -237,7 +237,7 @@ public class BandSettingActivity extends GuideSetComActivity {
                 //startActivity(new Intent(BandSettingActivity.this, HomePager.class));
                 BandInfoEntity bandInfo = (BandInfoEntity) SerializeUtils.unserialize(Constants.SERIALIZE_BAND_INFO);
                 CacheUtils.saveMacAdress(BandSettingActivity.this,bandInfo.getAddress());
-                Log.e("TAG","测试一下onClickNextBtn");
+                Log.e("pipa",bandInfo.getAddress());
                 LifeBandBLEUtil.getInstance().DataSync(1, 0);
                 finish();
             } else if(profile.getWeight() == 0 && profile.getHeight() == 0){

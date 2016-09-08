@@ -4,5 +4,5 @@
   <string name="pull_to_refresh_pull_label">下拉可以刷新&#8230;</string>
   <string name="pull_to_refresh_release_label">松开即可刷新&#8230;</string>
   <string name="pull_to_refresh_release_load_label">松开即可刷新&#8230;</string>
-  <string name="pull_to_refresh_refreshing_label">加载中&#8230;</string>
+  <string name="pull_to_refresh_refreshing_label">数据同步中&#8230;</string>
 </resources>

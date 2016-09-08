@@ -39,7 +39,7 @@ public class Constants {
     public static final String SERIALIZE_USERINFO = "userInfo.ser";
     public static final String MACADDRESSCONNECTIONUSERINFO = "MacAddressConnectionUserInfo";
     public static final String SERIALIZE_CLOCKBEAN = "clock.ser";
-    public static final String SERIALIZE_BAND_INFO = "bandinfo.ser";
+    public static final String SERIALIZE_BAND_INFO = "band_info.ser";
     public static final String SERIALIZE_USERBAND_INFO = "userbandinfo.ser";
 
     // BroadcastReceiver ID

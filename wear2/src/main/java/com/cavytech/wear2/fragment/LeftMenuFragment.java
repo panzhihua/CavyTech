@@ -13,6 +13,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.cavytech.wear2.R;
 import com.cavytech.wear2.activity.AccountInfoActivity;
 import com.cavytech.wear2.activity.HelpFeedBackActivity;
@@ -28,11 +29,10 @@ import com.cavytech.wear2.slidingmenu.AboutActivity;
 import com.cavytech.wear2.slidingmenu.FriendActivity;
 import com.cavytech.wear2.slidingmenu.PkActivity;
 import com.cavytech.wear2.util.CacheUtils;
-import com.cavytech.wear2.util.CircleTransform;
 import com.cavytech.wear2.util.Constants;
+import com.cavytech.wear2.util.GlideCircleTransform;
 import com.cavytech.wear2.util.SerializeUtils;
 import com.squareup.okhttp.Request;
-import com.squareup.picasso.Picasso;
 
 import org.xutils.view.annotation.ViewInject;
 import org.xutils.x;
@@ -122,12 +122,12 @@ public class LeftMenuFragment extends BaseFragment {
             /**
              * 更改
              */
-            if(userInfo.getAvatar() != null  ){
-                Picasso.with(getActivity())
+            if(userInfo.getAvatar() != null && !userInfo.getAvatar().isEmpty() ){
+                Glide.with(LeftMenuFragment.this)
                         .load(userInfo.getAvatar())
-                        .transform(new CircleTransform())
-                        .placeholder(R.drawable.head_boy_normal)
-                        .error(R.drawable.head_boy_normal)
+                        .transform(new GlideCircleTransform(mActivity))
+                        .placeholder(R.drawable.head)
+                        .error(R.drawable.head)
                         .into(iv_slidingmenu_head_icon);
             }
 

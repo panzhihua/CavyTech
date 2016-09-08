@@ -1,10 +1,6 @@
 package com.cavytech.wear2.cavylifeband;
 
-import java.util.ArrayList;
-
-        import android.app.Activity;
-        import android.content.Context;
-        import android.content.pm.ActivityInfo;
+import android.content.pm.ActivityInfo;
 
 public class Global
 {
@@ -86,7 +82,7 @@ public class Global
     //==================================================
     public static final int VIBRATE_OFF = 0;
     public static final int VIBRATE_ONCE = 1;
-    public static final int VIBRATE_TWICE = 2;
+    public static final int VIBRATE_TWICE = 98;
     public static final int MIN_VIBRATE_POWER = 1;
     public static final int MAX_VIBRATE_POWER = 100;
     //==================================================

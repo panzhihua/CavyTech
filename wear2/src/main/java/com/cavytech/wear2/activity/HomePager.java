@@ -44,6 +44,7 @@ import com.cavytech.wear2.cavylifeband.InterfaceOfBLECallback;
 import com.cavytech.wear2.cavylifeband.LifeBandBLE;
 import com.cavytech.wear2.cavylifeband.PedometerData;
 import com.cavytech.wear2.entity.BandSleepStepBean;
+import com.cavytech.wear2.entity.CheckVersionBean;
 import com.cavytech.wear2.entity.CommonEntity;
 import com.cavytech.wear2.entity.GPSCityEntity;
 import com.cavytech.wear2.entity.GetSleepentity;
@@ -237,16 +238,25 @@ public class HomePager extends SlidingFragmentActivity implements TextPick.OnVal
 
     public static Boolean isConnectoinNewBand = false;
 
+    private LeftMenuFragment leftMenuFragment;
+
+    private RightMenuFtragment rightMenuFtragment;
+
 //    private List<GetSleepBean.SleepListBean> sleepList;
     //private GetStepCountBean.StepListBean startbean;
     private Handler callHandler = new Handler();
 
-    private Runnable callReminder =new Runnable() {
+    private Runnable starcCallReminder =new Runnable() {//开始震动
         @Override
         public void run() {
-            for (int i = 0; i < 10; i++) {
-                LifeBandBLEUtil.getInstance().DoVibrate(1, 100, 200, 0);
-            }
+            LifeBandBLEUtil.getInstance().DoVibrate(10, 100, 200, 500);
+        }
+    };
+
+    private Runnable stopCallReminder =new Runnable() {//停止震动
+        @Override
+        public void run() {
+            LifeBandBLEUtil.getInstance().DoVibrate(0, 100, 200, 500);
         }
     };
 
@@ -449,6 +459,8 @@ public class HomePager extends SlidingFragmentActivity implements TextPick.OnVal
 
         initSlidingMenu();
 
+        initStartFragment();
+
         initFragment();
 
         getWheelDateCountFromNate();
@@ -494,9 +506,8 @@ public class HomePager extends SlidingFragmentActivity implements TextPick.OnVal
         int connectionCode = CacheUtils.getInt(HomePager.this, Constants.ISCONNECTIONBAND);
 
         Log.e("TAG", "connectionCode======" + connectionCode + "");
-        //if (connectionCode == 2 ||  connectionCode == 1) {
         if (connectionCode == 2) {
-            sliding_switch_band.setImageResource(R.drawable.icon_band);
+            judgeFWVersion();
         } else {
             sliding_switch_band.setImageResource(R.drawable.nav_band_disable);
         }
@@ -671,13 +682,7 @@ public class HomePager extends SlidingFragmentActivity implements TextPick.OnVal
             public void onReceive(Context context, Intent intent) {
 
                 if (LifeBandBLEUtil.getInstance().getConnectionState() == LifeBandBLE.STATE_CONNECTED) {
-                    sliding_switch_band.setImageResource(R.drawable.icon_band);
-                } else {
-                    sliding_switch_band.setImageResource(R.drawable.nav_band_disable);
-                }
-
-                if (LifeBandBLEUtil.getInstance().getConnectionState() == LifeBandBLE.STATE_CONNECTED) {
-                    sliding_switch_band.setImageResource(R.drawable.icon_band);
+                    judgeFWVersion();
                 } else {
                     sliding_switch_band.setImageResource(R.drawable.nav_band_disable);
                 }
@@ -726,20 +731,16 @@ public class HomePager extends SlidingFragmentActivity implements TextPick.OnVal
 
         LifeBandBLEUtil.getInstance().getBaseSysInfo1();
 
-        Log.e("TAG", "---onResume----");
-
         getUserInformation();
 
         LifeBandBLEUtil.getInstance().setCallBack(HomePager.this);
-
-        if (mBluetoothAdapter.isEnabled() == false) {
+        if (mBluetoothAdapter.isEnabled() == false) {//蓝牙是否开启判断
             Intent _EnableIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
             startActivityForResult(_EnableIntent, 1);
             return;
         } else {
             ifConnectionBand();
         }
-
     }
 
 
@@ -1160,16 +1161,26 @@ public class HomePager extends SlidingFragmentActivity implements TextPick.OnVal
             }
         });
     }
+    /**
+     * 初始化Fragment
+     */
 
+    private void initStartFragment(){
+        if(leftMenuFragment==null){
+            leftMenuFragment=new LeftMenuFragment();
+        }
+        if(rightMenuFtragment==null){
+            rightMenuFtragment=new RightMenuFtragment();
+        }
+    }
     /**
      * 加载Fragment
      */
     private void initFragment() {
         FragmentManager fm = getSupportFragmentManager();//得到FragmentManager
         FragmentTransaction ft = fm.beginTransaction();//开启事务
-
-        ft.replace(R.id.fl_leftmenu, new LeftMenuFragment(), LEFTMENU_TAG);
-        ft.replace(R.id.fl_rightmenu, new RightMenuFtragment(), RIGHT_TAG);
+        ft.replace(R.id.fl_leftmenu, leftMenuFragment, LEFTMENU_TAG);
+        ft.replace(R.id.fl_rightmenu, rightMenuFtragment, RIGHT_TAG);
 
         //事务的提交
         ft.commit();
@@ -1606,6 +1617,7 @@ public class HomePager extends SlidingFragmentActivity implements TextPick.OnVal
                 Log.e("TAG", "设置Config-=-=-=-=-=-=-");
             }
         }
+        judgeFWVersion();
     }
 
     @Override
@@ -2008,7 +2020,7 @@ public class HomePager extends SlidingFragmentActivity implements TextPick.OnVal
                     LifeBandBLEUtil.getInstance().connect(macAdress);
                 }
             }
-        }, 10000);
+        }, 5000);
     }
 
     public void SetSystemTime() {
@@ -2054,22 +2066,24 @@ public class HomePager extends SlidingFragmentActivity implements TextPick.OnVal
 
             switch (state) {
                 case TelephonyManager.CALL_STATE_IDLE://空闲
-                    Log.e("pipa","空闲");
                     break;
                 case TelephonyManager.CALL_STATE_RINGING://来电
-                    Log.e("pipa","来电");
                     int minute = 0;
                     minute = CacheUtils.getInt(HomePager.this, Constants.PHONENOTICE) * 1000;
                     Log.e("TAG", minute + "-=-=-=-=-=-=-=");
                     if (CacheUtils.getBoolean(HomePager.this, Constants.PHONEISCHECKED)) {
-                        callHandler.postDelayed(callReminder, minute);
+                        callHandler.postDelayed(starcCallReminder, minute);
                     } else {
                         break;
                     }
                     break;
                 case TelephonyManager.CALL_STATE_OFFHOOK://摘机（正在通话中）
-                    callHandler.removeCallbacks(callReminder);
-                    Log.e("pipa","摘机（正在通话中）");
+                    if (CacheUtils.getBoolean(HomePager.this, Constants.PHONEISCHECKED)) {
+                        callHandler.removeCallbacks(starcCallReminder);//让还未震动的手环永远不震动
+                        callHandler.postDelayed(stopCallReminder, 0);//让已经震动的手环停止震动
+                    } else {
+                        break;
+                    }
                     break;
             }
         }
@@ -2122,6 +2136,42 @@ public class HomePager extends SlidingFragmentActivity implements TextPick.OnVal
             return false;
         }
 
+    }
+
+    /**
+     * 判断固件版本是否最新
+     */
+    public void judgeFWVersion(){
+        HttpUtils.getInstance().getGuJianVersion(this, new RequestCallback<CheckVersionBean>() {
+            @Override
+            public void onError(Request request, Exception e) {
+                sliding_switch_band.setImageResource(R.drawable.icon_band);
+            }
+            @Override
+            public void onResponse(final CheckVersionBean response) {
+
+                int hwversion = CacheUtils.getInt(HomePager.this, Constants.HWVERSION);
+                int fwversion = CacheUtils.getInt(HomePager.this, Constants.FWVERSION);
+
+                String hw = hwversion + "";
+                String fw = fwversion + "";
+
+                String now = hw + "." + fw;
+                boolean b = DateHelper.getInstance().CompareVersion(now, response.getData().getVersion());
+                if (b) {
+                    sliding_switch_band.setImageResource(R.drawable.icon_fw);
+                    if(rightMenuFtragment!=null) {
+                        rightMenuFtragment.getIv_fw().setVisibility(View.VISIBLE);
+                    }
+                } else {
+                    sliding_switch_band.setImageResource(R.drawable.icon_band);
+                    if(rightMenuFtragment!=null) {
+                        rightMenuFtragment.getIv_fw().setVisibility(View.INVISIBLE);
+                    }
+                }
+
+            }
+        });
     }
 
 }

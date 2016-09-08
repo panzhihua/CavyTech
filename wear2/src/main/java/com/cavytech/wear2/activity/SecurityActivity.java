@@ -34,6 +34,7 @@ import org.xutils.view.annotation.ViewInject;
 import org.xutils.x;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -191,29 +192,67 @@ public class SecurityActivity extends AppCompatActivityEx {
                     Uri contactData = data.getData();
                     Cursor cursor = this.getContentResolver().query(contactData, null, null, null, null);
 //                    Cursor cursor = this.getContentResolver().query(ContactsContract.Contacts.CONTENT_URI, null, null, null, null);
-                    if(cursor.moveToFirst()){
+                  if(cursor.moveToFirst()){
                         username = cursor.getString(cursor.getColumnIndex(ContactsContract.Contacts.DISPLAY_NAME));
                         Log.e("TAG","用户名--"+username);
-                        String num = this.getContactPhone(cursor);
-                        Log.e("TAG","hhhhhh----"+num.replace(" ", ""));
-                        if(isMobileNO(num.replace(" ", ""))){
-                            GetPhone.ContactsBean phoneBean= new GetPhone.ContactsBean(username,num.replace(" ", ""));
-                            if(list.size()<3){
-                                if (!list.contains(phoneBean)) {
-                                    list.add(phoneBean);
-                                }
-                            }else {
-                                Toast.makeText(SecurityActivity.this,"紧急联系人上限3人",Toast.LENGTH_SHORT).show();
-                            }
+                        List<String> nums=this.getContactPhone(cursor);
+                      if(nums==null|| nums.isEmpty()){
+                          return;
+                      }else if(nums.size()==1){
+                          String num =nums.get(0);
+                          Log.e("TAG", "hhhhhh----" + num.replace(" ", ""));
+                          if (isMobileNO(num.replace(" ", ""))) {
+                              GetPhone.ContactsBean phoneBean = new GetPhone.ContactsBean(username, num.replace(" ", ""));
+                              if (list.size() < 3) {
+                                  if (!list.contains(phoneBean)) {
+                                      list.add(phoneBean);
+                                  }
+                              } else {
+                                  Toast.makeText(SecurityActivity.this, "紧急联系人上限3人", Toast.LENGTH_SHORT).show();
+                              }
 
-                        }else {
-                            Toast.makeText(SecurityActivity.this,"号码不正确--",Toast.LENGTH_SHORT).show();
-                        }
-                        if(list!=null){
-                            posttonet(list);
-                            CacheUtils.saveArray(SecurityActivity.this,list);
-                            adapter.notifyDataSetChanged();
-                        }
+                          } else {
+                              Toast.makeText(SecurityActivity.this, "号码不正确--", Toast.LENGTH_SHORT).show();
+                          }
+                          if (list != null) {
+                              posttonet(list);
+                              CacheUtils.saveArray(SecurityActivity.this, list);
+                              adapter.notifyDataSetChanged();
+                          }
+                      }else {
+                          AlertDialog.Builder builder = new AlertDialog.Builder(SecurityActivity.this);
+                          builder.setTitle("选择一个号码");
+                          //    指定下拉列表的显示数据
+                          final String[] cities = new String[nums.size()];
+                          nums.toArray(cities);
+                          //    设置一个下拉的列表选择项
+                          builder.setItems(cities, new DialogInterface.OnClickListener() {
+                              @Override
+                              public void onClick(DialogInterface dialog, int which) {
+                                  String num = cities[which];
+                                  Log.e("TAG", "hhhhhh----" + num.replace(" ", ""));
+                                  if (isMobileNO(num.replace(" ", ""))) {
+                                      GetPhone.ContactsBean phoneBean = new GetPhone.ContactsBean(username, num.replace(" ", ""));
+                                      if (list.size() < 3) {
+                                          if (!list.contains(phoneBean)) {
+                                              list.add(phoneBean);
+                                          }
+                                      } else {
+                                          Toast.makeText(SecurityActivity.this, "紧急联系人上限3人", Toast.LENGTH_SHORT).show();
+                                      }
+
+                                  } else {
+                                      Toast.makeText(SecurityActivity.this, "号码不正确--", Toast.LENGTH_SHORT).show();
+                                  }
+                                  if (list != null) {
+                                      posttonet(list);
+                                      CacheUtils.saveArray(SecurityActivity.this, list);
+                                      adapter.notifyDataSetChanged();
+                                  }
+                              }
+                          });
+                          builder.show();
+                      }
                         cursor.close();
                     }
                 }
@@ -270,10 +309,11 @@ public class SecurityActivity extends AppCompatActivityEx {
 
     }
 
-    private String getContactPhone(Cursor cursor) {
+    private List<String> getContactPhone(Cursor cursor) {
         int phoneColumn = cursor.getColumnIndex(ContactsContract.Contacts.HAS_PHONE_NUMBER);
         int phoneNum = cursor.getInt(phoneColumn);
-        String result = "";
+        //String result = "";
+        List<String> result=new ArrayList<>();
         if (phoneNum > 0) {
             // 获得联系人的ID号
             int idColumn = cursor.getColumnIndex(ContactsContract.Contacts._ID);
@@ -290,10 +330,9 @@ public class SecurityActivity extends AppCompatActivityEx {
                             .getColumnIndex(ContactsContract.CommonDataKinds.Phone.NUMBER);
                     int typeindex = phone
                             .getColumnIndex(ContactsContract.CommonDataKinds.Phone.TYPE);
-                    int phone_type = phone.getInt(typeindex);
+//                    int phone_type = phone.getInt(typeindex);
                     String phoneNumber = phone.getString(index);
-                    result = phoneNumber;
-
+                    result.add(phoneNumber);
                 }
                 if (!phone.isClosed()) {
                     phone.close();
