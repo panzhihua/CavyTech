@@ -35,7 +35,7 @@ import cn.sharesdk.framework.ShareSDK;
 import cn.sharesdk.onekeyshare.OnekeyShare;
 
 public class SleepActivity extends AppCompatActivityEx {
-    private static final String[] tabName = new String[] { "日","周", "月"};
+    private String[] tabName;
     private ArrayList<Fragment> fragmentList;
     private DaySleepFragmrnt daySleepFragment;
     private WeekSleepFragmrnt yearSleepFragment;
@@ -72,7 +72,7 @@ public class SleepActivity extends AppCompatActivityEx {
         x.view().inject(this);
 
 //        setToolBar();
-
+        tabName = new String[] { this.getString(R.string.day),this.getString(R.string.weeks), this.getString(R.string.month)};
         back.setOnClickListener(new MyonClickListener());
         go.setBackgroundResource(R.drawable.btn_share);
         title.setText(R.string.sleep_first);

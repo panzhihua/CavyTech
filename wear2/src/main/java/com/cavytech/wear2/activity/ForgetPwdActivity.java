@@ -23,7 +23,7 @@ public class ForgetPwdActivity extends RegForgetPwdBaseActivity{
         treaty.setChecked(true);
         agreeContext.setText(getString(R.string.remeber_pwd));
         registerAccount.setText(getString(R.string.complite));
-        title.setText("忘记密码");
+        title.setText(getString(R.string.forget_password_1));
     }
 
     @Override

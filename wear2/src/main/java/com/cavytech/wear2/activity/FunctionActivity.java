@@ -43,7 +43,11 @@ public class FunctionActivity extends AppCompatActivityEx {
             SystemBarTintManager tintManager = new SystemBarTintManager(this);
             tintManager.setStatusBarTintEnabled(true);
             tintManager.setStatusBarTintResource(R.color.top_bg_color);//通知栏所需颜色
+            tintManager .setNavigationBarTintEnabled(true);
+            tintManager .setNavigationBarTintResource(R.color.black);//导航栏所需颜色
+
         }
+
         setContentView(R.layout.activity_function);
 
         back = (ImageView) findViewById(R.id.back);

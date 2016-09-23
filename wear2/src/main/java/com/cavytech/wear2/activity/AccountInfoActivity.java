@@ -36,6 +36,7 @@ import com.cavytech.wear2.util.CacheUtils;
 import com.cavytech.wear2.util.Constants;
 import com.cavytech.wear2.util.FileUtils;
 import com.cavytech.wear2.util.GlideCircleTransform;
+import com.cavytech.wear2.util.LanguageUtil;
 import com.cavytech.wear2.util.LifeBandBLEUtil;
 import com.cavytech.wear2.util.PhoneUtils;
 import com.cavytech.wear2.util.SerializeUtils;
@@ -358,6 +359,8 @@ public class AccountInfoActivity extends CommonActivity {
                     }
                 } catch (JSONException e1) {
                     e1.printStackTrace();
+                } catch (Exception e2){
+                    e2.printStackTrace();
                 }
 
                 try {
@@ -386,6 +389,8 @@ public class AccountInfoActivity extends CommonActivity {
                     }
                 } catch (JSONException e1) {
                     e1.printStackTrace();
+                } catch (Exception e2){
+                    e2.printStackTrace();
                 }
 
             }
@@ -421,9 +426,11 @@ public class AccountInfoActivity extends CommonActivity {
                     //mUserInfoAdapter.resetDatas(userInfoList);
                     sendUpdate();
                 }
-
-                tv_steps.setText("累计"+response.getProfile().getSteps()+"步");
-                Log.e("TAG","累计"+response.getProfile().getSteps()+"步");
+                if (LanguageUtil.isZh(AccountInfoActivity.this)) {
+                    tv_steps.setText(AccountInfoActivity.this.getString(R.string.total)+response.getProfile().getSteps()+ AccountInfoActivity.this.getString(R.string.step));
+                }else{
+                    tv_steps.setText(AccountInfoActivity.this.getString(R.string.total)+ " "+AccountInfoActivity.this.getString(R.string.step)+"："+response.getProfile().getSteps());
+                }
 
                 /**
                  * 更改

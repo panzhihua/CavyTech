@@ -240,11 +240,10 @@ public class WeightView  extends ViewGroup {
 
         int iValue = (int)intValue;
         float fValue = intValue - iValue;
-
-        if(fValue > 0.4){
-            intValue = iValue;
-        }else{
+        if(fValue > 0.49){
             intValue = (float) iValue + 0.5f;
+        }else{
+            intValue = iValue;
         }
 
         BigDecimal b = new BigDecimal(intValue);

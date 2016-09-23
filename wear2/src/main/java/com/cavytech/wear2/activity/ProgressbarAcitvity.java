@@ -61,7 +61,7 @@ public class ProgressbarAcitvity extends AppCompatActivity implements InterfaceO
                 case 2:
                     if((int)msg.arg1==success){
                         CustomDialog.Builder builder = new CustomDialog.Builder(ProgressbarAcitvity.this);
-                        builder.setMessage("手环将在重启后自动连接,请稍等");
+                        builder.setMessage("手环正在重启，请在绿灯亮起后点击'确定'连接手环");
                         builder.setTitle("固件升级成功");
                         builder.setPositiveButton("确定", new DialogInterface.OnClickListener() {
                             public void onClick(final DialogInterface dialog, int which) {

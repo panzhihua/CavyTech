@@ -37,7 +37,6 @@ public class GuideSetComActivity extends CommonActivity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         if(FileUtils.isFileExit(Constants.SERIALIZE_USERINFO)){
             userInfo = (UserEntity.ProfileEntity) SerializeUtils.unserialize(Constants.SERIALIZE_USERINFO);
         }else{

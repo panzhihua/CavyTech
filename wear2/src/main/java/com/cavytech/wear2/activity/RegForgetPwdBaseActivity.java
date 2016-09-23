@@ -16,6 +16,7 @@ import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.basecore.util.core.MobileFormat;
@@ -31,6 +32,7 @@ import com.cavytech.wear2.http.HttpUtils;
 import com.cavytech.wear2.http.RequestCallback;
 import com.cavytech.wear2.util.CacheUtils;
 import com.cavytech.wear2.util.Constants;
+import com.cavytech.wear2.util.LanguageUtil;
 import com.cavytech.wear2.util.PhoneUtils;
 import com.cavytech.wear2.util.SerializeUtils;
 import com.cavytech.widget.ClearEditText;
@@ -56,6 +58,7 @@ public class RegForgetPwdBaseActivity extends CommonActivity {
     protected ImageView imageVerification;
     protected TimeCount time;
     protected TextView agreeContext;
+    protected LinearLayout agreeLinearLayout;
 
     protected boolean isForgetPwdView = false;
     private String account;
@@ -80,6 +83,7 @@ public class RegForgetPwdBaseActivity extends CommonActivity {
         treaty = (CheckBox) findViewById(R.id.box_agree);
         agreeContext = (TextView) findViewById(R.id.agree_context);
         imageVerification = (ImageView) findViewById(R.id.image_verification);
+        agreeLinearLayout = (LinearLayout) findViewById(R.id.lin_agree);
         inputPassword.setTypeface(Typeface.DEFAULT);
         inputPassword.setTransformationMethod(new PasswordTransformationMethod());
     }
@@ -187,11 +191,13 @@ public class RegForgetPwdBaseActivity extends CommonActivity {
                         return;
                     }
                 }
-                if (treaty.isChecked()) {
-                    register(account, code, password);
-                } else {
-                    CustomToast.showToast(RegForgetPwdBaseActivity.this, R.string.please_read_treaty);
-                    return;
+                if(LanguageUtil.isZh(RegForgetPwdBaseActivity.this)) {
+                    if (treaty.isChecked()) {
+                        register(account, code, password);
+                    } else {
+                        CustomToast.showToast(RegForgetPwdBaseActivity.this, R.string.please_read_treaty);
+                        return;
+                    }
                 }
             }
         });
@@ -251,6 +257,11 @@ public class RegForgetPwdBaseActivity extends CommonActivity {
         rightText.setVisibility(View.VISIBLE);
         rightText.setText(getString(R.string.email_box));
         time = new TimeCount(60000, 1000);
+        if(LanguageUtil.isZh(this)){
+            agreeLinearLayout.setVisibility(View.VISIBLE);
+        }else{
+            agreeLinearLayout.setVisibility(View.INVISIBLE);
+        }
     }
 
     class TimeCount extends CountDownTimer {

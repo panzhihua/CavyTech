@@ -127,7 +127,7 @@
                 android:layout_centerVertical="true"
                 android:layout_marginStart="20dp"
                 android:background="@color/white"
-                android:text="日均步数"
+                android:text="@string/average_steps"
                 style="@style/e16"/>
 
             <LinearLayout

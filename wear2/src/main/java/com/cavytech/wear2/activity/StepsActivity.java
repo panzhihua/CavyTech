@@ -34,7 +34,7 @@ import cn.sharesdk.framework.ShareSDK;
 import cn.sharesdk.onekeyshare.OnekeyShare;
 
 public class StepsActivity extends FragmentActivity {
-    private static final String[] tabName = new String[] { "日","周", "月"};
+    private String[] tabName;
     private ArrayList<Fragment> fragmentList;
     private DayFragmrnt dayFriendFragment;
     private MonthFragmrnt monthFriendFragment;
@@ -71,7 +71,7 @@ public class StepsActivity extends FragmentActivity {
 
         setContentView(R.layout.activity_steps);
         x.view().inject(this);
-
+        tabName = new String[] { this.getString(R.string.day),this.getString(R.string.weeks), this.getString(R.string.month)};
         title.setText(R.string.steps);
 
         back.setOnClickListener(new MyOnClickListener());

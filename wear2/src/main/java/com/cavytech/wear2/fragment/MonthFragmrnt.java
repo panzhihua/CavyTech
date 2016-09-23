@@ -88,7 +88,7 @@ public class MonthFragmrnt extends Fragment implements StepsPick.OnValueChangeLi
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
-        tv_zongbushu.setText("月总步数");
+        tv_zongbushu.setText(getString(R.string.monthly_total_steps));
 
         //初始化得到已经入当天的数据
         ArrayList<String> arrayList = new ArrayList<>();
@@ -172,11 +172,11 @@ public class MonthFragmrnt extends Fragment implements StepsPick.OnValueChangeLi
 
             float journey = totalStep * 6 / (float) 10000;
             String journeyStr=fnum.format(journey);
-            int avarageStep = totalStep/7;
+            int avarageStep = totalStep/30;
             int hour = totalHour / 60;
             int minute = totalHour % 60;
             //图表下半部数据填充
-            tv_step_count.setText(totalStep+" "); //周总步数
+            tv_step_count.setText(totalStep+" "); //月总步数
             tv_step_journey.setText(journeyStr +" "); //路程
             tv_step_target.setText(avarageStep + " "); //日均步数
             tv_step_time_hour.setText(hour+" ");
@@ -284,7 +284,7 @@ public class MonthFragmrnt extends Fragment implements StepsPick.OnValueChangeLi
 
     private void showBarChart(BarChart barChart, BarData barData) {
         // 如果没有数据的时候，会显示这个，类似ListView的EmptyView
-        barChart.setNoDataTextDescription("暂无数据");
+        barChart.setNoDataTextDescription(getString(R.string.temporarily_no_data));
 
         barChart.setData(barData); // 设置数据
 
@@ -304,6 +304,8 @@ public class MonthFragmrnt extends Fragment implements StepsPick.OnValueChangeLi
         barChart.setDragEnabled(true);// 是否可以拖拽
         barChart.setScaleEnabled(true);// 是否可以缩放
         barChart.setPinchZoom(false);//y轴的值是否跟随图表变换缩放;如果禁止，y轴的值会跟随图表变换缩放
+        barChart.setDoubleTapToZoomEnabled(false);//两指拉伸
+        barChart.setScaleYEnabled(false);//是否可以上下缩放
 
         barChart.setDrawValueAboveBar(true);//柱状图上面的数值显示在柱子上面还是柱子里面
 
@@ -320,7 +322,7 @@ public class MonthFragmrnt extends Fragment implements StepsPick.OnValueChangeLi
         barChart.getAxisRight().setEnabled(false);//是否显示最右侧竖线
         barChart.getAxisRight().setDrawAxisLine(false);
         barChart.getAxisLeft().setDrawAxisLine(false);
-        barChart.getAxisLeft().setEnabled(false);//是否显示最右侧竖线
+        barChart.getAxisLeft().setEnabled(false);//是否显示最左侧竖线
         barChart.getAxisLeft().setDrawLabels(false);
 
         barChart.getAxisLeft().setLabelCount(0, true);//设置Y轴显示数量
@@ -329,8 +331,6 @@ public class MonthFragmrnt extends Fragment implements StepsPick.OnValueChangeLi
 
         barChart.getAxisLeft().setSpaceBottom(0); //设置横轴距离底部距离
         barChart.getAxisLeft().setSpaceTop(0); //设置横轴距离顶部距离
-
-        barChart.getAxisLeft().setLabelCount(0, true);//设置Y轴显示数量
 
 //        barChart.getAxisLeft().setAxisMaxValue(3.4f);//设置Y轴最大值
 //        barChart.getAxisLeft().setAxisMinValue(3.1f);//设置Y轴最小值

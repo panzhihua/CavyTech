@@ -170,15 +170,14 @@ public class RightMenuFtragment extends BaseFragment {
             public void onReceive(Context context, Intent intent) {
 
                 if (LifeBandBLEUtil.getInstance().getConnectionState() == 2) {
-                    textView3.setText(R.string.cavy_band_3);
+                    textView3.setText(context.getString(R.string.cavy_band_3));
                     updateBandInfo();
                     iv_no_band_icon.setVisibility(View.GONE);
                 }else {
                     iv_no_band_icon.setVisibility(View.VISIBLE);
-                    textView3.setText("手环未连接");
-                    tv_rom_name.setText("开启蓝牙，按下手环");
-                    tv_rom_number.setText("按钮自动连接");
-
+                    textView3.setText(context.getString(R.string.disconnected));
+                    tv_rom_name.setText(context.getString(R.string.turn_Bluetooth_pres_CavyBand));
+                    tv_rom_number.setText(context.getString(R.string.to_connect));
                     ifconn();
 
                     reStartScan();
@@ -197,7 +196,7 @@ public class RightMenuFtragment extends BaseFragment {
 
         //if (connectionCode == 2 || connectionCode == 1) {
         if (connectionCode == 2 ) {
-            textView3.setText(R.string.cavy_band_3);
+            textView3.setText(this.getString(R.string.cavy_band_3));
             updateBandInfo();
             iv_no_band_icon.setVisibility(View.GONE);
 
@@ -228,10 +227,9 @@ public class RightMenuFtragment extends BaseFragment {
 
         } else {
             iv_no_band_icon.setVisibility(View.VISIBLE);
-            textView3.setText("手环未连接");
-            tv_rom_name.setText("开启蓝牙，按下手环");
-            tv_rom_number.setText("按钮自动连接");
-
+            textView3.setText(this.getString(R.string.disconnected));
+            tv_rom_name.setText(this.getString(R.string.turn_Bluetooth_pres_CavyBand));
+            tv_rom_number.setText(this.getString(R.string.to_connect));
             ifconn();
 
             reStartScan();
@@ -239,7 +237,6 @@ public class RightMenuFtragment extends BaseFragment {
     }
 
     private void ifconn() {
-
         tv_right_carmer.setTextColor(Color.parseColor("#91e4c2"));
         tv_right_tixing.setTextColor(Color.parseColor("#91e4c2"));
         tv_notice.setTextColor(Color.parseColor("#91e4c2"));
@@ -286,10 +283,9 @@ public class RightMenuFtragment extends BaseFragment {
 
     public void noConnection() {
         iv_no_band_icon.setVisibility(View.VISIBLE);
-        textView3.setText("手环未连接");
-        tv_rom_name.setText("开启蓝牙，按下手环");
-        tv_rom_number.setText("按钮自动连接");
-
+        textView3.setText(this.getString(R.string.disconnected));
+        tv_rom_name.setText(this.getString(R.string.turn_Bluetooth_pres_CavyBand));
+        tv_rom_number.setText(this.getString(R.string.to_connect));
         ifconn();
 
     }
@@ -341,10 +337,8 @@ public class RightMenuFtragment extends BaseFragment {
                 int hwVersion = intent.getIntExtra("hwVersion", 0);
                 CacheUtils.putInt(mActivity, Constants.FWVISION, fwVersion);
                 CacheUtils.putInt(mActivity, Constants.HWVISION, hwVersion);
-                tv_rom_number.setText("固件版本:" + hwVersion+"."+fwVersion);
-//                Log.e("TAG","固件版本----getFwVision--"+fwVersion+"."+hwVersion);
-//                Log.e("TAG", "intent.getIntExtra(\"fwVersion\",-1);" + intent.getIntExtra("fwVersion", -1));
-
+                tv_rom_number.setText(context.getString(R.string.firmware_version) + hwVersion+"."+fwVersion);
+                updateBandInfo();
             }
         };
         broadcastManager.registerReceiver(mItemViewListClickReceiver, intentFilter);
@@ -383,39 +377,39 @@ public class RightMenuFtragment extends BaseFragment {
         int anInt1 = CacheUtils.getInt(mActivity, Constants.STATUS);
 
         if (bandInfo != null) {
-            if (!bandInfo.getName().isEmpty()) {
-                tv_rom_name.setText(bandInfo.getName());
-                iv_no_band_icon.setVisibility(View.GONE);
-                textView3.setText(R.string.cavy_band_3);
-                if(anInt == -1 && anInt1 == -1){
-                    anInt = 0;
-                    anInt1 = 100;
-                }
-                tv_rom_number.setText("固件版本:" + anIn+"."+anInt);
-//                Log.e("TAG","固件版本---"+anInt+"."+anIn);
-                circularFillableLoaders.setProgress(100 - anInt1);
-                tv_electricityProgress.setText(anInt1 + "%");
-
-                tv_right_carmer.setTextColor(Color.WHITE);
-                tv_right_tixing.setTextColor(Color.WHITE);
-                tv_notice.setTextColor(Color.WHITE);
-                tv_right_sercity.setTextColor(Color.WHITE);
-                tv_right_gujian.setTextColor(Color.WHITE);
-
-                iv_right_carmer.setImageResource(R.drawable.icon_camera);
-                iv_right_tixing.setImageResource(R.drawable.icon_bandnotice);
-                iv_right_notice.setImageResource(R.drawable.icon_clock);
-                iv_right_sercity.setImageResource(R.drawable.icon_safe);
-
-                ll_comtral_camera.setClickable(true);
-                ll_band_notice.setClickable(true);
-                ll_know_clock.setClickable(true);
-                ll_safe.setClickable(true);
-                ll_rom_update.setClickable(true);
-
-                iv_fw.setVisibility(View.GONE);
-            }
+            tv_rom_name.setText(bandInfo.getName());
         }
+        iv_no_band_icon.setVisibility(View.GONE);
+        try {
+            textView3.setText(getString(R.string.cavy_band_3));
+            if (anInt == -1 && anInt1 == -1) {
+                anInt = 0;
+                anInt1 = 100;
+            }
+            tv_rom_number.setText(getString(R.string.firmware_version) + anIn + "." + anInt);
+            circularFillableLoaders.setProgress(100 - anInt1);
+            tv_electricityProgress.setText(anInt1 + "%");
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+        tv_right_carmer.setTextColor(Color.WHITE);
+        tv_right_tixing.setTextColor(Color.WHITE);
+        tv_notice.setTextColor(Color.WHITE);
+        tv_right_sercity.setTextColor(Color.WHITE);
+        tv_right_gujian.setTextColor(Color.WHITE);
+
+        iv_right_carmer.setImageResource(R.drawable.icon_camera);
+        iv_right_tixing.setImageResource(R.drawable.icon_bandnotice);
+        iv_right_notice.setImageResource(R.drawable.icon_clock);
+        iv_right_sercity.setImageResource(R.drawable.icon_safe);
+
+        ll_comtral_camera.setClickable(true);
+        ll_band_notice.setClickable(true);
+        ll_know_clock.setClickable(true);
+        ll_safe.setClickable(true);
+        ll_rom_update.setClickable(true);
+
+        iv_fw.setVisibility(View.GONE);
     }
 
     @Override
@@ -459,7 +453,7 @@ public class RightMenuFtragment extends BaseFragment {
                 //Toast.makeText(getActivity(), "ll_safe", Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(getActivity(), SecurityActivity.class));
             } else if (v == ll_rom_update) {//固件升级
-                Toast.makeText(getActivity(), "检测中...", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(), R.string.detecting, Toast.LENGTH_SHORT).show();
                 HttpUtils.getInstance().getGuJianVersion(mActivity, new RequestCallback<CheckVersionBean>() {
                     @Override
                     public void onError(Request request, Exception e) {
@@ -470,7 +464,7 @@ public class RightMenuFtragment extends BaseFragment {
                             if(HttpUtils.CODE_ACCOUNT_NOT_LOGIN==code){
                                 AlertDialog.Builder dialog = new AlertDialog.Builder(getActivity());
                                 dialog.setCancelable(false);
-                                dialog.setMessage(R.string.not_login);
+                                dialog.setMessage(getString(R.string.not_login));
                                 dialog.setPositiveButton(getString(R.string.ALERT_DLG_BTN_OK), new android.content.DialogInterface.OnClickListener() {
 
                                     @Override
@@ -490,6 +484,8 @@ public class RightMenuFtragment extends BaseFragment {
                             }
                         } catch (JSONException e1) {
                             e1.printStackTrace();
+                        } catch (Exception e2){
+                            e2.printStackTrace();
                         }
 
                     }
@@ -513,10 +509,10 @@ public class RightMenuFtragment extends BaseFragment {
                         boolean b = DateHelper.getInstance().CompareVersion(now, response.getData().getVersion());
                         if (b) {
                             CustomDialog.Builder builder = new CustomDialog.Builder(getActivity());
-                            builder.setMessage("1 当前版本 \n 2 当前版本");
-                            builder.setTitle("安装新的固件版本");
+                            builder.setMessage(getString(R.string.current_version));
+                            builder.setTitle(getString(R.string.install_new_version_firmware));
                             builder.setMessage(response.getData().getDescription());
-                            builder.setPositiveButton("确定", new DialogInterface.OnClickListener() {
+                            builder.setPositiveButton(getString(R.string.queding), new DialogInterface.OnClickListener() {
                                 public void onClick(final DialogInterface dialog, int which) {
                                     dialog.dismiss();
                                     //设置你的操作事项
@@ -530,9 +526,9 @@ public class RightMenuFtragment extends BaseFragment {
                                         dialog.dismiss();
 
                                         CustomDialog.Builder builder = new CustomDialog.Builder(getActivity());
-                                        builder.setTitle("手环电量过低");
-                                        builder.setMessage("手环电量过低，固件升级至少需20%电量，请充电后再试");
-                                        builder.setPositiveButton("充电后再试", new DialogInterface.OnClickListener() {
+                                        builder.setTitle(getString(R.string.insufficient_battery_power_CavyBand));
+                                        builder.setMessage(getString(R.string.insufficient_battery_power_CavyBand_please));
+                                        builder.setPositiveButton(getString(R.string.try_again_after_charging), new DialogInterface.OnClickListener() {
                                             public void onClick(final DialogInterface dialog, int which) {
                                                 dialog.dismiss();
 
@@ -547,7 +543,7 @@ public class RightMenuFtragment extends BaseFragment {
                                 }
                             });
 
-                            builder.setNegativeButton("取消",
+                            builder.setNegativeButton(getString(R.string.cancel),
                                     new android.content.DialogInterface.OnClickListener() {
                                         public void onClick(DialogInterface dialog, int which) {
                                             dialog.dismiss();
@@ -556,7 +552,7 @@ public class RightMenuFtragment extends BaseFragment {
 
                             builder.create().show();
                         } else {
-                            Toast.makeText(getContext(), "当前已经是最新版本", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getContext(), getString(R.string.current_firmware_is_the_latest_version), Toast.LENGTH_SHORT).show();
                         }
 
                     }
@@ -566,7 +562,7 @@ public class RightMenuFtragment extends BaseFragment {
             } else if (v == ll_new_band_cavy) {//绑定新手环
                 AlertDialog.Builder dialog = new AlertDialog.Builder(mActivity);
                 dialog.setCancelable(false);
-                dialog.setMessage(R.string.bind_new_bracelets_bracelets);
+                dialog.setMessage(getString(R.string.bind_new_bracelets_bracelets));
                 dialog.setPositiveButton(getString(R.string.ALERT_DLG_BTN_OK), new android.content.DialogInterface.OnClickListener() {
 
                     @Override

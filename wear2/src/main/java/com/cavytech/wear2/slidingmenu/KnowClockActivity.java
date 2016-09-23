@@ -178,8 +178,12 @@ public class KnowClockActivity extends AppCompatActivityEx {
      * 设置手环闹钟
      */
     private void setBandClock(int clockType,int minuteBand,int weekBand) {
-        LifeBandBLEUtil.getInstance().AlarmSetup(clockType,minuteBand,weekBand);
-        Log.e("TAG","clockType----"+clockType+"-------minuteBand-----"+minuteBand+"-----weekBand---"+weekBand);
+        try {
+            LifeBandBLEUtil.getInstance().AlarmSetup(clockType, minuteBand, weekBand);
+            Log.e("TAG", "clockType----" + clockType + "-------minuteBand-----" + minuteBand + "-----weekBand---" + weekBand);
+        }catch(Exception e){
+            Toast.makeText(KnowClockActivity.this, getString(R.string.failure_to_set_clock_please_try_again), Toast.LENGTH_SHORT).show();
+        }
     }
 
     public void  updateView(){
@@ -226,7 +230,7 @@ public class KnowClockActivity extends AppCompatActivityEx {
                     intent.setClass(KnowClockActivity.this, KnowClickDetailActivity.class);
                     startActivityForResult(intent, REQUESTCODE);//REQUESTCODE定义一个整型做为请求对象标识
                 }else{
-                    Toast.makeText(KnowClockActivity.this,"亲,只能添加两个闹钟哦",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(KnowClockActivity.this,getString(R.string.at_most_2_clocks_can_be_added),Toast.LENGTH_SHORT).show();
                 }
             }
         }
@@ -287,9 +291,9 @@ public class KnowClockActivity extends AppCompatActivityEx {
 //            }
 
             if(mListItems.get(position).isNotSelect()){
-                viewHolder.tv_click_day.setText("提醒一次");
+                viewHolder.tv_click_day.setText(getString(R.string.vibrate_once));
             }else{
-                viewHolder.tv_click_day.setText(mListItems.get(position).getWeekCheckString("每天"));
+                viewHolder.tv_click_day.setText(mListItems.get(position).getWeekCheckString(getString(R.string.everyday),KnowClockActivity.this));
             }
 
              viewHolder.sbe_clock_item.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {

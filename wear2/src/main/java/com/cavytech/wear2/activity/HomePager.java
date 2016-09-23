@@ -72,6 +72,7 @@ import com.cavytech.widget.TextPick;
 import com.google.gson.Gson;
 import com.handmark.pulltorefresh.library.PullToRefreshBase;
 import com.handmark.pulltorefresh.library.PullToRefreshListView;
+import com.igexin.sdk.PushManager;
 import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
 import com.jeremyfeinstein.slidingmenu.lib.app.SlidingFragmentActivity;
 import com.squareup.okhttp.Request;
@@ -94,7 +95,6 @@ import java.util.IdentityHashMap;
 import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
-
 /**
  * 首页
  *
@@ -108,7 +108,6 @@ public class HomePager extends SlidingFragmentActivity implements TextPick.OnVal
     public static final String WHETHER = "whether";
     private int width;
     private int height;
-    private List list = new ArrayList();
 
     private double latitude;//纬度
     private double longitude;//纬度
@@ -273,9 +272,9 @@ public class HomePager extends SlidingFragmentActivity implements TextPick.OnVal
                         if (sleepComplete != 0) {
                             int sleepPercent = (int) ((float) Integer.valueOf(sleepsplit[1]) / (float) sleepComplete * 100);
                             if (sleepPercent >= 100) {
-                                tv_sleep_percent.setText("完成" + 100 + "%");
+                                tv_sleep_percent.setText(HomePager.this.getString(R.string.accomplish) + 100 + "%");
                             } else {
-                                tv_sleep_percent.setText("完成" + sleepPercent + "%");
+                                tv_sleep_percent.setText(HomePager.this.getString(R.string.accomplish)+ sleepPercent + "%");
                             }
                             Log.e("TAG", "睡眠百分比" + "-----" + sleepPercent);
 
@@ -312,9 +311,9 @@ public class HomePager extends SlidingFragmentActivity implements TextPick.OnVal
             if (stepComplete != 0) {
                 int stepPercent = (int) ((float) kk / (float) stepComplete * 100);
                 if (stepPercent >= 100) {
-                    tv_step_complete.setText("完成" + 100 + "%");
+                    tv_step_complete.setText(HomePager.this.getString(R.string.accomplish) + 100 + "%");
                 } else {
-                    tv_step_complete.setText("完成" + stepPercent + "%");
+                    tv_step_complete.setText(HomePager.this.getString(R.string.accomplish) + stepPercent + "%");
                 }
                 Log.e("TAG", "记步百分比" + "-----" + stepPercent);
 
@@ -329,9 +328,9 @@ public class HomePager extends SlidingFragmentActivity implements TextPick.OnVal
                 int sleepPercent = (int) ((float) sleeptime / (float) sleepComplete * 100);
 
                 if (sleepPercent >= 100) {
-                    tv_sleep_percent.setText("完成" + 100 + "%");
+                    tv_sleep_percent.setText(HomePager.this.getString(R.string.accomplish) + 100 + "%");
                 } else {
-                    tv_sleep_percent.setText("完成" + sleepPercent + "%");
+                    tv_sleep_percent.setText(HomePager.this.getString(R.string.accomplish) + sleepPercent + "%");
                 }
                 Log.e("TAG", "睡眠百分比" + "-----" + sleepPercent);
 
@@ -364,6 +363,7 @@ public class HomePager extends SlidingFragmentActivity implements TextPick.OnVal
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
             setTranslucentStatus(true);
             SystemBarTintManager tintManager = new SystemBarTintManager(this);
@@ -375,6 +375,9 @@ public class HomePager extends SlidingFragmentActivity implements TextPick.OnVal
         CommonApplication.isLogin = true;
 
         setContentView(R.layout.activity_home_pager);
+
+        PushManager.getInstance().initialize(this.getApplicationContext());
+
         x.view().inject(this);
 
         Log.e("TAG", "手机型号---" + android.os.Build.MODEL);
@@ -387,6 +390,7 @@ public class HomePager extends SlidingFragmentActivity implements TextPick.OnVal
 
         initWindowScreen();
         getUserInformation();
+
 
 /**
  * 计步缓存
@@ -401,9 +405,9 @@ public class HomePager extends SlidingFragmentActivity implements TextPick.OnVal
                 if(anInt>0&&anInt!=0){
                     int stepPercent = (int) ((float) Integer.parseInt(split[1]) / (float) anInt * 100);
                     if (stepPercent >= 100) {
-                        tv_step_complete.setText("完成" + 100 + "%");
+                        tv_step_complete.setText(HomePager.this.getString(R.string.accomplish) + 100 + "%");
                     } else {
-                        tv_step_complete.setText("完成" + stepPercent + "%");
+                        tv_step_complete.setText(HomePager.this.getString(R.string.accomplish) + stepPercent + "%");
                     }
                     Log.e("TAG", "记步百分比" + "-----" + stepPercent);
 
@@ -425,9 +429,9 @@ public class HomePager extends SlidingFragmentActivity implements TextPick.OnVal
                 if(anInt>0&&anInt!=0){
                     int sleepPercent = (int) ((float) Integer.parseInt(sp[1]) / (float) anInt * 100);
                     if (sleepPercent >= 100) {
-                        tv_sleep_percent.setText("完成" + 100 + "%");
+                        tv_sleep_percent.setText(HomePager.this.getString(R.string.accomplish) + 100 + "%");
                     } else {
-                        tv_sleep_percent.setText("完成" + sleepPercent + "%");
+                        tv_sleep_percent.setText(HomePager.this.getString(R.string.accomplish) + sleepPercent + "%");
                     }
                     Log.e("TAG", "睡眠百分比" + "-----" + sleepPercent);
 
@@ -550,7 +554,6 @@ public class HomePager extends SlidingFragmentActivity implements TextPick.OnVal
 
             }
         });
-
     }
 
     /**
@@ -863,7 +866,7 @@ public class HomePager extends SlidingFragmentActivity implements TextPick.OnVal
 
             String replace = subStringData.replace("-", ".");
             if(replace.equals(date)){
-                whellDateArray.add("今天");
+                whellDateArray.add(this.getString(R.string.today));
             }else {
                 whellDateArray.add(replace);
             }
@@ -930,26 +933,32 @@ public class HomePager extends SlidingFragmentActivity implements TextPick.OnVal
 
                     @Override
                     public void onResponse(String response) {
-                        Log.e("TAG", "天气啊天气---onResponse---" + response.toString());
-                        if (response != null && !response.equals("")) {
-                            GPSCityEntity gpsCityEntity = new Gson().fromJson(response, GPSCityEntity.class);
-                            if(gpsCityEntity!=null){
-                                if (gpsCityEntity.getStatus().equals("OK")) {
-                                    String city = gpsCityEntity.getResult().getAddressComponent().getCity();
-                                    String whetherCity;
-                                    String PinYinCity = null;
-                                    if (city.length() > 0) {
-                                        whetherCity = city.substring(0, city.length() - 1);
-                                        PinYinCity = PinYinUtils.getPinYin(whetherCity);
+                        try {
+                            if (response != null && !response.equals("")) {
+                                Log.e("TAG", "天气啊天气====" +response);
+                                GPSCityEntity gpsCityEntity = new Gson().fromJson(response, GPSCityEntity.class);
+                                if (gpsCityEntity != null) {
+                                    if (gpsCityEntity.getStatus().equals("OK")) {
+                                        String city = gpsCityEntity.getResult().getAddressComponent().getCity();
+                                        String whetherCity;
+                                        String PinYinCity = null;
+                                        if (city.length() > 0) {
+                                            whetherCity = city.substring(0, city.length() - 1);
+                                            PinYinCity = PinYinUtils.getPinYin(whetherCity);
+                                        }
+                                        if (PinYinCity != null) {
+                                            getDateFromnatWhether(PinYinCity);
+                                        }else{
+                                            getDateFromnatWhether("hangzhou");
+                                        }
                                     }
-                                    if (PinYinCity != null) {
-                                        getDateFromnatWhether(PinYinCity);
-                                    }
+                                } else {
+                                    getDateFromnatWhether("hangzhou");
                                 }
-                            }else {
+                            } else {
                                 getDateFromnatWhether("hangzhou");
                             }
-                        }else {
+                        }catch(Exception e){
                             getDateFromnatWhether("hangzhou");
                         }
                     }
@@ -1018,7 +1027,9 @@ public class HomePager extends SlidingFragmentActivity implements TextPick.OnVal
     }
 
     private void setWhetherQuality(int pm25) {
-        if (pm25 > 0 && pm25 <= 35) {
+        if(pm25==0){
+            tv_youlaignzhongcha.setText("");
+        }else if (pm25 > 0 && pm25 <= 35) {
             tv_youlaignzhongcha.setText(getString(R.string.actor));
         } else if (pm25 > 35 && pm25 <= 75) {
             tv_youlaignzhongcha.setText(getString(R.string.mild_contamination));
@@ -1213,18 +1224,25 @@ public class HomePager extends SlidingFragmentActivity implements TextPick.OnVal
                 Log.e("TAG", value + "value-=-=");
                 Log.e("TAG", dateCount.length + "dateCount-=-=");
 
+                try {
+                    List<GetStepCountBean.DataBean.StepsDataBean> DaySteps = CommonApplication.dm.selector(GetStepCountBean.DataBean.StepsDataBean.class).where("date", "LIKE", WheelReturnData + "%").findAll();
 
-                List<GetStepCountBean.DataBean.StepsDataBean> DaySteps = CommonApplication.dm.selector(GetStepCountBean.DataBean.StepsDataBean.class).where("date", "LIKE", WheelReturnData + "%").findAll();
+                    List<GetSleepentity.DataBean.SleepDataBean> daySleep = CommonApplication.dm.selector(GetSleepentity.DataBean.SleepDataBean.class).where("dateTime", "LIKE", WheelReturnData + "%").findAll();
 
-                List<GetSleepentity.DataBean.SleepDataBean> daySleep = CommonApplication.dm.selector(GetSleepentity.DataBean.SleepDataBean.class).where("dateTime", "LIKE", WheelReturnData + "%").findAll();
+                    if (DaySteps.size() != 0 && daySleep.size() != 0) {
+                        tv_first_jibu_hour_list.setText(DaySteps.get(0).getTotal_steps() + "");
 
-                if (DaySteps.size() != 0 && daySleep.size() != 0) {
-                    tv_first_jibu_hour_list.setText(DaySteps.get(0).getTotal_steps() + "");
+                        tv_first_sleep_hour_sleep.setText(daySleep.get(0).getTotal_time() / 60 + "");
 
-                    tv_first_sleep_hour_sleep.setText(daySleep.get(0).getTotal_time() / 60 + "");
+                        tv_first_sleep_minute_sleep.setText(daySleep.get(0).getTotal_time() % 60 + "");
+                    } else {
+                        tv_first_jibu_hour_list.setText(0 + "");
 
-                    tv_first_sleep_minute_sleep.setText(daySleep.get(0).getTotal_time() % 60 + "");
-                } else {
+                        tv_first_sleep_hour_sleep.setText(0 + "");
+
+                        tv_first_sleep_minute_sleep.setText(0 + "");
+                    }
+                }catch(Exception e){
                     tv_first_jibu_hour_list.setText(0 + "");
 
                     tv_first_sleep_hour_sleep.setText(0 + "");
@@ -1266,7 +1284,10 @@ public class HomePager extends SlidingFragmentActivity implements TextPick.OnVal
                         }
                     } catch (JSONException e1) {
                         e1.printStackTrace();
+                    } catch (Exception e2){
+                        e2.printStackTrace();
                     }
+
 
                 }
 
@@ -1891,12 +1912,12 @@ public class HomePager extends SlidingFragmentActivity implements TextPick.OnVal
 
                             @Override
                             public void onError(Request request, Exception e) {
-                                Log.e("TAG", "活动上传失败--BAND_DISCONNECT--" + e.getLocalizedMessage() + e.getMessage().toString());
+                                //Log.e("TAG", "活动上传失败--BAND_DISCONNECT--" + e.getLocalizedMessage() + e.getMessage().toString());
                             }
 
                             @Override
                             public void onResponse(CommonEntity response) {
-                                Log.e("TAG", "活动上传成功--BAND_DISCONNECT--" + response.getCode());
+                                //Log.e("TAG", "活动上传成功--BAND_DISCONNECT--" + response.getCode());
                             }
                         });
 
@@ -1980,7 +2001,7 @@ public class HomePager extends SlidingFragmentActivity implements TextPick.OnVal
 
                         @Override
                         public void onError(Request request, Exception e) {
-                            Log.e("TAG", "活动上传失败--APP_QUIT--" + e.getLocalizedMessage() + e.getMessage().toString());
+                            //Log.e("TAG", "活动上传失败--APP_QUIT--" + e.getLocalizedMessage() + e.getMessage().toString());
                             finish();
                             MobclickAgent.onKillProcess(HomePager.this);
                             System.exit(0);
@@ -1988,7 +2009,7 @@ public class HomePager extends SlidingFragmentActivity implements TextPick.OnVal
 
                         @Override
                         public void onResponse(CommonEntity response) {
-                            Log.e("TAG", "活动上传成功--APP_QUIT--" + response.getCode());
+                            //Log.e("TAG", "活动上传成功--APP_QUIT--" + response.getCode());
                             finish();
                             MobclickAgent.onKillProcess(HomePager.this);
                             System.exit(0);

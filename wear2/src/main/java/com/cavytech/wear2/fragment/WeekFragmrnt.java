@@ -87,16 +87,16 @@ public class WeekFragmrnt extends Fragment implements StepsPick.OnValueChangeLis
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        tv_zongbushu.setText("周总步数");
+        tv_zongbushu.setText(this.getString(R.string.weekly_total_steps));
 
         dataist = new ArrayList<>();
-        dataist.add("周一");
-        dataist.add("周二");
-        dataist.add("周三");
-        dataist.add("周四");
-        dataist.add("周五");
-        dataist.add("周六");
-        dataist.add("周日");
+        dataist.add(this.getString(R.string.monday));
+        dataist.add(this.getString(R.string.tuesday));
+        dataist.add(this.getString(R.string.wednesday));
+        dataist.add(this.getString(R.string.thursday));
+        dataist.add(this.getString(R.string.friday));
+        dataist.add(this.getString(R.string.saturday));
+        dataist.add(this.getString(R.string.sunday));
         /*for (int i = 1; i <= 7; i++) {
             dataist.add("" + i);
         }*/

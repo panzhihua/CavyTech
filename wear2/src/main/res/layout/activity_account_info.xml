@@ -263,7 +263,7 @@
                     android:background="@color/white">
 
                     <TextView
-                        android:text="成就"
+                        android:text="@string/achievement"
                         style="@style/e14"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -272,7 +272,7 @@
                         android:layout_marginStart="20dp" />
 
                     <TextView
-                        android:text="累计0步"
+                        android:text="@string/total_step_0"
                         style="@style/k14"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -308,7 +308,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             style="@style/g12"
-                            android:text="5000步"/>
+                            android:text="@string/steps_5000"/>
                     </LinearLayout>
 
                     <LinearLayout
@@ -329,7 +329,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             style="@style/g12"
-                            android:text="20000步"/>
+                            android:text="@string/steps_20000"/>
                     </LinearLayout>
 
                     <LinearLayout
@@ -351,7 +351,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             style="@style/g12"
-                            android:text="100000步"/>
+                            android:text="@string/steps_100000"/>
                     </LinearLayout>
 
                 </LinearLayout>
@@ -383,7 +383,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             style="@style/g12"
-                            android:text="500000步"/>
+                            android:text="@string/steps_500000"/>
                     </LinearLayout>
 
                     <LinearLayout
@@ -406,7 +406,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             style="@style/g12"
-                            android:text="1000000步"/>
+                            android:text="@string/steps_1000000"/>
                     </LinearLayout>
 
                     <LinearLayout
@@ -430,7 +430,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             style="@style/g12"
-                            android:text="5000000步"/>
+                            android:text="@string/steps_5000000"/>
                     </LinearLayout>
 
                 </LinearLayout>

@@ -1,5 +1,9 @@
 package com.cavytech.wear2.entity;
 
+import android.app.Activity;
+
+import com.cavytech.wear2.R;
+
 import java.io.Serializable;
 import java.util.ArrayList;
 
@@ -83,18 +87,18 @@ public class ClockBean implements Serializable {
 
     *@param everyday "每天"的字符串  处理多语言
      */
-    public String getWeekCheckString(String everyday) {
+    public String getWeekCheckString(String everyday, Activity activity) {
 
-        String week[] = {"一", "二", "三", "四", "五", "六", "七"};
+        String week[] = {activity.getString(R.string.mon),activity.getString(R.string.tues), activity.getString(R.string.wed), activity.getString(R.string.thurs), activity.getString(R.string.fri), activity.getString(R.string.sat), activity.getString(R.string.sun)};
 
         boolean isEvryDay = true;
 
         String weekString = "";
         try {
             if (weekSet.get(0) && weekSet.get(1) && weekSet.get(2) && weekSet.get(3) && weekSet.get(4) && !weekSet.get(5) && !weekSet.get(6)) {
-                weekString = "工作日";
+                weekString = activity.getString(R.string.weekday);
             } else if (!weekSet.get(0) && !weekSet.get(1) && !weekSet.get(2) && !weekSet.get(3) && !weekSet.get(4) && weekSet.get(5) && weekSet.get(6)) {
-                weekString = "双休日";
+                weekString = activity.getString(R.string.weekend);
             } else {
                 for (int i = 0; i < weekSet.size(); i++) {
                     if (weekSet.get(i)) {

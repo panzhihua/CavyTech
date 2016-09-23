@@ -47,7 +47,7 @@ public class DaySleepFragmrnt extends Fragment implements OnChartValueSelectedLi
 
     private Typeface tf;
 
-    protected String[] mParties = new String[]{"深睡", "浅睡"};
+    protected String[] mParties;
 
     private TextView tv_vstep_time_hour;
     private TextView tv_vstep_time_minute;
@@ -68,7 +68,7 @@ public class DaySleepFragmrnt extends Fragment implements OnChartValueSelectedLi
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = View.inflate(getActivity(), R.layout.day_sleep_fragment, null);
-
+        mParties = new String[]{getString(R.string.deep_sleep), getString(R.string.light_sleep)};
         day_wheel = (StepsPick) view.findViewById(R.id.day_wheel);
         day_sleep_fragment_bar_chart = (PieChart) view.findViewById(R.id.day_sleep_fragment_bar_chart);
 

@@ -1,7 +1,5 @@
 package com.basecore.activity;
 
-import java.io.File;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.content.res.Configuration;
@@ -16,6 +14,8 @@ import com.basecore.util.netstate.NetWorkUtil.NetType;
 import com.basecore.window.WindowWrapper;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.umeng.analytics.MobclickAgent;
+
+import java.io.File;
 
 public abstract class BaseActivity extends Activity implements
 		com.basecore.window.IWindow {

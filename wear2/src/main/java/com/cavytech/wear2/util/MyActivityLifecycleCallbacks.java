@@ -57,12 +57,12 @@ public class MyActivityLifecycleCallbacks implements Application.ActivityLifecyc
 
                         @Override
                         public void onError(Request request, Exception e) {
-                            Log.e("TAG","活动上传失败--app open--"+e.getLocalizedMessage()+e.getMessage().toString());
+                            //Log.e("TAG","活动上传失败--app open--"+e.getLocalizedMessage()+e.getMessage().toString());
                         }
 
                         @Override
                         public void onResponse(CommonEntity response) {
-                            Log.e("TAG","活动上传成功--app open--"+response.getCode());
+                            //Log.e("TAG","活动上传成功--app open--"+response.getCode());
                         }
                     });
 
@@ -95,12 +95,12 @@ public class MyActivityLifecycleCallbacks implements Application.ActivityLifecyc
 
                         @Override
                         public void onError(Request request, Exception e) {
-                            Log.e("TAG","活动上传失败--app quit--"+e.getLocalizedMessage()+e.getMessage().toString());
+                            //Log.e("TAG","活动上传失败--app quit--"+e.getLocalizedMessage()+e.getMessage().toString());
                         }
 
                         @Override
                         public void onResponse(CommonEntity response) {
-                            Log.e("TAG","活动上传成功--app quit--"+response.getCode());
+                            //Log.e("TAG","活动上传成功--app quit--"+response.getCode());
                         }
                     });
 

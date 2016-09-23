@@ -277,7 +277,7 @@ public class MonthSleepFragmrnt extends Fragment implements StepsPick.OnValueCha
 
     private void showBarChart(final BarChart barChart, BarData barData) {
         // 如果没有数据的时候，会显示这个，类似ListView的EmptyView
-        barChart.setNoDataTextDescription("暂无数据");
+        barChart.setNoDataTextDescription(getString(R.string.temporarily_no_data));
 
         barChart.setData(barData); // 设置数据
 
@@ -296,6 +296,8 @@ public class MonthSleepFragmrnt extends Fragment implements StepsPick.OnValueCha
         barChart.setDragEnabled(true);// 是否可以拖拽
         barChart.setScaleEnabled(true);// 是否可以缩放
         barChart.setPinchZoom(false);//y轴的值是否跟随图表变换缩放;如果禁止，y轴的值会跟随图表变换缩放
+        barChart.setDoubleTapToZoomEnabled(false);//两指拉伸
+        barChart.setScaleYEnabled(false);//是否可以上下缩放
 
         barChart.setDrawValueAboveBar(true);//柱状图上面的数值显示在柱子上面还是柱子里面
 
@@ -343,7 +345,7 @@ public class MonthSleepFragmrnt extends Fragment implements StepsPick.OnValueCha
         barChart.setOnChartValueSelectedListener(new OnChartValueSelectedListener() {
             @Override
             public void onValueSelected(Entry e, int dataSetIndex, Highlight h) {
-                barDataSet.setDrawValues(true);
+                barDataSet.setDrawValues(false);
             }
 
             @Override
@@ -365,7 +367,7 @@ public class MonthSleepFragmrnt extends Fragment implements StepsPick.OnValueCha
 
         // y轴的数据集合
         barDataSet = new BarDataSet(yValues, "");
-        barDataSet.setStackLabels(new String[]{"深睡", "浅睡"});
+        barDataSet.setStackLabels(new String[]{getString(R.string.deep_sleep), getString(R.string.light_sleep)});
         barDataSet.setBarSpacePercent(85);
         barDataSet.setVisible(true);//是否显示柱状图柱子
         barDataSet.setDrawValues(false);//是否显示柱子上面的数值

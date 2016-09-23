@@ -3,6 +3,7 @@ package com.cavytech.wear2.activity;
 import android.annotation.TargetApi;
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
@@ -65,6 +66,27 @@ public class KnowClickDetailActivity extends Activity {
 
     @ViewInject(R.id.title)
     private TextView title;
+
+    @ViewInject(R.id.txt_one)
+    private TextView txtOne;
+
+    @ViewInject(R.id.txt_two)
+    private TextView txtTwo;
+
+    @ViewInject(R.id.txt_three)
+    private TextView txtThree;
+
+    @ViewInject(R.id.txt_four)
+    private TextView txtFour;
+
+    @ViewInject(R.id.txt_five)
+    private TextView txtFive;
+
+    @ViewInject(R.id.txt_six)
+    private TextView txtSix;
+
+    @ViewInject(R.id.txt_seven)
+    private TextView txtSeven;
 
     public int realHour;
     public int realMinute;
@@ -159,6 +181,7 @@ public class KnowClickDetailActivity extends Activity {
 
         for(int i = 0; i < mListItems.get(position).getWeekSet().size(); i++){
             mListCheckBox.get(i).setChecked(mListItems.get(position).getWeekSet().get(i));
+            setColorText(i,mListItems.get(position).getWeekSet().get(i));
         }
     }
     private void initListCheckBox(){
@@ -256,8 +279,70 @@ public class KnowClickDetailActivity extends Activity {
         public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
 
             int tag = (int)buttonView.getTag();
+            setColorText(tag,isChecked);
+
             mListItems.get(position).getWeekSet().set(tag, isChecked);
 
+        }
+    }
+
+    public void setColorText(int tag,boolean isChecked){
+        if(tag==0){
+            if(isChecked){
+                txtOne.setTextColor(Color.parseColor("#FFFFFF"));
+                txtOne.setText(R.string.mon);
+            }else{
+                txtOne.setTextColor(Color.parseColor("#7a7a7a"));
+                txtOne.setText(R.string.mon);
+            }
+        }else if(tag==1){
+            if(isChecked){
+                txtTwo.setTextColor(Color.parseColor("#FFFFFF"));
+                txtTwo.setText(R.string.tues);
+            }else{
+                txtTwo.setTextColor(Color.parseColor("#7a7a7a"));
+                txtTwo.setText(R.string.tues);
+            }
+        }else if(tag==2){
+            if(isChecked){
+                txtThree.setTextColor(Color.parseColor("#FFFFFF"));
+                txtThree.setText(R.string.wed);
+            }else{
+                txtThree.setTextColor(Color.parseColor("#7a7a7a"));
+                txtThree.setText(R.string.wed);
+            }
+        }else if(tag==3){
+            if(isChecked){
+                txtFour.setTextColor(Color.parseColor("#FFFFFF"));
+                txtFour.setText(R.string.thurs);
+            }else{
+                txtFour.setTextColor(Color.parseColor("#7a7a7a"));
+                txtFour.setText(R.string.thurs);
+            }
+        }else if(tag==4){
+            if(isChecked){
+                txtFive.setTextColor(Color.parseColor("#FFFFFF"));
+                txtFive.setText(R.string.fri);
+            }else{
+                txtFive.setTextColor(Color.parseColor("#7a7a7a"));
+                txtFive.setText(R.string.fri);
+            }
+        }else if(tag==5){
+            if(isChecked){
+                txtSix.setTextColor(Color.parseColor("#FFFFFF"));
+                txtSix.setText(R.string.sat);
+            }else{
+                txtSix.setTextColor(Color.parseColor("#7a7a7a"));
+                txtSix.setText(R.string.sat);
+            }
+        }else if(tag==6){
+            if(isChecked){
+                txtSeven.setTextColor(Color.parseColor("#FFFFFF"));
+                txtSeven.setText(R.string.sun);
+            }else{
+                txtSeven.setTextColor(Color.parseColor("#7a7a7a"));
+                txtSeven.setText(R.string.sun);
+            }
         }
     }
 }

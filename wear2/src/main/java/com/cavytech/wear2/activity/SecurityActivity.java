@@ -71,12 +71,12 @@ public class SecurityActivity extends AppCompatActivityEx {
 
         x.view().inject(this);
 
-        title.setText("安全");
+        title.setText(getString(R.string.safety));
 
         getdatafromnet();
 
         initlistener();
-
+        setToolBar();
 //        stopService(new Intent("com.cavytech.wear2.application.PhoneService"));
 
     }
@@ -116,7 +116,10 @@ public class SecurityActivity extends AppCompatActivityEx {
                     }
                 } catch (JSONException e1) {
                     e1.printStackTrace();
+                } catch (Exception e2) {
+                    e2.printStackTrace();
                 }
+
 
             }
 
@@ -208,20 +211,20 @@ public class SecurityActivity extends AppCompatActivityEx {
                                       list.add(phoneBean);
                                   }
                               } else {
-                                  Toast.makeText(SecurityActivity.this, "紧急联系人上限3人", Toast.LENGTH_SHORT).show();
+                                  Toast.makeText(SecurityActivity.this,getString(R.string.at_most_3_emergency_contact_numbers_can_be_added), Toast.LENGTH_SHORT).show();
                               }
 
                           } else {
-                              Toast.makeText(SecurityActivity.this, "号码不正确--", Toast.LENGTH_SHORT).show();
+                              Toast.makeText(SecurityActivity.this, getString(R.string.invalid_contact_number), Toast.LENGTH_SHORT).show();
                           }
-                          if (list != null) {
+                          if (list != null&&adapter!=null) {
                               posttonet(list);
                               CacheUtils.saveArray(SecurityActivity.this, list);
                               adapter.notifyDataSetChanged();
                           }
                       }else {
                           AlertDialog.Builder builder = new AlertDialog.Builder(SecurityActivity.this);
-                          builder.setTitle("选择一个号码");
+                          builder.setTitle(getString(R.string.select_a_contact_number));
                           //    指定下拉列表的显示数据
                           final String[] cities = new String[nums.size()];
                           nums.toArray(cities);
@@ -238,13 +241,13 @@ public class SecurityActivity extends AppCompatActivityEx {
                                               list.add(phoneBean);
                                           }
                                       } else {
-                                          Toast.makeText(SecurityActivity.this, "紧急联系人上限3人", Toast.LENGTH_SHORT).show();
+                                          Toast.makeText(SecurityActivity.this, getString(R.string.at_most_3_emergency_contact_numbers_can_be_added), Toast.LENGTH_SHORT).show();
                                       }
 
                                   } else {
-                                      Toast.makeText(SecurityActivity.this, "号码不正确--", Toast.LENGTH_SHORT).show();
+                                      Toast.makeText(SecurityActivity.this, getString(R.string.invalid_contact_number), Toast.LENGTH_SHORT).show();
                                   }
-                                  if (list != null) {
+                                  if (list != null&&adapter!=null) {
                                       posttonet(list);
                                       CacheUtils.saveArray(SecurityActivity.this, list);
                                       adapter.notifyDataSetChanged();

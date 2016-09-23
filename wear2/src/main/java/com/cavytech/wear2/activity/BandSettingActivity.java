@@ -233,24 +233,27 @@ public class BandSettingActivity extends GuideSetComActivity {
 
         if (stepActivity == StepType.SUCCESS) {
 
-            if (isReConnectBand) {
-                //startActivity(new Intent(BandSettingActivity.this, HomePager.class));
-                BandInfoEntity bandInfo = (BandInfoEntity) SerializeUtils.unserialize(Constants.SERIALIZE_BAND_INFO);
-                CacheUtils.saveMacAdress(BandSettingActivity.this,bandInfo.getAddress());
-                Log.e("pipa",bandInfo.getAddress());
-                LifeBandBLEUtil.getInstance().DataSync(1, 0);
-                finish();
-            } else if(profile.getWeight() == 0 && profile.getHeight() == 0){
+            if(profile!=null) {
+                if (isReConnectBand) {
+                    //startActivity(new Intent(BandSettingActivity.this, HomePager.class));
+                    BandInfoEntity bandInfo = (BandInfoEntity) SerializeUtils.unserialize(Constants.SERIALIZE_BAND_INFO);
+                    CacheUtils.saveMacAdress(BandSettingActivity.this, bandInfo.getAddress());
+                    LifeBandBLEUtil.getInstance().DataSync(1, 0);
+                    finish();
+                } else if (profile.getWeight() == 0 && profile.getHeight() == 0) {
+                    Intent intent = new Intent(BandSettingActivity.this, SexActivity.class);
+                    startActivity(intent);
+                    finish();
+                } else {
+                    Intent intent = new Intent(BandSettingActivity.this, HomePager.class);
+                    startActivity(intent);
+                    finish();
+                }
+            }else{
                 Intent intent = new Intent(BandSettingActivity.this, SexActivity.class);
                 startActivity(intent);
                 finish();
-            }else {
-                Intent intent = new Intent(BandSettingActivity.this, HomePager.class);
-                startActivity(intent);
-                finish();
             }
-
-
             return;
         }
         if (stepActivity == StepType.FAIL) {

@@ -169,7 +169,6 @@ public class LeftMenuFragment extends BaseFragment {
         public void onClick(View v) {
 
             if(v == ll_target){//目标
-
                 Intent intent = new Intent(mActivity, TargetActivity.class);
                 intent.putExtra(Constants.INTENT_EXTRA_ISEDIT,true);
                 startActivity(intent);

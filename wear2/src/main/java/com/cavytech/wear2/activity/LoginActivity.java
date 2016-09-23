@@ -210,6 +210,8 @@ public class LoginActivity extends CommonActivity {
                             }
                         } catch (JSONException e1) {
                             e1.printStackTrace();
+                        } catch (Exception e2){
+                            e2.printStackTrace();
                         }
 
                     }

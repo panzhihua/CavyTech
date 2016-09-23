@@ -23,6 +23,7 @@ import com.cavytech.wear2.entity.CheckVersionBean;
 import com.cavytech.wear2.http.HttpUtils;
 import com.cavytech.wear2.http.RequestCallback;
 import com.cavytech.wear2.util.Constants;
+import com.cavytech.wear2.util.LanguageUtil;
 import com.cavytech.widget.CustomDialog;
 import com.squareup.okhttp.Request;
 
@@ -74,37 +75,46 @@ public class AboutActivity extends AppCompatActivityEx {
         setContentView(R.layout.activity_about);
         x.view().inject(this);
 
-        title.setText(R.string.about_tittle);
-
+        title.setText(this.getString(R.string.about_tittle));
+        initview();
+        setToolBar();
         initlistener();
+    }
+
+    private void initview() {
+        if(LanguageUtil.isZh(this)){
+            xiyi.setVisibility(View.VISIBLE);
+        }else{
+            xiyi.setVisibility(View.GONE);
+        }
     }
 
     private void initlistener() {
 
         try {
             localVersion = AboutActivity.this.getPackageManager().getPackageInfo(AboutActivity.this.getPackageName(), 0).versionCode;
-            textView9.setText("当前版本 "+AboutActivity.this.getPackageManager().getPackageInfo(AboutActivity.this.getPackageName(), 0).versionName);
+            textView9.setText(AboutActivity.this.getPackageManager().getPackageInfo(AboutActivity.this.getPackageName(), 0).versionName);
         } catch (PackageManager.NameNotFoundException e1) {
             e1.printStackTrace();
         }
 
-        rl_about_check.setOnClickListener(new View.OnClickListener() {
+        textView11.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                textView11.setText("检测中...");
+                textView11.setText(getString(R.string.detecting));
 
                 HttpUtils.getInstance().getVersion(AboutActivity.this, new RequestCallback<CheckVersionBean>() {
                     @Override
                     public void onError(Request request, Exception e) {
-                        textView11.setText("检测完毕");
+                        textView11.setText(getString(R.string.detect_completed));
                         try {
                             JSONObject jsonObj = new JSONObject(e.getLocalizedMessage());
                             int code = jsonObj.optInt("code");
                             if(HttpUtils.CODE_ACCOUNT_NOT_LOGIN==code){
                                 AlertDialog.Builder dialog = new AlertDialog.Builder(AboutActivity.this);
                                 dialog.setCancelable(false);
-                                dialog.setMessage(R.string.not_login);
+                                dialog.setMessage(getString(R.string.not_login));
                                 dialog.setPositiveButton(getString(R.string.ALERT_DLG_BTN_OK), new android.content.DialogInterface.OnClickListener() {
 
                                     @Override
@@ -131,7 +141,7 @@ public class AboutActivity extends AppCompatActivityEx {
                                     runOnUiThread(new Runnable() {
                                         @Override
                                         public void run() {
-                                            textView11.setText("检测更新");
+                                            textView11.setText(getString(R.string.check_for_updates));
                                         }
                                     });
                                 }
@@ -141,16 +151,16 @@ public class AboutActivity extends AppCompatActivityEx {
 
                     @Override
                     public void onResponse(final CheckVersionBean response) {
-                        textView11.setText("检测完毕");
+                        textView11.setText(getString(R.string.detect_completed));
                         try {
                             downloadUrl = response.getData().getUrl();
                             appsize = response.getData().getSize();
                             if (response.getData().getUrl().length() > 0 && localVersion < response.getData().getReversion()) {
                                 CustomDialog.Builder builder = new CustomDialog.Builder(AboutActivity.this);
-                                builder.setMessage("1 当前版本 \n 2 当前版本");
-                                builder.setTitle("安装新APP版本" + response.getData().getVersion());
+                                builder.setMessage(getString(R.string.current_version));
+                                builder.setTitle(getString(R.string.install_new_app_version) + response.getData().getVersion());
                                 builder.setMessage(response.getData().getDescription());
-                                builder.setPositiveButton("确定", new DialogInterface.OnClickListener() {
+                                builder.setPositiveButton(getString(R.string.queding), new DialogInterface.OnClickListener() {
                                     public void onClick(DialogInterface dialog, int which) {
                                         dialog.dismiss();
                                         //设置你的操作事项
@@ -163,7 +173,7 @@ public class AboutActivity extends AppCompatActivityEx {
                                     }
                                 });
 
-                                builder.setNegativeButton("取消",
+                                builder.setNegativeButton(getString(R.string.ALERT_DLG_BTN_CANCEL),
                                         new android.content.DialogInterface.OnClickListener() {
                                             public void onClick(DialogInterface dialog, int which) {
                                                 dialog.dismiss();
@@ -171,7 +181,7 @@ public class AboutActivity extends AppCompatActivityEx {
                                         });
                                 builder.create().show();
                             }else {
-                                Toast.makeText(AboutActivity.this,"当前已经是最新版本",Toast.LENGTH_SHORT).show();
+                                Toast.makeText(AboutActivity.this,getString(R.string.current_firmware_is_the_latest_version),Toast.LENGTH_SHORT).show();
                             }
                         } catch (Exception e) {
                             e.printStackTrace();
@@ -182,7 +192,7 @@ public class AboutActivity extends AppCompatActivityEx {
                                     runOnUiThread(new Runnable() {
                                         @Override
                                         public void run() {
-                                            textView11.setText("检测更新");
+                                            textView11.setText(getString(R.string.check_for_updates));
                                         }
                                     });
                                 }

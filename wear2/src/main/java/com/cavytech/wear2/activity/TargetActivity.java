@@ -19,7 +19,6 @@ import com.cavytech.wear2.util.SerializeUtils;
 import com.squareup.okhttp.Request;
 import com.zhy.android.percent.support.PercentLinearLayout;
 
-import org.json.JSONException;
 import org.json.JSONObject;
 
 import app.minimize.com.seek_bar_compat.SeekBarCompat;
@@ -35,8 +34,8 @@ public class TargetActivity extends GuideSetComActivity implements SeekBarCompat
     final int INIT_AVGSTEP  = 6000 / STEP_PER;
     final int SLEEP_PER   = 10;   // 颗粒度10分钟
     final int MAX_SLEEP  = 12 * 60 / SLEEP_PER;  // min
-    final int INIT_SLEEP = 7 * 60 / SLEEP_PER;
-    final int INIT_AVGSLEEP  = 8 * 60 / SLEEP_PER;
+    final int INIT_SLEEP = 8 * 60 / SLEEP_PER;
+    final int INIT_AVGSLEEP  = 7 * 60 / SLEEP_PER;
 
     SeekBarCompat seekBarTarget1;
     SeekBarCompat seekBarTarget2;
@@ -218,11 +217,13 @@ public class TargetActivity extends GuideSetComActivity implements SeekBarCompat
                                 @Override
                                 public void onClick(DialogInterface arg0, int arg1) {
                                     arg0.dismiss();
+                                    startActivity(new Intent(TargetActivity.this, GuideActivity.class));
+                                    finish();
                                 }
                             } );
                             dialog.show();
                         }
-                    } catch (JSONException e1) {
+                    } catch (Exception e1) {
                         e1.printStackTrace();
                     }
 
@@ -231,20 +232,22 @@ public class TargetActivity extends GuideSetComActivity implements SeekBarCompat
                 @Override
                 public void onResponse(CommonEntity response) {
                     if(response.getCode() == 1000){
-                        Log.e("TAG","成功上传个人信息");
+                        Intent intent;
+
+                        if(CommonApplication.isLogin){
+                            // 先登陆后完善信息流程
+                            intent = new Intent(TargetActivity.this, HomePager.class);
+
+                            startActivity(intent);
+                        }else{
+                            intent = new Intent(TargetActivity.this, GuideActivity.class);
+
+                            startActivity(intent);
+                        }
+                        finish();
                     }
                 }
             });
-            Intent intent;
-
-            if(CommonApplication.isLogin){
-                // 先登陆后完善信息流程
-                intent = new Intent(TargetActivity.this, HomePager.class);
-
-                startActivity(intent);
-            }
-
-            finish();
 
         }
     }

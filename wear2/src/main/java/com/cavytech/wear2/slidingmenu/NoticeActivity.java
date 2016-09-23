@@ -65,7 +65,7 @@ public class NoticeActivity extends Activity implements TextPick.OnValueChangeLi
         setContentView(R.layout.activity_notice);
         x.view().inject(this);
 
-        tv_notice_time.setText(CacheUtils.getInt(NoticeActivity.this,Constants.PHONENOTICE)+"秒未接提醒");
+        tv_notice_time.setText(CacheUtils.getInt(NoticeActivity.this,Constants.PHONENOTICE)+" "+getString(R.string.second_later_vibrate));
 
         /**
          * 保存选中状态
@@ -80,7 +80,7 @@ public class NoticeActivity extends Activity implements TextPick.OnValueChangeLi
             ll_text_picker.setVisibility(View.GONE);
         }
 
-        title.setText("提醒");
+        title.setText(getString(R.string.call_reminder));
 
         back.setOnClickListener(new MyClockOnClickListener());
 
@@ -154,27 +154,27 @@ public class NoticeActivity extends Activity implements TextPick.OnValueChangeLi
             case 0:
                 CacheUtils.putInt(NoticeActivity.this, Constants.PHONENOTICE,0);
                 Log.e("TAG",0+"=-=-=-=-=-=-=-=-=-");
-                tv_notice_time.setText("0秒未接提醒");
+                tv_notice_time.setText(getString(R.string.second_later_vibrate_0));
                 break;
             case 1:
                 CacheUtils.putInt(NoticeActivity.this, Constants.PHONENOTICE,5);
                 Log.e("TAG",5+"=-=-=-=-=-=-=-=-=-");
-                tv_notice_time.setText("5秒未接提醒");
+                tv_notice_time.setText(getString(R.string.second_later_vibrate_5));
                 break;
             case 2:
                 CacheUtils.putInt(NoticeActivity.this, Constants.PHONENOTICE,10);
                 Log.e("TAG",10+"=-=-=-=-=-=-=-=-=-");
-                tv_notice_time.setText("10秒未接提醒");
+                tv_notice_time.setText(getString(R.string.second_later_vibrate_10));
                 break;
             case 3:
                 CacheUtils.putInt(NoticeActivity.this, Constants.PHONENOTICE,15);
                 Log.e("TAG",15+"=-=-=-=-=-=-=-=-=-");
-                tv_notice_time.setText("15秒未接提醒");
+                tv_notice_time.setText(getString(R.string.second_later_vibrate_15));
                 break;
             case 4:
                 CacheUtils.putInt(NoticeActivity.this, Constants.PHONENOTICE,20);
                 Log.e("TAG",20+"=-=-=-=-=-=-=-=-=-");
-                tv_notice_time.setText("20秒未接提醒");
+                tv_notice_time.setText(getString(R.string.second_later_vibrate_20));
                 break;
         }
 

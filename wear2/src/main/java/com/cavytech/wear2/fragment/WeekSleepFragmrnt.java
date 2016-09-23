@@ -305,7 +305,7 @@ public class WeekSleepFragmrnt extends Fragment implements StepsPick.OnValueChan
 
     private void showBarChart(BarChart barChart, BarData barData) {
         // 如果没有数据的时候，会显示这个，类似ListView的EmptyView
-        barChart.setNoDataTextDescription("暂无数据");
+        barChart.setNoDataTextDescription(getString(R.string.temporarily_no_data));
 
         barChart.setData(barData); // 设置数据
 
@@ -369,7 +369,7 @@ public class WeekSleepFragmrnt extends Fragment implements StepsPick.OnValueChan
         barChart.setOnChartValueSelectedListener(new OnChartValueSelectedListener() {
             @Override
             public void onValueSelected(Entry e, int dataSetIndex, Highlight h) {
-                barDataSet.setDrawValues(true);
+                barDataSet.setDrawValues(false);
             }
 
             @Override
@@ -385,13 +385,13 @@ public class WeekSleepFragmrnt extends Fragment implements StepsPick.OnValueChan
 
     private BarData getBarData(int count, ArrayList<BarEntry> yValues) {
         ArrayList<String> xValues = new ArrayList<String>();
-        xValues.add("周一");
-        xValues.add("周二");
-        xValues.add("周三");
-        xValues.add("周四");
-        xValues.add("周五");
-        xValues.add("周六");
-        xValues.add("周日");
+        xValues.add(getString(R.string.monday));
+        xValues.add(getString(R.string.tuesday));
+        xValues.add(getString(R.string.wednesday));
+        xValues.add(getString(R.string.thursday));
+        xValues.add(getString(R.string.friday));
+        xValues.add(getString(R.string.saturday));
+        xValues.add(getString(R.string.sunday));
         /*for (int i = 0; i < count; i++) {
             xValues.add(i + "");
         }*/
@@ -406,7 +406,7 @@ public class WeekSleepFragmrnt extends Fragment implements StepsPick.OnValueChan
         } else {
             barDataSet = new BarDataSet(yValues, "");
             barDataSet.setColors(getColors());
-            barDataSet.setStackLabels(new String[]{"深睡", "浅睡"});
+            barDataSet.setStackLabels(new String[]{getString(R.string.deep_sleep), getString(R.string.light_sleep)});
             barDataSet.setBarSpacePercent(85);
             barDataSet.setVisible(true);//是否显示柱状图柱子
             barDataSet.setDrawValues(false);//是否显示柱子上面的数值

@@ -2,7 +2,6 @@ package com.cavytech.wear2.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -21,8 +20,6 @@ import com.squareup.okhttp.Request;
 
 import org.xutils.view.annotation.ViewInject;
 import org.xutils.x;
-
-import java.util.HashMap;
 
 public class VerficatonActivity extends AppCompatActivityEx {
     @ViewInject(R.id.send_test)
@@ -45,7 +42,7 @@ public class VerficatonActivity extends AppCompatActivityEx {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_verficaton);
         x.view().inject(this);
-
+        setToolBar();
         Intent intent = getIntent();
         userid = intent.getStringExtra(Constants.INTENT_EXTRA_USERID);
         friendId = intent.getStringExtra(Constants.INTENT_EXTRA_FRDID);

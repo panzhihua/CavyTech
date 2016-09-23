@@ -41,10 +41,10 @@
                     <TextView
                         android:id="@+id/rl_about_check"
                         style="@style/text4"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:layout_marginLeft="20dp"
-                        android:gravity="center_vertical|left"
+                        android:layout_centerVertical="true"
                         android:textSize="14sp"
                         android:text="@string/about_version" />
 
@@ -52,9 +52,9 @@
                         android:id="@+id/textView9"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_alignStart="@+id/rl_about_check"
                         android:layout_centerVertical="true"
-                        android:layout_marginStart="75dp"
+                        android:layout_toRightOf="@+id/rl_about_check"
+                        android:layout_marginLeft ="10dp"
                         android:text="@string/v1_0_0"
                         android:textColor="#b8b8b8"
                         android:textSize="12sp" />
@@ -68,7 +68,7 @@
                         android:textSize="14sp"
                         android:textColor="#8d8d8d"
                         android:layout_marginRight="20dp"
-                        android:text="检测更新" />
+                        android:text="@string/check_for_updates" />
 
 
                 </RelativeLayout>

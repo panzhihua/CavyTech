@@ -238,10 +238,10 @@ public class FileUtils {
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
-        mBitmap.compress(Bitmap.CompressFormat.PNG, 100, fOut);
         try {
+            mBitmap.compress(Bitmap.CompressFormat.PNG, 100, fOut);
             fOut.flush();
-        } catch (IOException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
         try {

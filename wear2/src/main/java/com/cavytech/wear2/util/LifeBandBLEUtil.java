@@ -50,7 +50,9 @@ public class LifeBandBLEUtil {
     }
 
     public void StopScanCavyBand(){
-        mLifeBand.StopScanCavyBand();
+        if(mLifeBand!=null) {
+            mLifeBand.StopScanCavyBand();
+        }
     }
 
     public int getConnectionState(){

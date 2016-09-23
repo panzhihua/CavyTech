@@ -90,41 +90,91 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:orientation="horizontal">
-
-                <CheckBox
-                    android:id="@+id/checkBox_one"
+                <FrameLayout
                     android:layout_width="0dp"
                     android:layout_height="50dp"
-                    android:layout_weight="1"
-                    android:button="@drawable/one_select_drawable" />
-
-                <CheckBox
-                    android:id="@+id/checkBox_two"
+                    android:layout_weight="1">
+                    <CheckBox
+                        android:id="@+id/checkBox_one"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:button="@drawable/select_drawable" />
+                    <TextView
+                        android:id="@+id/txt_one"
+                        android:layout_width="42dp"
+                        android:layout_height="50dp"
+                        android:text="@string/mon"
+                        android:gravity="center"
+                        android:textSize="12sp"/>
+                </FrameLayout>
+                <FrameLayout
                     android:layout_width="0dp"
                     android:layout_height="50dp"
-                    android:layout_weight="1"
-                    android:button="@drawable/two_select_drawable" />
-
-                <CheckBox
-                    android:id="@+id/checkBox_three"
+                    android:layout_weight="1">
+                    <CheckBox
+                        android:id="@+id/checkBox_two"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:button="@drawable/select_drawable" />
+                    <TextView
+                        android:id="@+id/txt_two"
+                        android:layout_width="42dp"
+                        android:layout_height="50dp"
+                        android:text="@string/tues"
+                        android:gravity="center"
+                        android:textSize="12sp"/>
+                </FrameLayout>
+                <FrameLayout
                     android:layout_width="0dp"
                     android:layout_height="50dp"
-                    android:layout_weight="1"
-                    android:button="@drawable/three_select_drawable" />
-
-                <CheckBox
-                    android:id="@+id/checkBox_four"
+                    android:layout_weight="1">
+                    <CheckBox
+                        android:id="@+id/checkBox_three"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:button="@drawable/select_drawable" />
+                    <TextView
+                        android:id="@+id/txt_three"
+                        android:layout_width="42dp"
+                        android:layout_height="50dp"
+                        android:text="@string/wed"
+                        android:gravity="center"
+                        android:textSize="12sp"/>
+                </FrameLayout>
+                <FrameLayout
                     android:layout_width="0dp"
                     android:layout_height="50dp"
-                    android:layout_weight="1"
-                    android:button="@drawable/four_select_drawable" />
-
-                <CheckBox
-                    android:id="@+id/checkBox_five"
+                    android:layout_weight="1">
+                    <CheckBox
+                        android:id="@+id/checkBox_four"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:button="@drawable/select_drawable" />
+                    <TextView
+                        android:id="@+id/txt_four"
+                        android:layout_width="42dp"
+                        android:layout_height="50dp"
+                        android:text="@string/thurs"
+                        android:gravity="center"
+                        android:textSize="12sp"/>
+                </FrameLayout>
+                <FrameLayout
                     android:layout_width="0dp"
                     android:layout_height="50dp"
-                    android:layout_weight="1"
-                    android:button="@drawable/five_select_drawable" />
+                    android:layout_weight="1">
+                    <CheckBox
+                        android:id="@+id/checkBox_five"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:button="@drawable/select_drawable" />
+                    <TextView
+                        android:id="@+id/txt_five"
+                        android:layout_width="42dp"
+                        android:layout_height="50dp"
+                        android:text="@string/fri"
+                        android:gravity="center"
+                        android:textSize="12sp"/>
+                </FrameLayout>
             </LinearLayout>
 
             <LinearLayout
@@ -135,41 +185,73 @@
                 android:layout_marginRight="20dp"
                 android:layout_marginTop="16dp"
                 android:orientation="horizontal">
-
-                <CheckBox
-                    android:id="@+id/checkBox_six"
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1">
+                    <CheckBox
+                        android:id="@+id/checkBox_six"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:button="@drawable/select_drawable" />
+                    <TextView
+                        android:id="@+id/txt_six"
+                        android:layout_width="42dp"
+                        android:layout_height="50dp"
+                        android:text="@string/sat"
+                        android:gravity="center"
+                        android:textSize="12sp"/>
+                </FrameLayout>
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1">
+                    <CheckBox
+                        android:id="@+id/checkBox_seven"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:button="@drawable/select_drawable" />
+                    <TextView
+                        android:id="@+id/txt_seven"
+                        android:layout_width="42dp"
+                        android:layout_height="50dp"
+                        android:text="@string/sun"
+                        android:gravity="center"
+                        android:textSize="12sp"/>
+                </FrameLayout>
+                <FrameLayout
                     android:layout_width="0dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
-                    android:button="@drawable/six_select_drawable" />
-
-                <CheckBox
-                    android:id="@+id/checkBox_seven"
+                    android:visibility="invisible" >
+                    <CheckBox
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:button="@drawable/select_drawable" />
+                </FrameLayout>
+                <FrameLayout
                     android:layout_width="0dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
-                    android:button="@drawable/seven_select_drawable" />
+                    android:visibility="invisible" >
+                    <CheckBox
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:button="@drawable/select_drawable" />
+                </FrameLayout>
 
-                <CheckBox
+                <FrameLayout
                     android:layout_width="0dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
-                    android:button="@drawable/three_select_drawable"
-                    android:visibility="invisible" />
-
-                <CheckBox
-                    android:layout_width="0dp"
-                    android:layout_height="50dp"
-                    android:layout_weight="1"
-                    android:button="@drawable/four_select_drawable"
-                    android:visibility="invisible" />
-
-                <CheckBox
-                    android:layout_width="0dp"
-                    android:layout_height="50dp"
-                    android:layout_weight="1"
-                    android:button="@drawable/five_select_drawable"
-                    android:visibility="invisible" />
+                    android:visibility="invisible" >
+                    <CheckBox
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:button="@drawable/select_drawable" />
+                </FrameLayout>
             </LinearLayout>
 
             <TextView

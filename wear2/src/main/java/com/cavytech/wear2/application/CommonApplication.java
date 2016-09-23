@@ -10,6 +10,7 @@ import com.basecore.application.BaseApplication;
 import com.cavytech.wear2.util.CacheUtils;
 import com.cavytech.wear2.util.Constants;
 import com.cavytech.wear2.util.MyActivityLifecycleCallbacks;
+import com.tencent.bugly.crashreport.CrashReport;
 
 import org.xutils.DbManager;
 import org.xutils.x;
@@ -29,6 +30,9 @@ public class  CommonApplication extends BaseApplication {
     @Override
     public void onCreate() {
         super.onCreate();
+
+        CrashReport.initCrashReport(getApplicationContext(), "900053518", false);//上传bug信息
+
         CacheUtils.getLoctionAddress(this);
         x.Ext.init(this);
         x.Ext.setDebug(true);

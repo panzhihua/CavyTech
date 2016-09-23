@@ -385,7 +385,7 @@ public class DayFragmrnt extends Fragment implements StepsPick.OnValueChangeList
 
     private void showBarChart(final BarChart barChart, BarData barData) {
         // 如果没有数据的时候，会显示这个，类似ListView的EmptyView
-        barChart.setNoDataTextDescription("暂无数据");
+        barChart.setNoDataTextDescription(getString(R.string.temporarily_no_data));
 
         barChart.setData(barData); // 设置数据
 
@@ -447,7 +447,6 @@ public class DayFragmrnt extends Fragment implements StepsPick.OnValueChangeList
                 count = (int) yValues.get(i).getVal();
             }
         }
-
         barChart.setDescription(count + "");
         barChart.setDescriptionPosition(100, 40);
         barChart.setDescriptionColor(Color.WHITE);

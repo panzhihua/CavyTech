@@ -41,12 +41,12 @@ public class HeightActivity extends GuideSetComActivity implements TuneWheelVert
         heightWheel= (TuneWheelVertical)findViewById(R.id.height_wheel);
         selHeight  = (TextView)findViewById(R.id.sel_height);
 
-        selHeight.setText(defultHeight+"");
-
         if(isEdit ){
+            selHeight.setText((int)userInfo.getHeight()+"");
             heightWheel.initViewParam(beginHeight, (int) userInfo.getHeight(), maxHeight);
 
         }else{
+            selHeight.setText(defultHeight+"");
             heightWheel.initViewParam(beginHeight, defultHeight, maxHeight);
         }
 
