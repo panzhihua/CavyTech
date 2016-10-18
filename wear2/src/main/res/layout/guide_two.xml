@@ -3,7 +3,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/guide_bg"
     android:fitsSystemWindows="true">
 
     <ImageView
@@ -53,7 +52,6 @@
                 android:visibility="gone"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="让走路成为一种乐趣"
                 android:id="@+id/textView3"
                 />
         </LinearLayout>

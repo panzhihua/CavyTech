@@ -307,7 +307,7 @@ public class LoginActivity extends CommonActivity {
                          CustomToast.showToast(LoginActivity.this, R.string.password_error);
                          return;
                      }
-                 } catch (JSONException e1) {
+                 } catch (Exception e1) {
                      e1.printStackTrace();
                  }
              }

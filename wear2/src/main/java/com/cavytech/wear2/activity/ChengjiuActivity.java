@@ -84,7 +84,7 @@ public class ChengjiuActivity extends AppCompatActivity {
                                 } );
                                 dialog.show();
                             }
-                        } catch (JSONException e1) {
+                        } catch (Exception e1) {
                             e1.printStackTrace();
                         }
                     }

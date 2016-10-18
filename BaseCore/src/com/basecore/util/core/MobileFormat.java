@@ -28,13 +28,13 @@ public class MobileFormat
 	/**
 	 * 中国移动拥有号码段为:139,138,137,136,135,134,159,158,157(3G),151,150,188(3G),187(3G
 	 * );13个号段 中国联通拥有号码段为:130,131,132,156(3G),186(3G),185(3G);6个号段
-	 * 中国电信拥有号码段为:133,153,189(3G),180(3G);4个号码段
+	 * 中国电信拥有号码段为:133,153,173,189(3G),180(3G);5个号码段
 	 */
 	private static String regMobileStr = "^1(([3][456789])|([5][01789])|([7][8])|([8][1278]))[0-9]{8}$";
 	private static String regMobile3GStr = "^((157)|(18[12378]))[0-9]{8}$";
 	private static String regUnicomStr = "^1(([3][012])|([5][6])|([7][6])|([8][56]))[0-9]{8}$";
 	private static String regUnicom3GStr = "^((156)|(18[56]))[0-9]{8}$";
-	private static String regTelecomStr = "^1(([3][3])|([5][3])|([7][7])|([8][09]))[0-9]{8}$";
+	private static String regTelecomStr = "^1(([3][3])|([5][3])|([7][37])|([8][09]))[0-9]{8}$";
 	private static String regTelocom3GStr = "^(18[09])[0-9]{8}$";
 	private static String regPhoneString = "^(?:13\\d|15\\d)\\d{5}(\\d{3}|\\*{3})$";
 
@@ -79,7 +79,7 @@ public class MobileFormat
 			}
 		}
 		/** */
-		/** 第三步判断中国电脑 */
+		/** 第三步判断中国电信 */
 		else if (mobile.matches(MobileFormat.regTelecomStr))
 		{
 			this.mobile = mobile;

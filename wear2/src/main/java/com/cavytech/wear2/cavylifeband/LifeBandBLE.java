@@ -116,7 +116,6 @@ public class LifeBandBLE {
             Intent _EnableIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
             mActivity.startActivityForResult(_EnableIntent, 1);
         }
-
         for(int i = 1; i < 145; i++)
         {
             PedometerData temp = new PedometerData();
@@ -147,8 +146,9 @@ public class LifeBandBLE {
                 }
                 catch (InterruptedException e)
                 {
-                    // TODO Auto-generated catch block
                     e.printStackTrace();
+                }catch(IndexOutOfBoundsException e1){
+                    e1.printStackTrace();
                 }
             }
         };
@@ -816,18 +816,20 @@ public class LifeBandBLE {
 
     private void scanBLE_Device(final boolean enable) {
         if (enable) {
-            mBLE_ScanHandler.postDelayed(new Runnable() {
-                @Override
-                public void run() {
-                    mBluetoothAdapter.stopLeScan(mLeScanCallback);
-                    mScanning = false;
-                    DebugLog("Stop Scan");
-                }
-            }, BLE_SCAN_PERIOD);
+            if(mBLE_ScanHandler!=null) {
+                mBLE_ScanHandler.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        mBluetoothAdapter.stopLeScan(mLeScanCallback);
+                        mScanning = false;
+                        DebugLog("Stop Scan");
+                    }
+                }, BLE_SCAN_PERIOD);
 
-            mScanning = true;
-            mBluetoothAdapter.startLeScan(mLeScanCallback);
-            DebugLog("Start Scan");
+                mScanning = true;
+                mBluetoothAdapter.startLeScan(mLeScanCallback);
+                DebugLog("Start Scan");
+            }
         } else {
             mScanning = false;
             mBluetoothAdapter.stopLeScan(mLeScanCallback);
@@ -1178,11 +1180,11 @@ public class LifeBandBLE {
         }
     }
 
-    public void CallBLEConnectionEvents(int eventCode, LifeBandBLE.CavyBandDevice device)
-    {
-        if( InterfaceOfBLECallback.class.isInstance(mCallBackObj) )
-        {
-            ((InterfaceOfBLECallback) mCallBackObj).BLEConnectionEvents(eventCode, device);
-        }
-    }
+//    public void CallBLEConnectionEvents(int eventCode, LifeBandBLE.CavyBandDevice device)
+//    {
+//        if( InterfaceOfBLECallback.class.isInstance(mCallBackObj) )
+//        {
+//            ((InterfaceOfBLECallback) mCallBackObj).BLEConnectionEvents(eventCode, device);
+//        }
+//    }
 }

@@ -318,10 +318,10 @@ public class HomePager extends SlidingFragmentActivity implements TextPick.OnVal
                 Log.e("TAG", "记步百分比" + "-----" + stepPercent);
 
                 ObjectAnimator animStep = ObjectAnimator.ofFloat(crpv_first_walk, "percent",
-                        0, stepPercent);
-                animStep.setInterpolator(new LinearInterpolator());
-                animStep.setDuration(1000);
-                animStep.start();
+                        0, stepPercent);//第一个参数为 view对象，第二个参数为 动画改变的类型，第三，第四个参数依次是开始透明度和结束透明度。
+                animStep.setInterpolator(new LinearInterpolator());//以常量速率改变
+                animStep.setDuration(1000);//设置动画时间
+                animStep.start();//启动动画
             }
 
             if (sleepComplete != 0) {
@@ -830,7 +830,7 @@ public class HomePager extends SlidingFragmentActivity implements TextPick.OnVal
                             sb.setSteps(stepsdata.get(i).getHours().get(j).getSteps());
                             try {
                                 CommonApplication.dm.saveOrUpdate(sb);
-                            } catch (DbException e) {
+                            } catch (Exception e) {
                                 e.printStackTrace();
                             }
 
@@ -846,7 +846,7 @@ public class HomePager extends SlidingFragmentActivity implements TextPick.OnVal
                         sb.setTotal_time(stepsdata.get(i).getTotal_time());
                         try {
                             CommonApplication.dm.saveOrUpdate(sb);
-                        } catch (DbException e) {
+                        } catch (Exception e) {
                             e.printStackTrace();
                         }
                     }
@@ -1694,17 +1694,17 @@ public class HomePager extends SlidingFragmentActivity implements TextPick.OnVal
                 sleep = initsleep.getSleeptime();
                 CacheUtils.putString(HomePager.this, Constants.CANREFRESH, DateHelper.getDateString() + "," + sleep);
                 CacheUtils.putString(HomePager.this, Constants.SLEEPSHOW, String.valueOf(sleep));
-                Log.e("TAG", "1---");
+                Log.e("pipa", "当日还没有计算，直接计算");
             } else {//当日已经计算，判断
                 if (canrefresh()) {//实时刷新时间段
                     SleepRetrun initsleep = SleepCount.initsleep();
                     sleep = initsleep.getSleeptime();
                     CacheUtils.putString(HomePager.this, Constants.CANREFRESH, DateHelper.getDateString() + "," + sleep);
                     CacheUtils.putString(HomePager.this, Constants.SLEEPSHOW, String.valueOf(sleep));
-                    Log.e("TAG", "2---");
+                    Log.e("pipa", "实时刷新时间段");
                 } else {
                     sleep=Integer.parseInt(CacheUtils.getString(HomePager.this, Constants.SLEEPSHOW));
-                    Log.e("TAG", "刷新过一次，并且不是刷新时间段");
+                    Log.e("pipa", "刷新过一次，并且不是刷新时间段");
                 }
             }
         } else {//不是当日，直接计算
@@ -1712,7 +1712,7 @@ public class HomePager extends SlidingFragmentActivity implements TextPick.OnVal
             sleep = initsleep.getSleeptime();
             CacheUtils.putString(HomePager.this, Constants.CANREFRESH, DateHelper.getDateString() + "," + sleep);
             CacheUtils.putString(HomePager.this, Constants.SLEEPSHOW, String.valueOf(sleep));
-            Log.e("TAG", "3---");
+            Log.e("pipa", "不是当日，直接计算");
         }
         Message m = new Message();
         m.arg1 = stepcountday;

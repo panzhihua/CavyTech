@@ -381,17 +381,17 @@ public class RightMenuFtragment extends BaseFragment {
         }
         iv_no_band_icon.setVisibility(View.GONE);
         try {
-            textView3.setText(getString(R.string.cavy_band_3));
+            textView3.setText(mActivity.getString(R.string.cavy_band_3));
             if (anInt == -1 && anInt1 == -1) {
                 anInt = 0;
                 anInt1 = 100;
             }
-            tv_rom_number.setText(getString(R.string.firmware_version) + anIn + "." + anInt);
-            circularFillableLoaders.setProgress(100 - anInt1);
-            tv_electricityProgress.setText(anInt1 + "%");
+            tv_rom_number.setText(mActivity.getString(R.string.firmware_version) + anIn + "." + anInt);
         }catch(Exception e){
             e.printStackTrace();
         }
+        circularFillableLoaders.setProgress(100 - anInt1);
+        tv_electricityProgress.setText(anInt1 + "%");
         tv_right_carmer.setTextColor(Color.WHITE);
         tv_right_tixing.setTextColor(Color.WHITE);
         tv_notice.setTextColor(Color.WHITE);

@@ -650,7 +650,7 @@ public class AccountInfoActivity extends CommonActivity {
                         } );
                         dialog.show();
                     }
-                } catch (JSONException e1) {
+                } catch (Exception e1) {
                     e1.printStackTrace();
                 }
             }
@@ -931,7 +931,7 @@ public class AccountInfoActivity extends CommonActivity {
                         } );
                         dialog.show();
                     }
-                } catch (JSONException e1) {
+                } catch (Exception e1) {
                     e1.printStackTrace();
                 }
 

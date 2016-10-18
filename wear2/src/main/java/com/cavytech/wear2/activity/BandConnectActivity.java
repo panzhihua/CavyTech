@@ -73,7 +73,6 @@ public class BandConnectActivity extends BandSettingActivity implements Interfac
 
 
     public void SetSystemTime() {
-
         LifeBandBLEUtil.getInstance().SetSystemTime();
     }
 
@@ -81,8 +80,6 @@ public class BandConnectActivity extends BandSettingActivity implements Interfac
         CacheUtils.putString(BandConnectActivity.this, Constants.MCONNECTEDMACADDRESS, macAddr);
 
         LifeBandBLEUtil.getInstance().connect(macAddr);
-
-
 
     }
 

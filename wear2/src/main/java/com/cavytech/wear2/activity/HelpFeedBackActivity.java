@@ -22,7 +22,6 @@ import com.cavytech.wear2.http.RequestCallback;
 import com.cavytech.wear2.util.Constants;
 import com.squareup.okhttp.Request;
 
-import org.json.JSONException;
 import org.json.JSONObject;
 import org.xutils.view.annotation.ViewInject;
 import org.xutils.x;
@@ -113,7 +112,7 @@ public class HelpFeedBackActivity extends AppCompatActivityEx {
                         } );
                         dialog.show();
                     }
-                } catch (JSONException e1) {
+                } catch (Exception e1) {
                     e1.printStackTrace();
                 }
             }

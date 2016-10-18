@@ -10,7 +10,6 @@ import android.widget.SeekBar;
 import android.widget.TextView;
 
 import com.cavytech.wear2.R;
-import com.cavytech.wear2.application.CommonApplication;
 import com.cavytech.wear2.entity.CommonEntity;
 import com.cavytech.wear2.http.HttpUtils;
 import com.cavytech.wear2.http.RequestCallback;
@@ -234,17 +233,17 @@ public class TargetActivity extends GuideSetComActivity implements SeekBarCompat
                     if(response.getCode() == 1000){
                         Intent intent;
 
-                        if(CommonApplication.isLogin){
+//                        if(CommonApplication.isLogin){
                             // 先登陆后完善信息流程
                             intent = new Intent(TargetActivity.this, HomePager.class);
 
                             startActivity(intent);
-                        }else{
-                            intent = new Intent(TargetActivity.this, GuideActivity.class);
-
-                            startActivity(intent);
-                        }
-                        finish();
+//                        }else{
+//                            intent = new Intent(TargetActivity.this, GuideActivity.class);
+//
+//                            startActivity(intent);
+//                        }
+//                        finish();
                     }
                 }
             });

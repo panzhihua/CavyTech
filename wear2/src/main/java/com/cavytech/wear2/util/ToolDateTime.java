@@ -103,7 +103,7 @@ public class ToolDateTime {
 	/**
 	 * 将日期以yyyy-MM-dd HH:mm:ss格式化
 	 * 
-	 * @param dateL
+	 * @param date
 	 *            日期
 	 * @return
 	 */

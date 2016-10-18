@@ -23,7 +23,6 @@ import com.cavytech.widget.CircleCornerForm;
 import com.squareup.okhttp.Request;
 import com.squareup.picasso.Picasso;
 
-import org.json.JSONException;
 import org.json.JSONObject;
 import org.xutils.view.annotation.ViewInject;
 import org.xutils.x;
@@ -94,7 +93,7 @@ public class OtherActivity extends AppCompatActivityEx {
                         } );
                         dialog.show();
                     }
-                } catch (JSONException e1) {
+                } catch (Exception e1) {
                     e1.printStackTrace();
                 }
             }

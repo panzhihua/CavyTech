@@ -81,7 +81,7 @@ public class GuideSetComActivity extends CommonActivity{
                             }else{
                                 Toast.makeText(GuideSetComActivity.this, e.getMessage(), Toast.LENGTH_SHORT).show();
                             }
-                        } catch (JSONException e1) {
+                        } catch (Exception e1) {
                             e1.printStackTrace();
                         }
                         Log.e("TAG",e+"error");
@@ -109,7 +109,7 @@ public class GuideSetComActivity extends CommonActivity{
                                 } );
                                 dialog.show();
                             }
-                        } catch (JSONException e1) {
+                        } catch (Exception e1) {
                             e1.printStackTrace();
                         }
                     }

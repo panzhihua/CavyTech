@@ -155,7 +155,7 @@ public class PublicUserInfoActivity extends AppCompatActivityEx implements Compo
                         } );
                         dialog.show();
                     }
-                } catch (JSONException e1) {
+                } catch (Exception e1) {
                     e1.printStackTrace();
                 }
             }

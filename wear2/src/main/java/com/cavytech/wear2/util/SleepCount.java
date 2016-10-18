@@ -144,25 +144,25 @@ public class SleepCount {
                 e2 = dlist.get(i).getTilts() < 15;//条件2
                 e3 = dlist.get(i).getSteps() < 30;//条件3
 
-                //String s20 = DateHelper.getInstance().givedTimeToBefer(dlist.get(i).getData(), -1200, "yyyy-MM-dd HH:mm:ss");
+                String s20 = DateHelper.getInstance().givedTimeToBefer(dlist.get(i).getData(), -1200, "yyyy-MM-dd HH:mm:ss");
                 String s10 = DateHelper.getInstance().givedTimeToBefer(dlist.get(i).getData(), -600, "yyyy-MM-dd HH:mm:ss");
-                //String t20 = DateHelper.getInstance().givedTimeToBefer(dlist.get(i).getData(), 1200, "yyyy-MM-dd HH:mm:ss");
+                String t20 = DateHelper.getInstance().givedTimeToBefer(dlist.get(i).getData(), 1200, "yyyy-MM-dd HH:mm:ss");
                 String t10 = DateHelper.getInstance().givedTimeToBefer(dlist.get(i).getData(), 600, "yyyy-MM-dd HH:mm:ss");
 
                 try {
-                    //ds20 = CommonApplication.dm.selector(BandSleepStepBean.class).where("date", "=", s20).findFirst();//之前20分钟
+                    ds20 = CommonApplication.dm.selector(BandSleepStepBean.class).where("date", "=", s20).findFirst();//之前20分钟
                     ds10 = CommonApplication.dm.selector(BandSleepStepBean.class).where("date", "=", s10).findFirst();//之前10分钟
-                    //dt20 = CommonApplication.dm.selector(BandSleepStepBean.class).where("date", "=", t20).findFirst();//之前10分钟
-                    dt10 = CommonApplication.dm.selector(BandSleepStepBean.class).where("date", "=", t10).findFirst();//之前10分钟
+                    dt20 = CommonApplication.dm.selector(BandSleepStepBean.class).where("date", "=", t20).findFirst();//之后20分钟
+                    dt10 = CommonApplication.dm.selector(BandSleepStepBean.class).where("date", "=", t10).findFirst();//之后10分钟
                 } catch (DbException e) {
                     e.printStackTrace();
                 }
 
 
-                //条件1：之前10分钟tilt总量+当前10分钟tilt总量 +之后10分钟tilt总量<30
+                //条件1：之前20分钟tilt总量+当前10分钟tilt总量 +之后20分钟tilt总量<40
 
                 if (ds20 != null && ds10 != null && dt20 != null && dt10 != null) {
-                    e1 = ds10.getTilts() + dt10.getTilts() + dlist.get(i).getTilts() < 30;
+                    e1 = ds20.getTilts()+ds10.getTilts() + dt20.getTilts() +dt10.getTilts() + dlist.get(i).getTilts() < 40;
                     if (e1 && e2 && e3) {
                         finallist.add(dlist.get(i));
                     }

@@ -1094,15 +1094,17 @@ public class HttpUtils {
                 .execute(new Callback() {
                     @Override
                     public Object parseNetworkResponse(Response response) throws IOException {
+                        try {
+                            String string = response.body().string();
 
-                        String string = response.body().string();
-                        Log.w("TAG","--------string--------"+string);
-
-                        Object entity = null;
-                        if(callback != null){
-                            entity = new Gson().fromJson(string, callback.mType);
+                            Object entity = null;
+                            if (callback != null) {
+                                entity = new Gson().fromJson(string, callback.mType);
+                            }
+                            return entity;
+                        }catch(Exception e){
+                            return null;
                         }
-                        return entity;
                     }
 
                     @Override

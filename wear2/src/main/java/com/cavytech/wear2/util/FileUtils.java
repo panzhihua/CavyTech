@@ -246,7 +246,7 @@ public class FileUtils {
         }
         try {
             fOut.close();
-        } catch (IOException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }

@@ -298,7 +298,7 @@ public class SecurityActivity extends AppCompatActivityEx {
                         } );
                         dialog.show();
                     }
-                } catch (JSONException e1) {
+                } catch (Exception e1) {
                     e1.printStackTrace();
                 }
 

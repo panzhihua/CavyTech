@@ -39,7 +39,6 @@ import com.cavytech.widget.ClearEditText;
 import com.squareup.okhttp.Request;
 import com.umeng.analytics.MobclickAgent;
 
-import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.HashMap;
@@ -304,7 +303,7 @@ public class RegForgetPwdBaseActivity extends CommonActivity {
                     }else {
                         hideProgress();
                     }
-                } catch (JSONException e1) {
+                } catch (Exception e1) {
                     e1.printStackTrace();
                 }
             }
@@ -389,7 +388,7 @@ public class RegForgetPwdBaseActivity extends CommonActivity {
                 try {
                     JSONObject jsonObj = new JSONObject(e.getLocalizedMessage());
                     code = jsonObj.optInt("code");
-                } catch (JSONException e1) {
+                } catch (Exception e1) {
                     e1.printStackTrace();
                 }
 
@@ -511,7 +510,7 @@ public class RegForgetPwdBaseActivity extends CommonActivity {
                         } );
                         dialog.show();
                     }
-                } catch (JSONException e1) {
+                } catch (Exception e1) {
                     e1.printStackTrace();
                 }
 

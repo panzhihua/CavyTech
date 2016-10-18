@@ -108,12 +108,13 @@ public class  CommonApplication extends BaseApplication {
      * 初始化数据库
      */
     private void initdao() {
-
-        daoconfig = new DbManager.DaoConfig()
-                .setDbName("CB_LIST.db")
-//                .setDbDir(new File("/sdcard"))
-                .setDbVersion(1);
-        CommonApplication.dm = x.getDb(daoconfig);
+        synchronized(this) {
+            daoconfig = new DbManager.DaoConfig()
+                    .setDbName("CB_LIST.db")
+    //                .setDbDir(new File("/sdcard"))
+                    .setDbVersion(1);
+            CommonApplication.dm = x.getDb(daoconfig);
+        }
 
     }
 

@@ -154,7 +154,7 @@ public class GuideActivity extends Activity implements OnPageChangeListener {
         // 初始化Adapter
         vpAdapter = new ViewPagerAdapter(views, this);
 
-        vp = (ViewPager) findViewById(R.id.viewpager);
+        vp = (ViewPager) findViewById(R.id.guide_viewpager);
         vp.setAdapter(vpAdapter);
         // 绑定回调
         vp.setOnPageChangeListener(this);
